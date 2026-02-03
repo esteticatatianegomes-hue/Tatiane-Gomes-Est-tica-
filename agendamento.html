@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agendamento - Tatiane Gomes Estética">
+    <title>Agendamento - Tatiane Gomes Estética</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <span class="logo-text">Tatiane Gomes</span>
+                    <span class="logo-subtitle">Estética</span>
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Início</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Tratamentos <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tratamentos-corporais.html">Tratamentos Corporais</a></li>
+                        <li><a href="tratamentos-faciais.html">Tratamentos Faciais</a></li>
+                        <li><a href="slim-one.html">Slim One</a></li>
+                    </ul>
+                </li>
+                <li><a href="contato.html" class="nav-link">Contato</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="agendamento.html" class="nav-link btn-agendar active">Agendar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content">
+            <h1>Agende sua Consulta</h1>
+            <p>Dê o primeiro passo para realçar sua beleza</p>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section class="appointment-section">
+        <div class="container">
+            <div class="appointment-grid">
+                <div class="appointment-info">
+                    <h2>Como Funciona?</h2>
+                    <div class="title-underline"></div>
+
+                    <div class="step-info">
+                        <div class="step-number-small">1</div>
+                        <div>
+                            <h3>Avaliação</h3>
+                            <p>Na primeira visita, faremos uma avaliação completa. A consulta é técnica, criteriosa e
+                                completa. É realizada a bioimpedância para avaliação detalhada da composição corporal,
+                                incluindo percentual de gordura, massa magra e retenção hídrica. Também é feito um
+                                levantamento aprofundado do histórico de saúde, rotina, hábitos e procedimentos
+                                estéticos prévios, além da análise de exames laboratoriais quando disponíveis.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-info">
+                        <div class="step-number-small">2</div>
+                        <div>
+                            <h3>Protocolo Personalizado</h3>
+                            <p>A partir desse conjunto de dados, é definido um plano de tratamento totalmente
+                                personalizado, seguro e estratégico, com foco em melhores resultados e em respostas
+                                reais do corpo.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-info">
+                        <div class="step-number-small">3</div>
+                        <div>
+                            <h3>Início do Tratamento</h3>
+                            <p>Veremos se será possível iniciar o tratamento no mesmo dia da sua consulta, de acordo com
+                                o que seu corpo permite e disponibilidade de agenda.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-info">
+                        <div class="step-number-small">4</div>
+                        <div>
+                            <h3>Sua Transformação</h3>
+                            <p>Você colherá os frutos da sua transformação.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>💡 Dica</h4>
+                        <p>Para agilizar seu atendimento, tenha em mente qual tratamento você deseja realizar ou suas
+                            principais preocupações estéticas.</p>
+                    </div>
+
+                    <div class="contact-quick">
+                        <h3>Prefere agendar por telefone?</h3>
+                        <p>📞 <a href="tel:+5511957739880">(11) 95773-9880</a></p>
+                        <p>💬 WhatsApp disponível</p>
+                    </div>
+                </div>
+
+                <div class="appointment-form-container" style="text-align: center;">
+                    <h2>Agende pelo WhatsApp</h2>
+                    <div class="title-underline center"></div>
+
+                    <div class="whatsapp-contact-content">
+                        <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-light);">
+                            Para sua maior comodidade, realizamos agendamentos diretamente pelo WhatsApp.
+                            Clique no botão abaixo para iniciar uma conversa e agendar sua avaliação.
+                        </p>
+
+                        <a href="https://wa.me/5511957739880" target="_blank" class="btn btn-primary btn-large"
+                            style="background-color: #25D366; color: white; display: inline-flex; align-items: center; gap: 10px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                            </svg>
+                            Agendar via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Tatiane Gomes Estética</h3>
+                    <p>Cuidando da sua beleza com profissionalismo e dedicação.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html#sobre">Sobre</a></li>
+                        <li><a href="tratamentos-corporais.html">Tratamentos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="contato.html">Entre em Contato</a></li>
+                        <li><a href="agendamento.html">Agendar Consulta</a></li>
+                        <li><a href="faq.html">Perguntas Frequentes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tatiane Gomes Estética. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
