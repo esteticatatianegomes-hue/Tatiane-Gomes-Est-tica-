@@ -742,24 +742,7 @@ h4 {
 }
 
 /* Responsive */
-@media (max-width: 968px) {
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 80px;
-        flex-direction: column;
-        background: white;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px var(--shadow);
-        padding: 2rem 0;
-        align-items: stretch;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
+@media (max-width: 968px) {`r`n    .nav-menu {`r`n        position: fixed;`r`n        left: -100%;`r`n        top: 80px;`r`n        flex-direction: column;`r`n        background: white;`r`n        width: 100%;`r`n        text-align: center;`r`n        transition: 0.3s;`r`n        box-shadow: 0 10px 27px var(--shadow);`r`n        padding: 2rem 1.5rem;`r`n        align-items: stretch;`r`n    }`r`n    `r`n    .nav-menu li {`r`n        padding: 0 1rem;`r`n    }`r`n    `r`n    .nav-link {`r`n        padding: 1rem 1.5rem;`r`n    }`r`n}
 
     .nav-link::after {
         display: none;
@@ -938,17 +921,7 @@ h4 {
     justify-content: center;
 }
 
-.image-placeholder {
-    width: 100%;
-    aspect-ratio: 1;
-    background: linear-gradient(135deg, var(--secondary-color), var(--light-green));
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 5rem;
-    box-shadow: 0 10px 30px var(--shadow);
-}
+.image-placeholder {`r`n    width: 100%;`r`n    aspect-ratio: 1;`r`n    min-height: 400px;`r`n    background: linear-gradient(135deg, var(--secondary-color), var(--light-green));`r`n    border-radius: 20px;`r`n    display: flex;`r`n    align-items: center;`r`n    justify-content: center;`r`n    font-size: 5rem;`r`n    box-shadow: 0 10px 30px var(--shadow);`r`n}
 
 /* Slim On Details */
 .slim-on-details {
@@ -1591,21 +1564,7 @@ h4 {
     }
 }
 
-@media (max-width: 968px) {
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 80px;
-        flex-direction: column;
-        background: white;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px var(--shadow);
-        padding: 2rem 0;
-        align-items: stretch;
-    }
-}
+@media (max-width: 968px) {`r`n    .nav-menu {`r`n        position: fixed;`r`n        left: -100%;`r`n        top: 80px;`r`n        flex-direction: column;`r`n        background: white;`r`n        width: 100%;`r`n        text-align: center;`r`n        transition: 0.3s;`r`n        box-shadow: 0 10px 27px var(--shadow);`r`n        padding: 2rem 1.5rem;`r`n        align-items: stretch;`r`n    }`r`n    `r`n    .nav-menu li {`r`n        padding: 0 1rem;`r`n    }`r`n    `r`n    .nav-link {`r`n        padding: 1rem 1.5rem;`r`n    }`r`n}
 
 /* End of file check, actually just appending to standard end */
 
@@ -2485,3 +2444,19 @@ h4 {
          }  
  }  
  
+/* Featured Badge */
+.featured-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
