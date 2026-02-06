@@ -477,10 +477,6 @@ h4 {
     position: relative;
 }
 
-.about-image {
-    max-width: 50%;
-}
-
 .image-frame {
     position: relative;
     border-radius: 20px;
