@@ -2244,3 +2244,20 @@ h4 {
     }
 
 }
+
+/* ===== Dropdown Tratamentos ===== */
+.dropdown-menu {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
+}
