@@ -2182,3 +2182,65 @@ h4 {
         min-width: auto;
     }
 }
+
+/* ===== MENU COM SUBMENU FUNCIONAL ===== */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 14px 18px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background: #f2f6ee;
+}
+
+/* PC */
+@media (min-width: 769px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+}
+
+/* ===== AJUSTE SLIM ONE – MOBILE ===== */
+@media (max-width: 768px) {
+
+    .slim-one-badge,
+    .badge-destaque,
+    .highlight-badge {
+        position: static !important;
+        margin: 0 auto 16px;
+        display: inline-block;
+        transform: none !important;
+    }
+
+}

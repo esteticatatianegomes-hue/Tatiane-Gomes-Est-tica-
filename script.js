@@ -1,37 +1,3 @@
-// Mobile Menu Toggle
-const menuToggle = document.getElementById('menuToggle');
-const navMenu = document.getElementById('navMenu');
-
-if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-}
-
-// Dropdown Toggle for Mobile
-const dropdowns = document.querySelectorAll('.dropdown');
-dropdowns.forEach(dropdown => {
-    const link = dropdown.querySelector('.nav-link');
-    link.addEventListener('click', (e) => {
-        if (window.innerWidth <= 968) {
-            e.preventDefault();
-            dropdown.classList.toggle('active');
-        }
-    });
-});
-
-// Close mobile menu when clicking on a link
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        if (window.innerWidth <= 968 && !link.closest('.dropdown')) {
-            menuToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
-    });
-});
-
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
 let lastScroll = 0;
@@ -287,4 +253,13 @@ document.addEventListener('DOMContentLoaded', () => {
             resetAutoPlay();
         }
     }
+});
+
+// Submenu funcionando no celular
+document.querySelectorAll('.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            link.parentElement.classList.toggle('active');
+        }
+    });
 });
