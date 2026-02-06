@@ -2102,3 +2102,83 @@ h4 {
         width: 100%;
     }
 }
+
+/* ===============================
+   CORREÇÃO IMAGENS – RESULTADOS (MOBILE)
+================================ */
+@media (max-width: 768px) {
+
+    /* cards de resultados */
+    .resultados-grid,
+    .cards-resultados {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+
+    /* cada card */
+    .resultado-card,
+    .card-resultado {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* imagens dentro dos cards */
+    .resultado-card img,
+    .card-resultado img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover;
+    }
+
+    /* se tiver imagem redonda */
+    .resultado-card img.round,
+    .card-resultado img.round {
+        border-radius: 16px;
+    }
+}
+
+/* ===============================
+   CARROSSEL RESULTADOS – MOBILE
+================================ */
+
+.results-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0 16px;
+}
+
+.results-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.result-card {
+    min-width: 85%;
+    scroll-snap-align: center;
+    background: #fff;
+    border-radius: 28px;
+    padding: 16px;
+    text-align: center;
+}
+
+.result-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (min-width: 769px) {
+    .results-carousel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        overflow: visible;
+    }
+
+    .result-card {
+        min-width: auto;
+    }
+}
