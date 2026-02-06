@@ -2398,3 +2398,19 @@ h4 {
 body {
     padding-top: 80px;
 }
+
+/* ===============================
+   CORREÇÃO DEFINITIVA DESKTOP
+================================ */
+@media (min-width: 769px) {
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: static;
+        background: transparent;
+        padding: 0;
+        gap: 24px;
+        height: auto;
+    }
+}
