@@ -2371,6 +2371,14 @@ h4 {
     display: flex;
 }
 
+.menu-overlay {
+    pointer-events: none;
+}
+
+.menu-overlay.active {
+    pointer-events: all;
+}
+
 .menu-list {
     list-style: none;
     text-align: center;
