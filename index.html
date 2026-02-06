@@ -16,28 +16,32 @@
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+
+    <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
                 <span class="logo-text">Tatiane Gomes</span>
                 <span class="logo-subtitle">Estética</span>
             </div>
-            <li class="dropdown">
-                <a href="#" class="nav-link">Tratamentos ▾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="tratamentos-corporais.html">Tratamentos Corporais</a></li>
-                    <li><a href="tratamentos-faciais.html">Tratamentos Faciais</a></li>
-                    <li><a href="slim-one.html">Slim One</a></li>
-                </ul>
-            </li>
-            </li>
-            <li><a href="contato.html" class="nav-link">Contato</a></li>
-            <li><a href="faq.html" class="nav-link">FAQ</a></li>
-            <li><a href="agendamento.html" class="nav-link btn-agendar">Agendar</a></li>
-            </ul>
+
+            <div class="nav-actions">
+                <a href="agendamento.html" class="btn-agendar">Agendar</a>
+                <button class="menu-toggle" id="menuToggle">☰ Menu</button>
+            </div>
         </div>
     </nav>
+
+    <!-- MENU OVERLAY -->
+    <div class="menu-overlay" id="menuOverlay">
+        <ul class="menu-list">
+            <li><a href="tratamentos-corporais.html">Tratamentos Corporais</a></li>
+            <li><a href="tratamentos-faciais.html">Tratamentos Faciais</a></li>
+            <li><a href="slim-one.html">Slim One</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </div>
+
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -252,6 +256,18 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        const toggle = document.getElementById('menuToggle');
+        const overlay = document.getElementById('menuOverlay');
+
+        toggle.addEventListener('click', () => {
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+    </script>
 </body>
 
 </html>

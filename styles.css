@@ -2306,3 +2306,86 @@ h4 {
         display: block;
     }
 }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.logo-subtitle {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.btn-agendar {
+    padding: 8px 16px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-overlay.active {
+    display: flex;
+}
+
+.menu-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.menu-list li {
+    margin: 20px 0;
+}
+
+.menu-list a {
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+body {
+    padding-top: 80px;
+}
