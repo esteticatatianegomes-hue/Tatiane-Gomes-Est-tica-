@@ -94,11 +94,60 @@ h4 {
     font-weight: 500;
 }
 
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    align-items: center;
+/* ===============================
+   MENU MOBILE ORGANIZADO
+================================ */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        padding: 12px 0;
+        gap: 6px;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: 10px 0;
+        font-size: 1rem;
+    }
+
+    /* Dropdown */
+    .dropdown-menu {
+        display: none;
+        background: #f6f9f3;
+        padding: 8px 0;
+        margin-top: 6px;
+        border-radius: 12px;
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu li a {
+        padding: 8px 0;
+        display: block;
+        font-size: 0.95rem;
+    }
+
+    /* Botão agendar */
+    .btn-agendar {
+        margin-top: 10px;
+        width: auto;
+        padding: 10px 22px;
+    }
 }
 
 .nav-link {
