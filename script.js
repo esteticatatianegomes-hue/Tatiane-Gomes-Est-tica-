@@ -263,3 +263,17 @@ document.querySelectorAll('.dropdown > .nav-link').forEach(link => {
         }
     });
 });
+
+// Menu toggle for index.html
+const menuToggle = document.getElementById('menuToggle');
+const menuOverlay = document.getElementById('menuOverlay');
+
+if (menuToggle && menuOverlay) {
+    menuToggle.addEventListener('click', () => {
+        menuOverlay.classList.toggle('active');
+    });
+
+    menuOverlay.addEventListener('click', () => {
+        menuOverlay.classList.remove('active');
+    });
+}
