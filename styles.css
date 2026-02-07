@@ -2414,3 +2414,15 @@ body {
         height: auto;
     }
 }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
