@@ -264,16 +264,34 @@ document.querySelectorAll('.dropdown > .nav-link').forEach(link => {
     });
 });
 
-// Menu toggle for index.html
-const menuToggle = document.getElementById('menuToggle');
-const menuOverlay = document.getElementById('menuOverlay');
+// GLOBAL MENU TOGGLE (Works on ALL pages)
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menuToggle');
+    const menuOverlay = document.getElementById('menuOverlay');
 
-if (menuToggle && menuOverlay) {
-    menuToggle.addEventListener('click', () => {
-        menuOverlay.classList.toggle('active');
-    });
+    if (menuToggle && menuOverlay) {
+        // Remove any existing listeners to be safe (cloning trick)
+        const newMenuToggle = menuToggle.cloneNode(true);
+        menuToggle.parentNode.replaceChild(newMenuToggle, menuToggle);
 
-    menuOverlay.addEventListener('click', () => {
-        menuOverlay.classList.remove('active');
-    });
-}
+        const newMenuOverlay = menuOverlay.cloneNode(true);
+        menuOverlay.parentNode.replaceChild(newMenuOverlay, menuOverlay);
+
+        // Re-attach fresh listeners
+        newMenuToggle.addEventListener('click', () => {
+            newMenuOverlay.classList.toggle('active');
+        });
+
+        // Close when clicking outside (on the overlay itself) or on the close button if you had one
+        newMenuOverlay.addEventListener('click', (e) => {
+            if (e.target === newMenuOverlay || e.target.tagName === 'A') {
+                newMenuOverlay.classList.remove('active');
+            }
+        });
+
+        // Also handle the text "Menu" if it's inside the button (for safety)
+        newMenuToggle.style.cursor = 'pointer';
+    }
+});
+
+
