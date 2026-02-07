@@ -2426,3 +2426,31 @@ body {
     background: white;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}
