@@ -255,10 +255,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-dropdown
-const toggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('nav-menu');
-
-toggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
+// Submenu funcionando no celular
+document.querySelectorAll('.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            link.parentElement.classList.toggle('active');
+        }
+    });
 });
