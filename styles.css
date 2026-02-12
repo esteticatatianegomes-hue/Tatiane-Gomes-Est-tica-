@@ -2390,19 +2390,6 @@ h4 {
 }
 
 .menu-list a {
-    color: #fff;
-    font-size: 22px;
-    text-decoration: none;
-}
-
-body {
-    padding-top: 80px;
-}
-
-/* ===============================
-   CORREÇÃO DEFINITIVA DESKTOP
-================================ */
-@media (min-width: 769px) {
     .nav-menu {
         display: flex;
         flex-direction: row;
@@ -2453,4 +2440,26 @@ body {
     .nav-menu.active {
         display: flex;
     }
+}
+
+/* Forced Z-Index for Menu Debug */
+#menuToggle,
+.menu-toggle {
+    z-index: 99999 !important;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-overlay {
+    z-index: 99998 !important;
+}
+
+/* Ensure Menu is clickable */
+.menu-toggle {
+    position: relative;
+    z-index: 10002;
+}
+
+.menu-overlay {
+    z-index: 10001;
 }
