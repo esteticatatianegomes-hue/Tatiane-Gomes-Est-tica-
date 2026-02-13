@@ -17,25 +17,30 @@
 
 <body>
 
-    <!-- Simplified Header -->
-    <header class="lp-header">
-        <div class="logo">
-            <span class="logo-text" style="font-size: 1.5rem; font-weight: 700;">Tatiane Gomes</span>
-            <span class="logo-subtitle" style="display: block; font-size: 0.8rem; letter-spacing: 2px;">Estética</span>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Tatiane Gomes</span>
+                <span class="logo-subtitle">Estética</span>
+            </div>
+
+            <div class="nav-actions">
+                <a href="agendamento.html" class="btn-agendar">Agendar</a>
+                <button class="menu-toggle" id="menuToggle">☰ Menu</button>
+            </div>
         </div>
-        <a href="https://wa.me/5511957739880?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20especialista!"
-            class="btn-cta" target="_blank">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M17.472 14.382C17.112 14.382 16.596 14.166 16.068 13.626C15.54 13.086 15.324 12.57 15.324 12.21C15.324 11.85 15.54 11.334 16.068 10.794C16.596 10.254 17.112 10.038 17.472 10.038C17.832 10.038 18.06 10.098 18.276 10.314C18.492 10.53 18.6 10.758 18.6 11.118V13.302C18.6 13.662 18.492 13.89 18.276 14.106C18.06 14.322 17.832 14.382 17.472 14.382ZM12.012 14.382C11.652 14.382 11.136 14.166 10.608 13.626C10.08 13.086 9.864 12.57 9.864 12.21C9.864 11.85 10.08 11.334 10.608 10.794C11.136 10.254 11.652 10.038 12.012 10.038C12.372 10.038 12.6 10.098 12.816 10.314C13.032 10.53 13.14 10.758 13.14 11.118V13.302C13.14 13.662 13.032 13.89 12.816 14.106C12.6 14.322 12.372 14.382 12.012 14.382ZM6.552 14.382C6.192 14.382 5.676 14.166 5.148 13.626C4.62 13.086 4.404 12.57 4.404 12.21C4.404 11.85 4.62 11.334 5.148 10.794C5.676 10.254 6.192 10.038 6.552 10.038C6.912 10.038 7.14 10.098 7.356 10.314C7.572 10.53 7.68 10.758 7.68 11.118V13.302C7.68 13.662 7.572 13.89 7.356 14.106C7.14 14.322 6.912 14.382 6.552 14.382Z"
-                    fill="white" />
-                <path
-                    d="M12 0C5.373 0 0 5.373 0 12C0 14.07 0.546 16.02 1.5 17.724L0.27 22.254C0.198 22.518 0.276 22.8 0.48 23.004C0.636 23.16 0.852 23.25 1.08 23.25C1.152 23.25 1.224 23.238 1.296 23.22L6.156 21.894C7.908 23.214 10.05 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM12 21.75C10.362 21.75 8.796 21.282 7.428 20.4L6.96 20.1L2.838 21.222L4.05 17.382L3.696 16.812C2.634 15.354 2.052 13.632 2.052 11.856C2.052 6.492 6.558 2.1 12 2.1C17.442 2.1 21.948 6.492 21.948 11.856C21.948 17.22 17.442 21.75 12 21.75Z"
-                    fill="white" />
-            </svg>
-            Fale com a Especialista
-        </a>
-    </header>
+    </nav>
+
+    <!-- MENU OVERLAY -->
+    <div class="menu-overlay" id="menuOverlay">
+        <ul class="menu-list">
+            <li><a href="tratamentos-corporais.html">Tratamentos Corporais</a></li>
+            <li><a href="tratamentos-faciais.html">Tratamentos Faciais</a></li>
+            <li><a href="slim-one.html">Slim One</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </div>
 
     <!-- Hero Section -->
     <section class="lp-hero">
@@ -267,6 +272,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
