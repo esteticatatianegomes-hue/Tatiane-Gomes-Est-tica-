@@ -6,7 +6,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'AW-17947496680');
 </script>
 
@@ -14,212 +13,369 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Método LINFACT - Drenagem Linfática com Estímulo Profundo por Tatiane Gomes. Resultados reais e sofisticação.">
-    <title>Método LINFACT | Tatiane Gomes Estética Premium</title>
-    <!-- CSS PRÓPRIO PARA A LANDING PAGE -->
-    <link rel="stylesheet" href="landing-page-premium.css">
+        content="Método LINFACT - Drenagem Linfática com Estímulo Profundo por Tatiane Gomes. Resultados reais, leveza e contorno corporal.">
+    <title>Método LINFACT | Tatiane Gomes Estética</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<body class="premium-lp">
+<body>
 
-    <!-- NAVBAR PREMIUM -->
-    <nav class="premium-nav">
-        <div class="container nav-container">
-            <div class="logo-premium">
-                <span class="name">Tatiane Gomes</span>
-                <span class="sub">Saúde Estética</span>
+    <!-- NAVBAR (mesma do site principal) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <span class="logo-text">Tatiane Gomes</span>
+                <span class="logo-subtitle">Estética</span>
+            </a>
+            <div class="nav-actions">
+                <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20vim%20pelo%20an%C3%BAncio%20do%20M%C3%A9todo%20LINFACT%20e%20quero%20agendar."
+                    class="btn-agendar" target="_blank">Agendar</a>
+                <button class="menu-toggle" id="menuToggle">☰ Menu</button>
             </div>
-            <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20vim%20pelo%20an%C3%BAncio%20do%20M%C3%A9todo%20LINFACT%20e%20quero%20agendar."
-                class="btn-cta" style="padding: 12px 25px; font-size: 0.9rem;" target="_blank">Agendar Sessão</a>
         </div>
     </nav>
 
-    <!-- 1. HERO - IMPACTO IMEDIATO (2 COLUNAS) -->
-    <section class="hero-premium" id="home">
-        <div class="container hero-grid">
-            <div class="hero-text-content">
-                <h1 class="fade-in">Método LINFACT</h1>
-                <h2>Drenagem Linfática com Estímulo Profundo, Alongamento Leve e Respiração Diafragmática Guiada para
-                    ativar seu sistema linfático de forma estratégica.</h2>
-                <div class="hero-cta-wrapper">
+    <!-- MENU OVERLAY -->
+    <div class="menu-overlay" id="menuOverlay">
+        <ul class="menu-list">
+            <li><a href="tratamentos-corporais.html">Tratamentos Corporais</a></li>
+            <li><a href="tratamentos-faciais.html">Tratamentos Faciais</a></li>
+            <li><a href="slim-one.html">Slim One</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- 1. HERO - IMPACTO IMEDIATO -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Método LINFACT</span>
+                    <span class="title-line highlight">Drenagem Linfática com Estímulo Profundo</span>
+                </h1>
+                <p class="hero-subtitle">Alongamento Leve e Respiração Diafragmática Guiada para ativar seu sistema
+                    linfático de forma estratégica. Sinta leveza e melhora do contorno corporal já na primeira
+                    sessão.</p>
+                <div class="hero-buttons">
                     <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20vim%20pelo%20an%C3%BAncio%20do%20M%C3%A9todo%20LINFACT%20e%20quero%20agendar."
-                        class="btn-cta" target="_blank">Agendar minha sessão agora</a>
-                    <p class="hero-reinforcement">Sinta leveza e melhora do contorno corporal já na primeira sessão.</p>
+                        class="btn btn-primary" target="_blank">Quero Agendar Minha Sessão</a>
+                    <a href="#sobre" class="btn btn-secondary">Conheça o Método</a>
                 </div>
             </div>
-            <div class="hero-image-side">
-                <div class="hero-image-wrapper">
-                    <img src="lifestyle-stretch.jpg" alt="Estética de Alto Padrão - Método LINFACT">
+        </div>
+        <div class="scroll-indicator">
+            <span>Role para descobrir</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- 2. IDENTIFICAÇÃO COM A DOR -->
+    <section class="about" id="identificacao">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <span class="section-label">Você se identifica?</span>
+                <h2 class="section-title">Isso não é gordura. É retenção.</h2>
+                <div class="title-underline center"></div>
+                <p class="section-description">Muitas mulheres convivem com sintomas que não são gordura, e sim
+                    sobrecarga do sistema linfático.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3>Inchaço Frequente</h3>
+                    <p>Sensação constante de corpo estufado, principalmente ao acordar e ao final do dia.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🦵</div>
+                    <h3>Pernas Pesadas</h3>
+                    <p>Cansaço e peso nas pernas, especialmente depois de muitas horas sentada ou em pé.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🩺</div>
+                    <h3>Abdômen Estufado</h3>
+                    <p>Barriga inchada mesmo se alimentando bem, sem relação direta com a gordura.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📅</div>
+                    <h3>Retenção Pré-Menstrual</h3>
+                    <p>Inchaço acentuado antes e durante o ciclo menstrual, com desconforto significativo.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="font-size: 1.15rem; max-width: 700px; margin: 0 auto; line-height: 1.8;">
+                    O <strong>Método LINFACT</strong> foi desenvolvido para ativar profundamente o sistema linfático e
+                    auxiliar o corpo a eliminar o excesso de líquidos de forma estratégica.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. O QUE TORNA O MÉTODO DIFERENTE -->
+    <section class="philosophy-section" id="sobre">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <span class="section-label">O Diferencial</span>
+                <h2 class="section-title">Não é uma drenagem comum</h2>
+                <div class="title-underline center"></div>
+            </div>
+
+            <div class="philosophy-row">
+                <div class="philosophy-image">
+                    <img src="profile-photo.jpg" alt="Tatiane Gomes realizando o Método LINFACT"
+                        style="max-height: 400px; object-fit: cover; border-radius: 15px;">
+                </div>
+                <div class="philosophy-content">
+                    <p><strong>Estímulo profundo</strong> do sistema linfático, diferente das drenagens superficiais
+                        convencionais.</p>
+                    <p><strong>Sequência técnica</strong> baseada na fisiologia dos coletores linfáticos, garantindo
+                        eficiência máxima.</p>
+                    <p><strong>Alongamentos leves</strong> que auxiliam na mobilização de líquidos e aliviam a sensação
+                        de corpo travado.</p>
+                    <p><strong>Respiração diafragmática guiada</strong> — o diafragma funciona como uma bomba natural do
+                        sistema linfático. Quando associamos técnica manual e respiração guiada,
+                        <strong>potencializamos o resultado.</strong>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 2. IDENTIFICAÇÃO COM A DOR (BLOCOS PREMIUM) -->
-    <section class="section-padding pain-premium" id="sinais">
+    <!-- CTA INTERMEDIÁRIO -->
+    <section class="cta-section">
         <div class="container">
-            <h2 class="text-center" style="font-size: 3rem;">Isso não é gordura.</h2>
-            <p class="text-center" style="color: var(--premium-text-muted); font-size: 1.2rem; margin-bottom: 20px;">
-                Você sente inchaço ou pernas pesadas?</p>
-            <div class="title-underline center"></div>
-
-            <div class="pain-grid">
-                <div class="pain-card">
-                    <i class="fas fa-tint-slash"></i>
-                    <p>Inchaço frequente e desconfortável</p>
-                </div>
-                <div class="pain-card">
-                    <i class="fas fa-shoe-prints"></i>
-                    <p>Pernas pesadas e cansadas ao final do dia</p>
-                </div>
-                <div class="pain-card">
-                    <i class="fas fa-female"></i>
-                    <p>Abdômen estufado após as refeições</p>
-                </div>
-                <div class="pain-card">
-                    <i class="fas fa-calendar-alt"></i>
-                    <p>Retenção severa no período pré-menstrual</p>
-                </div>
-            </div>
-
-            <div class="text-center" style="margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <p style="font-size: 1.3rem;">O <strong>Método LINFACT</strong> utiliza ciência e ativação fisiológica
-                    para eliminar o excesso de líquidos e devolver a leveza ao seu corpo.</p>
+            <div class="cta-content">
+                <h2>Sinta a diferença já na primeira sessão</h2>
+                <p>Agende agora e descubra o que a ativação linfática estratégica pode fazer pelo seu corpo</p>
+                <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20vim%20pelo%20an%C3%BAncio%20do%20M%C3%A9todo%20LINFACT%20e%20quero%20agendar."
+                    class="btn btn-primary btn-large" target="_blank">Agendar pelo WhatsApp</a>
             </div>
         </div>
     </section>
 
-    <!-- 3. O QUE TORNA DIFERENTE (MECANISMO ÚNICO) -->
-    <section class="section-padding" id="mecanismo">
+    <!-- 4. BENEFÍCIOS -->
+    <section class="services-preview" id="beneficios">
         <div class="container">
-            <h2 class="text-center" style="font-size: 3rem; margin-bottom: 40px;">O Diferencial do Método</h2>
+            <div class="section-header">
+                <span class="section-label">Benefícios</span>
+                <h2 class="section-title">O que você pode sentir após a sessão</h2>
+                <div class="title-underline center"></div>
+                <p class="section-description">Resultados reais relatados pelas nossas clientes</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🍃</div>
+                    <h3>Redução do Inchaço</h3>
+                    <p>Diminuição visível do inchaço em pernas, tornozelos e abdômen.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Leveza Imediata</h3>
+                    <p>Sensação de corpo leve, solto e desinchado logo após a sessão.</p>
+                </div>
+                <div class="service-card featured">
+                    <div class="featured-badge">Destaque</div>
+                    <div class="service-icon">💎</div>
+                    <h3>Contorno Corporal</h3>
+                    <p>Melhora visível da silhueta pela eliminação estratégica de líquidos retidos.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">❤️</div>
+                    <h3>Circulação Ativada</h3>
+                    <p>Alívio nas dores e cansaço das pernas, melhora na circulação geral.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌸</div>
+                    <h3>Auxílio no Lipedema</h3>
+                    <p>Grande aliado no gerenciamento do Lipedema e celulites inflamatórias.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧴</div>
+                    <h3>Melhora da Celulite</h3>
+                    <p>Redução da celulite associada à retenção hídrica e inflamação.</p>
+                </div>
+            </div>
+
+            <div
+                style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: #fff3cd; border-radius: 10px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                <p style="color: #856404; margin: 0;"><strong>Importante:</strong> O Método LINFACT atua na retenção de
+                    líquidos. Não é tratamento para redução de gordura.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PARA QUEM É INDICADO -->
+    <section class="about" id="indicado" style="background: var(--light-green);">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <span class="section-label">Para quem é</span>
+                <h2 class="section-title">O Método LINFACT é indicado para você se:</h2>
+                <div class="title-underline center"></div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3>Retém Líquido</h3>
+                    <p>Mulheres que retêm líquido com facilidade e se sentem estufadas frequentemente.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Trabalho Sedentário</h3>
+                    <p>Passa muitas horas sentada e sente as pernas pesadas ao final do dia.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📅</div>
+                    <h3>Inchaço no Ciclo</h3>
+                    <p>Sofre com retenção acentuada nos períodos pré-menstrual e menstrual.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Busca Resultado Real</h3>
+                    <p>Quer melhora do contorno corporal sem promessas milagrosas ou irreais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SOBRE A PROFISSIONAL -->
+    <section class="about" id="profissional">
+        <div class="container">
             <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="profile-photo.jpg" alt="Tatiane Gomes - Esteticista">
+                        <div class="image-decoration"></div>
+                    </div>
+                    <div class="experience-badge">
+                        <span class="number">7+</span>
+                        <span class="text">Anos de<br>Experiência</span>
+                    </div>
+                </div>
                 <div class="about-content">
-                    <div class="faq-item" style="border: none; padding: 0;">
-                        <h3>Ativação Fisiológica Profunda</h3>
-                        <p>Diferente de drenagens convencionais, o Método LINFACT atua nos coletores linfáticos
-                            profundos através de manobras técnicas precisas.</p>
+                    <span class="section-label">A Especialista</span>
+                    <h2 class="section-title">Tatiane Dias Gomes</h2>
+                    <div class="title-underline"></div>
+                    <div class="about-text">
+                        <p>Esteticista graduada e pós-graduada em <strong>Saúde Estética e Cosmetologia</strong>, com
+                            especialização pela UNIFESP.</p>
+                        <p>Especialista em tratamentos corporais estratégicos com foco em fisiologia e ativação
+                            linfática. Minha abordagem une técnica manual precisa e compreensão profunda do
+                            funcionamento corporal.</p>
+                        <p><strong>Não trabalho com promessas ilusórias. Trabalho com estratégia e ciência aplicada à
+                                estética.</strong></p>
+                        <p>Cada atendimento é pensado de forma individual, respeitando a realidade de vida da cliente e
+                            buscando resultados visíveis e sustentáveis.</p>
                     </div>
-                    <div class="faq-item" style="border: none; padding: 0;">
-                        <h3>Bomba Diafragmática</h3>
-                        <p>A respiração guiada funciona como uma bomba natural, potencializando o retorno linfático de
-                            forma imediata.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-text">
+                                <h4>Atendimento Individual</h4>
+                                <p>Cada sessão é única</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-text">
+                                <h4>Avaliação Personalizada</h4>
+                                <p>Protocolo sob medida</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-text">
+                                <h4>Pós-Graduada</h4>
+                                <p>Saúde Estética e Cosmetologia</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="faq-item" style="border: none; padding: 0;">
-                        <h3>Mobilização Integrada</h3>
-                        <p>Associamos alongamentos estratégicos que liberam as vias de circulação e reduzem a sensação
-                            de corpo "travado".</p>
-                    </div>
-                </div>
-                <div class="professional-photo-wrapper">
-                    <img src="profile-photo.jpg" alt="Tatiane Gomes realizando o Método LINFACT">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. BENEFÍCIOS (BLOCKS PREMIUM) -->
-    <section class="section-padding benefits-premium">
+    <!-- 7. RESULTADOS REAIS (ANTES E DEPOIS) -->
+    <section class="lp-section" id="resultados" style="background: var(--light-green); padding: 80px 20px;">
         <div class="container">
-            <h2 class="text-center" style="font-size: 3rem;">Sinta a Transformação</h2>
-            <div class="title-underline center"></div>
+            <div class="section-header" style="text-align: center;">
+                <span class="section-label">Prova Social</span>
+                <h2 class="section-title">Resultados Reais</h2>
+                <div class="title-underline center"></div>
+                <p class="section-description">Veja a transformação que uma sessão pode proporcionar</p>
+            </div>
 
-            <div class="benefits-grid">
-                <div class="benefit-block">
-                    <i class="fas fa-leaf"></i>
-                    <h4>Leveza Absoluta</h4>
-                    <p>Sensação imediata de corpo desinchado e livre de peso.</p>
+            <div class="ba-gallery">
+                <div class="ba-card">
+                    <img src="corporal2.jpg" alt="Resultado Método LINFACT - Redução de Edema">
+                    <span>Redução de Edema Abdominal</span>
                 </div>
-                <div class="benefit-block">
-                    <i class="fas fa-magic"></i>
-                    <h4>Contorno Corporal</h4>
-                    <p>Melhora visível da silhueta pela eliminação estratégica de líquidos.</p>
-                </div>
-                <div class="benefit-block">
-                    <i class="fas fa-sync-alt"></i>
-                    <h4>Circulação Ativada</h4>
-                    <p>Alívio nas dores e inchaços das pernas e tornozelos.</p>
-                </div>
-                <div class="benefit-block">
-                    <i class="fas fa-gem"></i>
-                    <h4>Aspecto da Pele</h4>
-                    <p>Melhora na textura da celulite associada à retenção hídrica.</p>
+                <div class="ba-card">
+                    <img src="corporal6.jpeg" alt="Resultado Método LINFACT - Contorno Corporal">
+                    <span>Definição do Contorno Corporal</span>
                 </div>
             </div>
 
-            <p class="text-center" style="margin-top: 40px; color: var(--premium-text-muted); font-style: italic;">
-                *Nota: Foco exclusivo em retenção hídrica e ativação linfática. Não é um tratamento para redução de
-                gordura localizada.</p>
+            <!-- Depoimento -->
+            <div
+                style="max-width: 600px; margin: 3rem auto 0; text-align: center; background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                <p style="font-size: 1.1rem; font-style: italic; color: var(--text-dark); line-height: 1.8;">
+                    "Já na primeira sessão senti minhas pernas mais leves e o abdômen menos inchado. Saí outra
+                    pessoa."
+                </p>
+                <p style="margin-top: 1rem; font-weight: 600; color: var(--primary-color);">★★★★★</p>
+            </div>
         </div>
     </section>
 
-    <!-- 5. RESULTADOS (PROTAGONISTAS) -->
-    <section class="section-padding results-premium">
+    <!-- CTA INTERMEDIÁRIO 2 -->
+    <section class="cta-section">
         <div class="container">
-            <h2 class="text-center" style="font-size: 3rem;">Resultados em uma Única Sessão</h2>
-            <p class="text-center" style="margin-bottom: 40px; opacity: 0.8;">A ciência aplicada à estética gera
-                mudanças reais e imediatas.</p>
-
-            <div class="results-grid">
-                <div class="results-item">
-                    <img src="corporal2.jpg" alt="Resultado Método LINFACT 1">
-                    <div class="results-caption">Redução de Edema Abdominal</div>
-                </div>
-                <div class="results-item">
-                    <img src="corporal6.jpeg" alt="Resultado Método LINFACT 2">
-                    <div class="results-caption">Definição do Contorno Corporal</div>
-                </div>
-            </div>
-
-            <div class="text-center" style="margin-top: 50px;">
+            <div class="cta-content">
+                <h2>Quer resultados como esses?</h2>
+                <p>Agende sua sessão e sinta a transformação no seu corpo</p>
                 <a href="https://wa.me/5511957739880?text=Quero%20ter%20resultados%20como%20esses%20com%20o%20M%C3%A9todo%20LINFACT."
-                    class="btn-cta" style="background: var(--premium-gold);">Quero esses resultados</a>
+                    class="btn btn-primary btn-large" target="_blank">Quero Agendar Agora</a>
             </div>
         </div>
     </section>
 
-    <!-- 6. SOBRE A PROFISSIONAL (INTEGRADO) -->
-    <section class="section-padding about-premium">
-        <div class="container about-grid">
-            <div class="professional-photo-wrapper">
-                <img src="profile-photo.jpg" alt="Tatiane Dias Gomes">
-            </div>
-            <div class="about-content">
-                <h3>A Especialista</h3>
-                <h2>Tatiane Dias Gomes</h2>
-                <p>Esteticista graduada e pós-graduada em Saúde Estética e Cosmetologia. Especialista em tratamentos
-                    corporais estratégicos com foco em fisiologia e ativação linfática.</p>
-                <p><strong>Minha missão é entregar resultados reais através de técnica manual precisa e compreensão
-                        profunda do funcionamento corporal.</strong></p>
-                <p>Não trabalho com promessas ilusórias. Trabalho com estratégia e ciência aplicada à estética para
-                    mulheres que buscam o mais alto padrão de cuidado.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. FAQ -->
-    <section class="section-padding faq-premium">
+    <!-- 8. DÚVIDAS FREQUENTES -->
+    <section class="about" id="faq-section">
         <div class="container">
-            <h2>Dúvidas Frequentes</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>O procedimento é doloroso?</h3>
+            <div class="section-header" style="text-align: center;">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title">Dúvidas Frequentes</h2>
+                <div class="title-underline center"></div>
+            </div>
+
+            <div style="max-width: 700px; margin: 0 auto;">
+                <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #eee;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">O procedimento é doloroso?</h3>
                     <p>Absolutamente não. O estímulo é profundo porém extremamente confortável, respeitando sempre a
                         fisiologia e o limite do seu corpo.</p>
                 </div>
-                <div class="faq-item">
-                    <h3>Quantas sessões eu preciso?</h3>
+                <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #eee;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Quantas sessões eu preciso?</h3>
                     <p>Os resultados são percebidos já na primeira sessão. A frequência ideal depende do seu estilo de
                         vida e grau de retenção, o que avaliamos juntas no primeiro encontro.</p>
                 </div>
-                <div class="faq-item">
-                    <h3>Serve para quem tem Lipedema?</h3>
+                <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #eee;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Emagrece?</h3>
+                    <p>Não reduz gordura. Atua na retenção de líquidos e melhora o aspecto corporal de forma real e
+                        honesta.</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Serve para quem tem Lipedema?</h3>
                     <p>Sim. O Método LINFACT é um grande aliado no gerenciamento do Lipedema e das celulites
                         inflamatórias.</p>
                 </div>
@@ -228,28 +384,85 @@
     </section>
 
     <!-- 9. OFERTA FINAL -->
-    <section class="section-padding offer-premium">
+    <section class="cta-section" id="oferta">
         <div class="container">
-            <div class="offer-box">
-                <h2>Comece sua Jornada</h2>
-                <p class="offer-price">Avaliação Corporal Personalizada Inclusa na Primeira Sessão.</p>
-                <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20quero%20agendar%20minha%20sess%C3%A3o%20premium%20do%20M%C3%A9todo%20LINFACT."
-                    class="btn-cta">Agendar Sessão VIP</a>
-                <p style="margin-top: 30px; opacity: 0.7; font-size: 0.9rem;">Atendimento exclusivo em São Paulo | Alto
-                    da Boa Vista</p>
+            <div class="cta-content">
+                <h2>Primeira sessão com avaliação corporal inclusa</h2>
+                <p>Se você quer se sentir mais leve, menos inchada e com o corpo mais solto, agende agora sua sessão do
+                    <strong>Método LINFACT</strong>.
+                </p>
+                <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20vim%20pelo%20an%C3%BAncio%20do%20M%C3%A9todo%20LINFACT%20e%20quero%20agendar%20minha%20primeira%20sess%C3%A3o."
+                    class="btn btn-primary btn-large" target="_blank">Agendar pelo WhatsApp</a>
             </div>
         </div>
     </section>
 
-    <footer style="padding: 40px 0; text-align: center; background: #222; color: #777; font-size: 0.8rem;">
-        <p>&copy; 2026 Tatiane Gomes Estética | Método LINFACT. Todos os direitos reservados.</p>
+    <!-- MAPA -->
+    <section class="map-section">
+        <div class="map-placeholder">
+            <div class="map-content">
+                <h3>📍 Localização</h3>
+                <p>Rua Bela Vista, 580 - Clínica OEquilibrio</p>
+                <p>Santo Amaro - São Paulo/SP</p>
+                <p class="map-note">Próximo ao metrô Borba Gato - Linha 5 Lilás</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (mesmo do site principal) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Tatiane Gomes Estética</h3>
+                    <p>Cuidando da sua beleza com profissionalismo e dedicação.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html#sobre">Sobre</a></li>
+                        <li><a href="tratamentos-corporais.html">Tratamentos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="landing-page.html" style="color: #c7a17a; font-weight: bold;">★ Método
+                                LINFACT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="contato.html">Entre em Contato</a></li>
+                        <li><a href="agendamento.html">Agendar Consulta</a></li>
+                        <li><a href="faq.html">Perguntas Frequentes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tatiane Gomes Estética. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
 
-    <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/5511957739880" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+    <!-- FLOAT WHATSAPP -->
+    <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20vim%20pelo%20an%C3%BAncio%20do%20M%C3%A9todo%20LINFACT%20e%20quero%20agendar."
+        class="whatsapp-float" target="_blank"
+        style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 5px 20px rgba(37,211,102,0.4); z-index: 1000; text-decoration: none; transition: transform 0.3s;">
+        💬
     </a>
 
+    <script src="script.js"></script>
+    <script>
+        const toggle = document.getElementById('menuToggle');
+        const overlay = document.getElementById('menuOverlay');
+
+        toggle.addEventListener('click', () => {
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+    </script>
 </body>
 
 </html>
