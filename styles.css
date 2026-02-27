@@ -3034,6 +3034,12 @@ body.lp-body {
     box-shadow: 0 15px 30px var(--shadow-medium);
 }
 
+@media (min-width: 768px) {
+    .result-item {
+        max-width: 380px;
+    }
+}
+
 .result-item img {
     width: 100%;
     height: auto;
