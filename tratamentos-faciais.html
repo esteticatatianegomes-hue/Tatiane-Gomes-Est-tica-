@@ -12,33 +12,54 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17947496680"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-17947496680', {
+            'linker': {
+                'domains': ['api.whatsapp.com']
+            }
+        });
+    </script>
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav id="navbar" class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+
+            <div class="logo">
                 <span class="logo-text">Tatiane Gomes</span>
                 <span class="logo-subtitle">Estética</span>
-            </a>
-
-            <div class="nav-actions">
-                <a href="agendamento.html" class="btn-agendar">Agendar</a>
-                <button class="menu-toggle" id="menuToggle">☰ Menu</button>
             </div>
+
+            <a href="agendamento.html" class="btn-agendar">Agendar</a>
+
+            <div class="menu-toggle" id="menu-toggle">
+                ☰ Menu
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Início</a></li>
+
+                <li class="dropdown">
+                    <a href="#">Tratamentos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tratamentos-corporais.html">Tratamentos Corporais</a></li>
+                        <li><a href="tratamentos-faciais.html">Tratamentos Faciais</a></li>
+                        <li><a href="slim-one.html">Slim One</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+
         </div>
     </nav>
-
-    <!-- MENU OVERLAY -->
-    <div class="menu-overlay" id="menuOverlay">
-        <ul class="menu-list">
-            <li><a href="tratamentos-corporais.html">Tratamentos Corporais</a></li>
-            <li><a href="tratamentos-faciais.html">Tratamentos Faciais</a></li>
-            <li><a href="slim-one.html">Slim One</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </div>
 
 
     <!-- Page Header -->
@@ -250,15 +271,3 @@
 </body>
 
 </html>
-    <script>
-        const toggle = document.getElementById('menuToggle');
-        const overlay = document.getElementById('menuOverlay');
-
-        toggle.addEventListener('click', () => {
-            overlay.classList.toggle('active');
-        });
-
-        overlay.addEventListener('click', () => {
-            overlay.classList.remove('active');
-        });
-    </script>
