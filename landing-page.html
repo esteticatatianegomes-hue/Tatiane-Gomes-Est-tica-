@@ -39,7 +39,8 @@
             </a>
             <div class="nav-actions">
                 <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20vim%20pelo%20an%C3%BAncio%20do%20M%C3%A9todo%20LINFACT%20e%20quero%20agendar."
-                    class="btn-agendar" target="_blank">Agendar</a>
+                    class="btn-agendar" target="_blank"
+                    onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Agendar</a>
                 <button class="menu-toggle" id="menuToggle">☰ Menu</button>
             </div>
         </div>
@@ -70,7 +71,9 @@
                     sessão.</p>
                 <div class="hero-buttons">
                     <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20vim%20pelo%20an%C3%BAncio%20do%20M%C3%A9todo%20LINFACT%20e%20quero%20agendar."
-                        class="btn btn-primary" target="_blank">Quero Agendar Minha Sessão</a>
+                        class="btn btn-primary" target="_blank"
+                        onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Quero Agendar Minha
+                        Sessão</a>
                     <a href="#sobre" class="btn btn-secondary">Conheça o Método</a>
                 </div>
             </div>
@@ -161,7 +164,8 @@
                 <h2>Sinta a diferença já na primeira sessão</h2>
                 <p>Agende agora e descubra o que a ativação linfática estratégica pode fazer pelo seu corpo</p>
                 <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20vim%20pelo%20an%C3%BAncio%20do%20M%C3%A9todo%20LINFACT%20e%20quero%20agendar."
-                    class="btn btn-primary btn-large" target="_blank">Agendar pelo WhatsApp</a>
+                    class="btn btn-primary btn-large" target="_blank"
+                    onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Agendar pelo WhatsApp</a>
             </div>
         </div>
     </section>
@@ -349,7 +353,8 @@
                 <h2>Quer resultados como esses?</h2>
                 <p>Agende sua sessão e sinta a transformação no seu corpo</p>
                 <a href="https://wa.me/5511957739880?text=Quero%20ter%20resultados%20como%20esses%20com%20o%20M%C3%A9todo%20LINFACT."
-                    class="btn btn-primary btn-large" target="_blank">Quero Agendar Agora</a>
+                    class="btn btn-primary btn-large" target="_blank"
+                    onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Quero Agendar Agora</a>
             </div>
         </div>
     </section>
@@ -397,7 +402,8 @@
                     <strong>Método LINFACT</strong>.
                 </p>
                 <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20vim%20pelo%20an%C3%BAncio%20do%20M%C3%A9todo%20LINFACT%20e%20quero%20agendar%20minha%20primeira%20sess%C3%A3o."
-                    class="btn btn-primary btn-large" target="_blank">Agendar pelo WhatsApp</a>
+                    class="btn btn-primary btn-large" target="_blank"
+                    onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Agendar pelo WhatsApp</a>
             </div>
         </div>
     </section>
@@ -451,10 +457,26 @@
     <!-- FLOAT WHATSAPP -->
     <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20vim%20pelo%20an%C3%BAncio%20do%20M%C3%A9todo%20LINFACT%20e%20quero%20agendar."
         class="whatsapp-float" target="_blank"
-        style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 5px 20px rgba(37,211,102,0.4); z-index: 1000; text-decoration: none; transition: transform 0.3s;">
+        style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 5px 20px rgba(37,211,102,0.4); z-index: 1000; text-decoration: none; transition: transform 0.3s;"
+        onclick="return gtag_report_conversion('https://wa.me/5511957739880')">
         💬
     </a>
 
+    <!-- Event snippet for WhatsApp conversion -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17947496680/hUBdCOX99oMcEOihhO5C',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
     <script src="script.js"></script>
     <script>
         const toggle = document.getElementById('menuToggle');

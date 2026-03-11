@@ -130,7 +130,8 @@
                         </p>
 
                         <a href="https://wa.me/5511957739880" target="_blank" class="btn btn-primary btn-large"
-                            style="background-color: #25D366; color: white; display: inline-flex; align-items: center; gap: 10px;">
+                            style="background-color: #25D366; color: white; display: inline-flex; align-items: center; gap: 10px;"
+                            onclick="return gtag_report_conversion('https://wa.me/5511957739880')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="currentColor">
                                 <path
@@ -187,6 +188,21 @@
         </div>
     </footer>
 
+    <!-- Event snippet for WhatsApp conversion -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17947496680/hUBdCOX99oMcEOihhO5C',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 
