@@ -72,6 +72,7 @@
                     <p style="font-size: 0.95rem; line-height: 1.4; margin-bottom: 15px; color: var(--text-light); font-style: italic;">Clique no botão e abra uma conversa comigo com a mensagem já pronta. É só enviar e pronto.</p>
                     <a href="https://wa.me/5511957739880?text=Oi%2C+quero+eliminar+minha+gordura+localizada" class="btn btn-whatsapp-destaque" target="_blank"
                         onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Quero eliminar minha gordura localizada (me chama no WhatsApp)</a>
+                    <a href="#avaliacao-form" class="btn btn-premium" style="display: block; margin-top: 15px; width: fit-content;" onclick="document.getElementById('avaliacao-form').scrollIntoView({behavior: 'smooth'}); return false;">Quero entender meu caso</a>
                 </div>
                 <p
                     style="font-size: 0.95rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500; font-family: 'Montserrat', sans-serif;">
@@ -115,6 +116,40 @@
         </div>
     </section>
 
+    <!-- Form Section -->
+    <section id="avaliacao-form" class="form-section" style="padding: 80px 0; background-color: #ffffff;">
+        <div class="container text-center" style="max-width: 600px; margin: 0 auto;">
+            <h2 class="section-title">Descubra o que está travando o seu resultado</h2>
+            <div class="title-underline center"></div>
+            <p style="font-size: 1.15rem; line-height: 1.6; margin-top: 20px; margin-bottom: 40px; color: var(--text);">
+                Preencha rápido e eu te explico o melhor caminho para o seu caso
+            </p>
+            <form id="leadForm" style="text-align: left; background: #fdfbf7; padding: 30px; border-radius: 12px; border: 1px solid rgba(196, 154, 69, 0.3);">
+                <div style="margin-bottom: 20px;">
+                    <label for="nome" style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">Nome</label>
+                    <input type="text" id="nome" name="nome" required style="width: 100%; box-sizing: border-box; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit; font-size: 1rem;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="whatsapp" style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">WhatsApp</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" required style="width: 100%; box-sizing: border-box; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit; font-size: 1rem;">
+                </div>
+                <div style="margin-bottom: 25px;">
+                    <label for="incomodo" style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">O que mais te incomoda?</label>
+                    <select id="incomodo" name="incomodo" required style="width: 100%; box-sizing: border-box; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit; font-size: 1rem; background-color: #fff;">
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="gordura localizada">Gordura localizada</option>
+                        <option value="celulite">Celulite</option>
+                        <option value="flacidez">Flacidez</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-whatsapp-destaque" style="width: 100%; box-sizing: border-box; cursor: pointer; border: none; font-size: 1.1rem;">Quero minha avaliação</button>
+                <div id="formMessage" style="display: none; margin-top: 20px; padding: 15px; background-color: #d4edda; color: #155724; border-radius: 6px; text-align: center; font-weight: 500;">
+                    Recebi suas informações. Vou analisar seu caso e entrar em contato com você pelo WhatsApp.
+                </div>
+            </form>
+        </div>
+    </section>
+
     <!-- About the Method (Slim One) -->
     <section class="method-section">
         <div class="container method-container">
@@ -130,6 +165,9 @@
                         é um procedimento isolado.</strong></p>
                 <p style="font-size: 1.15rem; line-height: 1.6; color: var(--text);"><strong>É um plano estruturado para
                         redefinição corporal.</strong></p>
+                <div style="display: flex; justify-content: center; margin-top: 40px;">
+                    <iframe src="https://www.youtube.com/embed/px2JgGJ-jyE" width="320" height="568" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -235,10 +273,7 @@
             <h2 class="section-title">Por que muitas mulheres treinam e mesmo assim a barriga não vai embora?</h2>
             <div class="title-underline center"></div>
             <div style="display: flex; justify-content: center; margin-top: 40px;">
-                <iframe src="https://www.instagram.com/reel/DJsAItSMwGV/embed" autoplay muted playsinline width="320"
-                    height="540" frameborder="0" scrolling="no" allowtransparency="true"
-                    style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"
-                    allow="autoplay; encrypted-media"></iframe>
+                <iframe src="https://www.youtube.com/embed/8LL8qqhS5ag" width="320" height="568" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
             </div>
         </div>
     </section>
@@ -430,6 +465,7 @@
             <div style="margin-top: 20px;">
                 <a href="https://wa.me/5511957739880?text=Oi%2C+quero+eliminar+minha+gordura+localizada" class="btn btn-whatsapp-destaque" target="_blank"
                     onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Quero eliminar minha gordura localizada (me chama no WhatsApp)</a>
+                <a href="#avaliacao-form" class="btn btn-premium" style="display: block; margin-top: 15px; width: fit-content; margin-left: auto; margin-right: auto;" onclick="document.getElementById('avaliacao-form').scrollIntoView({behavior: 'smooth'}); return false;">Prefiro que você me chame</a>
             </div>
         </div>
     </section>
@@ -548,6 +584,37 @@
             });
             return false;
         }
+    </script>
+    <script>
+        document.getElementById("leadForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            var btn = this.querySelector('button[type="submit"]');
+            var originalText = btn.innerText;
+            btn.innerText = "Enviando...";
+            btn.disabled = true;
+
+            var formData = new FormData(this);
+            formData.append("_subject", "Novo lead - Avaliação estética");
+            formData.append("_captcha", "false");
+            
+            fetch("https://formsubmit.co/ajax/EsteticaTatianeGomes@gmail.com", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("formMessage").style.display = "block";
+                this.reset();
+                btn.innerText = originalText;
+                btn.disabled = false;
+            })
+            .catch(error => {
+                alert("Ocorreu um erro ao enviar. Por favor, tente novamente ou chame no WhatsApp.");
+                btn.innerText = originalText;
+                btn.disabled = false;
+            });
+        });
     </script>
     <script src="script.js"></script>
 </body>
