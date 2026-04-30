@@ -62,18 +62,97 @@
     </nav>
 
 
+    <!-- Estilos específicos para a primeira dobra responsiva -->
+    <style>
+        .page-header-custom {
+            height: auto !important;
+            min-height: 100vh !important;
+            padding: 140px 20px 60px 20px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            align-items: center !important;
+            overflow: visible !important;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-green) 100%);
+            position: relative;
+            box-sizing: border-box;
+        }
+        .section-header-custom {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .section-header-custom h1 {
+            font-size: clamp(28px, 5vw, 56px) !important;
+            line-height: 1.1 !important;
+            margin-bottom: 20px;
+            color: white;
+            word-wrap: break-word;
+        }
+        .section-header-custom p {
+            font-size: clamp(16px, 2.5vw, 20px) !important;
+            line-height: 1.5 !important;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-custom {
+            background-color: #25D366 !important;
+            color: white !important;
+            border: none !important;
+            font-weight: bold !important;
+            margin-bottom: 30px !important;
+            display: inline-flex !important;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        .benefits-list-custom {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            color: #ffffff !important;
+            opacity: 1 !important;
+            text-align: left;
+            max-width: 400px;
+            font-size: clamp(16px, 2vw, 18px);
+            line-height: 1.6;
+        }
+        .benefits-list-custom li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+        @media (max-width: 600px) {
+            .cta-custom {
+                width: 100% !important;
+                max-width: 320px !important;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+
     <!-- Page Header -->
-    <section class="page-header">
-        <div class="page-header-overlay"></div>
-        <div class="section-header" style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
-            <h1 style="margin-bottom: 20px;">Limpeza de Pele Profunda em São Paulo</h1>
-            <p style="margin-bottom: 30px; font-size: 1.2rem; line-height: 1.6;">Remova cravos, controle a oleosidade e devolva o aspecto saudável da sua pele com atendimento profissional e personalizado.</p>
-            <div style="margin-top: 20px;">
-                <a href="https://wa.me/5511957739880?text=Olá,%20quero%20agendar%20limpeza%20de%20pele" class="btn btn-primary btn-large" style="background-color: #25D366; color: white; border: none; font-weight: bold; margin-bottom: 30px; display: inline-block;">Agendar pelo WhatsApp</a>
-                <ul style="list-style: none; padding: 0; color: #fff; font-size: 1.1rem; text-align: left; max-width: 400px; margin: 0 auto; line-height: 1.8;">
-                    <li><span style="color: #25D366; margin-right: 10px;">✔</span> Remoção de cravos sem agressão</li>
-                    <li><span style="color: #25D366; margin-right: 10px;">✔</span> Controle da oleosidade e acne</li>
-                    <li><span style="color: #25D366; margin-right: 10px;">✔</span> Pele mais limpa, uniforme e saudável</li>
+    <section class="page-header-custom">
+        <div class="page-header-overlay" style="overflow: visible; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg width=\"100\" height=\"100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"50\" r=\"1\" fill=\"rgba(235,241,229,0.1)\"/></svg>'); opacity: 0.3; z-index: 1;"></div>
+        <div class="section-header-custom">
+            <h1>Limpeza de Pele Profunda em São Paulo</h1>
+            <p>Remova cravos, controle a oleosidade e devolva o aspecto saudável da sua pele com atendimento profissional e personalizado.</p>
+            <div style="margin-top: 20px; width: 100%;">
+                <a href="https://wa.me/5511957739880?text=Olá,%20quero%20agendar%20limpeza%20de%20pele" class="cta-custom">Agendar pelo WhatsApp</a>
+                <ul class="benefits-list-custom">
+                    <li><span style="color: #25D366; margin-right: 10px; font-weight: bold;">✔</span> Remoção de cravos sem agressão</li>
+                    <li><span style="color: #25D366; margin-right: 10px; font-weight: bold;">✔</span> Controle da oleosidade e acne</li>
+                    <li><span style="color: #25D366; margin-right: 10px; font-weight: bold;">✔</span> Pele mais limpa, uniforme e saudável</li>
                 </ul>
             </div>
         </div>
@@ -195,7 +274,7 @@
             </p>
             
             <div style="background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); display: inline-block; max-width: 100%;">
-                <img src="dep1.jpeg" alt="Depoimento de cliente" style="max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
+                <img src="avaliacao-maria.jpeg" alt="Depoimento de Maria Elisa Freitas" style="max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
                 <p style="margin-top: 20px; font-size: 1rem; color: #555; font-style: italic;">Cliente atendida com limpeza de pele e microagulhamento.</p>
             </div>
         </div>
