@@ -1,0 +1,1052 @@
+/* ==========================================================================
+   TATIANE GOMES ESTÉTICA - LANDING PAGE PREMIUM CSS
+   ABORDAGEM: MOBILE-FIRST, DESIGN EDITORIAL, RESPOSTA DIRETA
+   ========================================================================== */
+
+/* 1. VARIÁVEIS & DESIGN TOKENS */
+:root {
+    /* Cores Hexadecimais Exatas */
+    --bg-canvas: #F9F8F6;          /* Off-White / Fendi Claro (Fundo Principal) */
+    --bg-white: #FFFFFF;           /* Branco Puro (Blocos de Destaque) */
+    --color-text: #1A1A1A;         /* Grafite Ultra-Escuro (Texto e Títulos) */
+    --color-accent: #8C7863;       /* Bronze Fosco / Taupe (Destaques e Apoio) */
+    --color-cta: #2A2A2A;          /* Botão Escuro Imponente */
+    --color-cta-hover: #000000;    /* Hover do CTA */
+    --color-whatsapp: #0D5C3A;     /* Verde Profundo Institucional (Conversão) */
+    --color-whatsapp-hover: #064026;
+    
+    /* Tipografia */
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+    /* Transições */
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 2. RESET & REGRAS GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-canvas);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Editorial Spacing (Whitespace) */
+section {
+    padding: 80px 0;
+}
+
+/* 3. TIPOGRAFIA & HIERARQUIA VISUAL */
+h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+p, li, span, a {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+}
+
+.section-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-accent);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 16px;
+    color: var(--color-text);
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 48px auto;
+    color: #555555;
+    font-weight: 400;
+}
+
+/* 4. BOTÕES & LINKS (CTA) */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-cta);
+    color: var(--bg-white);
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 18px 36px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--color-cta-hover);
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+    background-color: var(--color-whatsapp);
+}
+
+.btn-whatsapp:hover {
+    background-color: var(--color-whatsapp-hover);
+}
+
+/* Link Instagram */
+.instagram-link-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    opacity: 0.85;
+}
+
+.instagram-link:hover {
+    color: var(--color-accent);
+    opacity: 1;
+}
+
+.instagram-link svg {
+    fill: currentColor;
+    width: 18px;
+    height: 18px;
+}
+
+/* Sticky Mobile Button */
+.sticky-cta-mobile {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 9999;
+    transform: translateY(150px);
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.sticky-cta-mobile.active {
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.sticky-cta-mobile .btn {
+    background-color: var(--color-whatsapp);
+    box-shadow: 0 8px 30px rgba(13, 92, 58, 0.3);
+    padding: 16px 24px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 5. NAVEGAÇÃO / NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(249, 248, 246, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(140, 120, 99, 0.08);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.logo-text {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.logo-subtitle {
+    font-size: 0.7rem;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-accent);
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-actions .btn-agendar {
+    display: none; /* Desktop only */
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text);
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(26, 26, 26, 0.1);
+    transition: var(--transition);
+}
+
+.menu-toggle:hover {
+    border-color: var(--color-text);
+}
+
+/* Menu Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-canvas);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-list {
+    list-style: none;
+    text-align: center;
+    width: 100%;
+}
+
+.menu-list li {
+    margin-bottom: 24px;
+}
+
+.menu-list a {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 400;
+}
+
+.menu-list a:hover {
+    color: var(--color-accent);
+    padding-left: 10px;
+}
+
+/* 6. SEÇÃO 1: HERO / DOBRA PRINCIPAL */
+.hero {
+    min-height: 95vh;
+    padding-top: 120px;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-canvas);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('tati profissional.jpg');
+    background-size: cover;
+    background-position: center top;
+    opacity: 0.15; /* Opacidade suave para priorizar leitura no celular */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2rem; /* Mobile 32px aproximado */
+    font-weight: 500;
+    margin-bottom: 24px;
+    color: var(--color-text);
+    line-height: 1.25;
+}
+
+.hero-subtitle {
+    font-size: 1rem; /* Mobile 16px */
+    font-weight: 400;
+    color: #4A4A4A;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.hero-cta-box {
+    margin-bottom: 24px;
+}
+
+/* 7. SEÇÃO 2: O PROTOCOLO ASSINATURA (SLIMONE) */
+.slimone-section {
+    background-color: var(--bg-white); /* Fundo branco puro para contrastar */
+}
+
+.slimone-box {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid var(--color-accent); /* Borda fina bronze fosco */
+    padding: 40px 24px;
+    text-align: center;
+    position: relative;
+}
+
+.slimone-box::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 1px solid rgba(140, 120, 99, 0.15);
+    pointer-events: none;
+}
+
+.slimone-title {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    color: var(--color-text);
+}
+
+.slimone-text {
+    font-size: 1rem;
+    color: #4A4A4A;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* 8. SEÇÃO 3: PROVA SOCIAL VISUAL (ANTES E DEPOIS) */
+.carousel-section {
+    background-color: var(--bg-canvas);
+}
+
+.carousel-outer {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: var(--transition);
+}
+
+.carousel-slide {
+    min-width: 100%;
+    padding: 10px;
+}
+
+.carousel-slide-content {
+    background-color: var(--bg-white);
+    border: 1px solid rgba(140, 120, 99, 0.1);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-image-wrapper {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.carousel-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    text-align: center;
+}
+
+/* Setas do Carrossel */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.carousel-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-text);
+    cursor: pointer;
+    padding: 10px;
+    transition: var(--transition);
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    opacity: 1;
+    color: var(--color-accent);
+}
+
+/* 9. SEÇÃO 4: MENU DE PROTOCOLOS PREMIUM */
+.menu-section {
+    background-color: var(--bg-white);
+}
+
+/* Mobile Accordions */
+.protocols-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid rgba(140, 120, 99, 0.15);
+}
+
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--color-text);
+    cursor: pointer;
+    text-align: left;
+}
+
+.accordion-icon {
+    font-size: 1.1rem;
+    font-weight: 300;
+    transition: var(--transition);
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.accordion-body {
+    padding-bottom: 20px;
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* Desktop Grid (Escondido no Mobile por padrão) */
+.protocols-grid {
+    display: none;
+}
+
+/* 10. SEÇÃO 5: AUTORIDADE MÁXIMA */
+.about-section {
+    background-color: var(--bg-canvas);
+}
+
+.about-grid-custom {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.about-photo-col {
+    width: 100%;
+}
+
+.about-photo-wrapper {
+    position: relative;
+    border: 1px solid rgba(140, 120, 99, 0.2);
+    padding: 12px;
+    background-color: var(--bg-white);
+}
+
+.about-photo-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.about-text-col {
+    width: 100%;
+}
+
+.about-bio-title {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    color: var(--color-text);
+    position: relative;
+}
+
+.about-bio-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 1.5px;
+    background-color: var(--color-accent);
+    margin-top: 16px;
+}
+
+.about-bio-text p {
+    font-size: 0.95rem;
+    color: #4A4A4A;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.about-bio-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* 11. SEÇÃO 6: O AMBIENTE DA CLÍNICA */
+.space-section {
+    background-color: var(--bg-white);
+}
+
+.space-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px; /* Espaçamento fino de 4px conforme solicitado */
+}
+
+.space-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+
+.space-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.space-item:hover img {
+    transform: scale(1.05);
+}
+
+/* 12. SEÇÃO 7: PROVA SOCIAL INSTITUCIONAL */
+.reviews-section {
+    background-color: var(--bg-canvas);
+}
+
+.reviews-widget {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--bg-white);
+    border: 1px solid rgba(140, 120, 99, 0.1);
+    padding: 32px 24px;
+}
+
+.reviews-header-widget {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 20px;
+}
+
+.google-logo-custom {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-text);
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.google-logo-custom span {
+    color: #4285F4; /* Azul Google */
+}
+
+.google-rating-info {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.google-stars {
+    color: var(--color-accent); /* Bronze / Dourado fosco */
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
+
+.reviews-list-widget {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.review-item-widget {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 24px;
+}
+
+.review-item-widget:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.review-meta-widget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.review-user-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.review-stars {
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.review-text-widget {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* 13. SEÇÃO 8: RODAPÉ E CTA DE ENCERRAMENTO */
+.footer {
+    background-color: #1A1A1A; /* Grafite escuro */
+    color: var(--bg-canvas); /* Textos claros */
+    padding: 80px 0 40px 0;
+}
+
+.footer-grid-custom {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin-bottom: 60px;
+}
+
+.footer-info-col h3 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: var(--bg-canvas);
+}
+
+.footer-info-col p {
+    font-size: 0.95rem;
+    color: #B3B3B3;
+    margin-bottom: 16px;
+}
+
+.footer-address-list {
+    list-style: none;
+    margin-top: 24px;
+}
+
+.footer-address-list li {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.footer-address-list strong {
+    color: var(--bg-canvas);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.footer-address-list span {
+    color: #CCCCCC;
+}
+
+.footer-hours-col h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--bg-canvas);
+}
+
+.footer-hours-list {
+    list-style: none;
+}
+
+.footer-hours-list li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    color: #CCCCCC;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 8px;
+}
+
+.footer-hours-list li strong {
+    color: var(--bg-canvas);
+}
+
+.footer-maps-col {
+    width: 100%;
+}
+
+.footer-map-wrapper {
+    margin-bottom: 20px;
+}
+
+/* Google Maps Estilizado em Grayscale */
+.footer-map-wrapper iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    filter: grayscale(1) invert(0.9) contrast(1.2);
+    -webkit-filter: grayscale(1) invert(0.9) contrast(1.2);
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.footer-map-wrapper iframe:hover {
+    opacity: 1;
+}
+
+.footer-bottom-custom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+.footer-bottom-custom p {
+    font-size: 0.8rem;
+    color: #888888;
+}
+
+.footer-links-discretos {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links-discretos a {
+    color: #888888;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.footer-links-discretos a:hover {
+    color: var(--bg-canvas);
+}
+
+/* ==========================================================================
+   14. RESPONSIVIDADE E ADAPTAÇÃO PARA DESKTOP (1440px / > 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
+    /* Tipografia Desktop */
+    .section-title {
+        font-size: 2.8rem;
+        margin-bottom: 24px;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 64px;
+    }
+
+    /* Navbar Desktop */
+    .nav-actions .btn-agendar {
+        display: inline-flex;
+        background-color: var(--color-cta);
+        color: var(--bg-white);
+        text-decoration: none;
+        font-family: var(--font-sans);
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 12px 24px;
+        border-radius: 4px;
+        transition: var(--transition);
+    }
+    
+    .nav-actions .btn-agendar:hover {
+        background-color: var(--color-cta-hover);
+    }
+
+    /* Hero Desktop (Grid Assimétrico 2 Colunas) */
+    .hero {
+        min-height: 90vh;
+        padding-top: 80px;
+    }
+    
+    .hero-overlay {
+        display: none; /* Não precisa de imagem em baixa opacidade cobrindo tudo */
+    }
+    
+    .hero-content .container {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 60px;
+        align-items: center;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+    }
+    
+    .hero-title {
+        font-size: 3rem; /* Desktop 48px */
+        margin-bottom: 24px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem; /* Desktop 18px */
+        margin-bottom: 40px;
+    }
+    
+    .hero-cta-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .hero-cta-box .btn {
+        width: auto;
+        padding: 20px 48px;
+    }
+    
+    .instagram-link-wrapper {
+        justify-content: flex-start;
+        margin-top: 16px;
+    }
+    
+    /* Coluna Direita da Hero com Imagem da Especialista */
+    .hero-image-desktop {
+        display: block !important;
+        position: relative;
+        height: 600px;
+        overflow: hidden;
+        border: 1px solid rgba(140, 120, 99, 0.15);
+        background-color: var(--bg-white);
+        padding: 16px;
+    }
+    
+    .hero-image-desktop img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    /* SlimOne Box Desktop */
+    .slimone-box {
+        padding: 64px 80px;
+    }
+    
+    .slimone-title {
+        font-size: 2.2rem;
+    }
+    
+    /* Protocolos Grid Desktop (Substitui Accordions) */
+    .protocols-accordion {
+        display: none; /* Esconde accordions */
+    }
+    
+    .protocols-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 por linha */
+        gap: 24px;
+    }
+    
+    .protocol-card {
+        background-color: var(--bg-white);
+        border: 1px solid rgba(140, 120, 99, 0.12);
+        padding: 32px;
+        border-radius: 4px;
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .protocol-card:hover {
+        border-color: var(--color-accent);
+        transform: translateY(-4px);
+        box-shadow: 0 10px 30px rgba(140, 120, 99, 0.05);
+    }
+    
+    .protocol-card h3 {
+        font-family: var(--font-serif);
+        font-size: 1.4rem;
+        margin-bottom: 16px;
+        color: var(--color-text);
+        border-bottom: 1px solid rgba(140, 120, 99, 0.1);
+        padding-bottom: 12px;
+    }
+    
+    .protocol-card p {
+        font-size: 0.95rem;
+        color: #555555;
+        line-height: 1.6;
+    }
+
+    /* Sobre Tatiane Gomes Desktop */
+    .about-grid-custom {
+        flex-direction: row;
+        align-items: center;
+        gap: 80px;
+    }
+    
+    .about-photo-col {
+        width: 45%;
+    }
+    
+    .about-text-col {
+        width: 55%;
+    }
+    
+    .about-bio-title {
+        font-size: 2.4rem;
+    }
+    
+    /* Espaço Clínica Desktop Grid */
+    .space-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas em linha */
+    }
+
+    /* Avaliações do Google Desktop */
+    .reviews-widget {
+        padding: 48px;
+    }
+    
+    .reviews-header-widget {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Footer Desktop */
+    .footer-grid-custom {
+        grid-template-columns: 1.2fr 0.8fr 1fr;
+        gap: 60px;
+    }
+    
+    .footer-bottom-custom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
