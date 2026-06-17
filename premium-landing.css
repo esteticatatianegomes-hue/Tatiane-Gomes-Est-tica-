@@ -1,26 +1,29 @@
 /* ==========================================================================
-   TATIANE GOMES ESTÉTICA - LANDING PAGE PREMIUM CSS
-   ABORDAGEM: MOBILE-FIRST, DESIGN EDITORIAL, RESPOSTA DIRETA
+   TATIANE GOMES ESTÉTICA - LANDING PAGE PREMIUM CSS (REDESENHO CORES E FONTES)
+   ESTILO: LUXO DISCRETO, FEMININO, SOFISTICADO, ANIMAÇÕES PREMIUM
    ========================================================================== */
 
 /* 1. VARIÁVEIS & DESIGN TOKENS */
 :root {
-    /* Cores Hexadecimais Exatas */
-    --bg-canvas: #F9F8F6;          /* Off-White / Fendi Claro (Fundo Principal) */
-    --bg-white: #FFFFFF;           /* Branco Puro (Blocos de Destaque) */
-    --color-text: #1A1A1A;         /* Grafite Ultra-Escuro (Texto e Títulos) */
-    --color-accent: #8C7863;       /* Bronze Fosco / Taupe (Destaques e Apoio) */
-    --color-cta: #2A2A2A;          /* Botão Escuro Imponente */
-    --color-cta-hover: #000000;    /* Hover do CTA */
-    --color-whatsapp: #0D5C3A;     /* Verde Profundo Institucional (Conversão) */
-    --color-whatsapp-hover: #064026;
+    /* Paleta de Cores Institucional */
+    --color-dark-green: #234236;    /* Verde Escuro (Primária) */
+    --color-moss-green: #2E5344;    /* Verde Musgo (Apoio/Hover) */
+    --color-gold: #C5A46D;          /* Dourado (Destaques, Selo, Links) */
+    --color-off-white: #F8F6F2;      /* Off-White (Canvas/Fundo) */
+    --color-white: #FFFFFF;          /* Branco Puro (Contraste de Blocos) */
+    
+    /* Cores de Texto */
+    --color-text-dark: #234236;
+    --color-text-light: #5A6B62;
+    --color-text-white: #F8F6F2;
     
     /* Tipografia */
-    --font-serif: 'Cormorant Garamond', Georgia, serif;
-    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-title: 'Playfair Display', Georgia, serif;
+    --font-text: 'Montserrat', sans-serif;
     
     /* Transições */
-    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-fast: all 0.2s ease;
 }
 
 /* 2. RESET & REGRAS GERAIS */
@@ -38,9 +41,9 @@ html {
 }
 
 body {
-    font-family: var(--font-sans);
-    background-color: var(--bg-canvas);
-    color: var(--color-text);
+    font-family: var(--font-text);
+    background-color: var(--color-off-white);
+    color: var(--color-text-dark);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -49,7 +52,24 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 20px;
+}
+
+/* Espaçamentos Obrigatórios de Responsividade */
+section {
+    padding: 40px 0; /* Mobile: 40px */
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: 60px 0; /* Tablet: 60px */
+    }
+}
+
+@media (min-width: 1024px) {
+    section {
+        padding: 100px 0; /* Desktop: 80px a 120px */
+    }
 }
 
 img {
@@ -58,22 +78,53 @@ img {
     display: block;
 }
 
-/* Editorial Spacing (Whitespace) */
-section {
-    padding: 80px 0;
-}
-
-/* 3. TIPOGRAFIA & HIERARQUIA VISUAL */
-h1, h2, h3, h4 {
-    font-family: var(--font-serif);
+/* 3. TIPOGRAFIA */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
     font-weight: 500;
     line-height: 1.25;
-    letter-spacing: -0.02em;
 }
 
-p, li, span, a {
-    font-family: var(--font-sans);
-    line-height: 1.6;
+/* Tamanhos de Títulos Obrigatórios */
+h1 {
+    font-size: 30px; /* Mobile: 30px a 36px */
+}
+
+h2 {
+    font-size: 28px;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 44px; /* Tablet: 40px a 48px */
+    }
+    h2 {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 56px; /* Desktop: 48px a 64px */
+    }
+    h2 {
+        font-size: 42px;
+    }
+}
+
+/* Subtítulos Obrigatórios */
+.subtitle {
+    font-size: 16px; /* Mobile: 16px a 18px */
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--color-text-light);
+    margin-bottom: 24px;
+}
+
+@media (min-width: 1024px) {
+    .subtitle {
+        font-size: 22px; /* Desktop: 20px a 24px */
+    }
 }
 
 .section-label {
@@ -82,211 +133,203 @@ p, li, span, a {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: var(--color-accent);
+    color: var(--color-gold);
     margin-bottom: 12px;
     text-align: center;
 }
 
 .section-title {
-    font-size: 2.2rem;
     text-align: center;
+    color: var(--color-dark-green);
     margin-bottom: 16px;
-    color: var(--color-text);
 }
 
-.section-subtitle {
-    font-size: 1rem;
+.section-desc {
     text-align: center;
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto 48px auto;
-    color: #555555;
-    font-weight: 400;
-}
-
-/* 4. BOTÕES & LINKS (CTA) */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-cta);
-    color: var(--bg-white);
-    text-decoration: none;
-    font-family: var(--font-sans);
     font-size: 0.95rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 18px 36px;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    transition: var(--transition);
-    width: 100%;
-    text-align: center;
+    color: var(--color-text-light);
 }
 
-.btn:hover {
-    background-color: var(--color-cta-hover);
-    transform: translateY(-2px);
-}
-
-.btn-whatsapp {
-    background-color: var(--color-whatsapp);
-}
-
-.btn-whatsapp:hover {
-    background-color: var(--color-whatsapp-hover);
-}
-
-/* Link Instagram */
-.instagram-link-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.instagram-link {
+/* 4. BOTÕES E CTA */
+.btn-premium {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    color: var(--color-text);
+    justify-content: center;
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
     text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: var(--transition);
-    opacity: 0.85;
+    font-family: var(--font-text);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px solid var(--color-gold);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    width: 90%; /* Mobile: largura 80% a 95% */
+    max-width: 450px;
+    height: 52px; /* Mobile: altura mínima 52px */
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(35, 66, 54, 0.15);
 }
 
-.instagram-link:hover {
-    color: var(--color-accent);
-    opacity: 1;
+.btn-premium:hover {
+    background-color: var(--color-gold);
+    color: var(--color-dark-green);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(197, 164, 109, 0.3);
 }
 
-.instagram-link svg {
-    fill: currentColor;
-    width: 18px;
-    height: 18px;
+.btn-container-centered {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-/* Sticky Mobile Button */
-.sticky-cta-mobile {
+@media (min-width: 1024px) {
+    .btn-premium {
+        height: 56px; /* Desktop: altura mínima 56px */
+        font-size: 0.9rem;
+    }
+}
+
+/* WhatsApp Flutuante */
+.whatsapp-flutuante {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    z-index: 9999;
-    transform: translateY(150px);
-    transition: var(--transition);
-    pointer-events: none;
-}
-
-.sticky-cta-mobile.active {
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
-.sticky-cta-mobile .btn {
-    background-color: var(--color-whatsapp);
-    box-shadow: 0 8px 30px rgba(13, 92, 58, 0.3);
-    padding: 16px 24px;
-    font-size: 0.9rem;
+    bottom: 24px;
+    right: 24px;
+    background-color: #25D366;
+    color: var(--color-white);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: var(--transition-smooth);
+    text-decoration: none;
+    border: 2px solid var(--color-white);
 }
 
-/* 5. NAVEGAÇÃO / NAVBAR */
+.whatsapp-flutuante:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-flutuante svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+}
+
+/* 5. NAVBAR / HEADER */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(249, 248, 246, 0.9);
+    height: 70px; /* Altura máxima do header 70px */
+    background-color: rgba(248, 246, 242, 0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(140, 120, 99, 0.08);
+    border-bottom: 1px solid rgba(197, 164, 109, 0.15);
     z-index: 1000;
-    transition: var(--transition);
+    transition: var(--transition-smooth);
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 100%;
 }
 
 .logo {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    color: var(--color-text);
+    color: var(--color-dark-green);
 }
 
 .logo-text {
-    font-family: var(--font-serif);
-    font-size: 1.6rem;
-    font-weight: 600;
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    font-weight: 500;
     line-height: 1;
 }
 
 .logo-subtitle {
-    font-size: 0.7rem;
-    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-family: var(--font-text);
     text-transform: uppercase;
-    letter-spacing: 3px;
-    color: var(--color-accent);
-    margin-top: 4px;
+    letter-spacing: 2px;
+    color: var(--color-gold);
+    margin-top: 3px;
     font-weight: 500;
 }
 
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
 }
 
-.nav-actions .btn-agendar {
-    display: none; /* Desktop only */
+/* Botão WhatsApp no Header */
+.nav-btn-whatsapp {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    border: 1px solid var(--color-gold);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    transition: var(--transition-smooth);
+}
+
+.nav-btn-whatsapp:hover {
+    background-color: var(--color-gold);
+    color: var(--color-dark-green);
 }
 
 .menu-toggle {
     background: none;
     border: none;
-    font-family: var(--font-sans);
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-family: var(--font-text);
+    font-size: 0.8rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--color-text);
+    color: var(--color-dark-green);
     cursor: pointer;
-    padding: 8px 12px;
+    padding: 6px 10px;
     border-radius: 4px;
-    border: 1px solid rgba(26, 26, 26, 0.1);
-    transition: var(--transition);
-}
-
-.menu-toggle:hover {
-    border-color: var(--color-text);
+    transition: var(--transition-smooth);
 }
 
 /* Menu Overlay */
 .menu-overlay {
     position: fixed;
-    top: 80px;
+    top: 70px;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--bg-canvas);
+    background-color: var(--color-off-white);
     z-index: 999;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
-    transition: var(--transition);
+    transition: var(--transition-smooth);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
 }
 
 .menu-overlay.active {
@@ -302,751 +345,994 @@ p, li, span, a {
 }
 
 .menu-list li {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .menu-list a {
-    font-family: var(--font-serif);
-    font-size: 2.2rem;
-    color: var(--color-text);
+    font-family: var(--font-title);
+    font-size: 2rem;
+    color: var(--color-dark-green);
     text-decoration: none;
-    transition: var(--transition);
-    font-weight: 400;
+    transition: var(--transition-smooth);
 }
 
 .menu-list a:hover {
-    color: var(--color-accent);
-    padding-left: 10px;
+    color: var(--color-gold);
+    padding-left: 8px;
 }
 
-/* 6. SEÇÃO 1: HERO / DOBRA PRINCIPAL */
+/* 6. SEÇÃO 1: HERO */
 .hero {
     min-height: 95vh;
-    padding-top: 120px;
+    padding-top: 70px; /* Para compensar o navbar fixo */
     display: flex;
     align-items: center;
-    background-color: var(--bg-canvas);
+    background-color: var(--color-off-white);
     position: relative;
     overflow: hidden;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('tati profissional.jpg');
+/* Parallax Suave */
+.parallax-bg {
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center top;
-    opacity: 0.15; /* Opacidade suave para priorizar leitura no celular */
-    z-index: 1;
+}
+
+@media (min-width: 1024px) {
+    .parallax-bg {
+        background-attachment: fixed; /* Parallax apenas no Desktop */
+    }
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
     width: 100%;
+    z-index: 2;
 }
 
-.hero-text {
-    max-width: 600px;
+.hero-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
 }
 
+/* Regra Rígida de Imagem da Tatiane na Hero */
+.hero-photo-wrapper {
+    width: 100%;
+    max-width: 250px; /* Mobile: largura máxima 280px */
+    max-height: 300px; /* Mobile: altura máxima 350px */
+    margin: 0 auto;
+    border: 1px solid rgba(197, 164, 109, 0.3);
+    padding: 8px;
+    background-color: var(--color-white);
+    box-shadow: 0 10px 30px rgba(35, 66, 54, 0.08);
+}
+
+.hero-photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text-wrapper {
+    max-width: 100%;
+}
+
+/* Títulos Hero */
 .hero-title {
-    font-size: 2rem; /* Mobile 32px aproximado */
+    color: var(--color-dark-green);
+    margin-bottom: 16px;
     font-weight: 500;
-    margin-bottom: 24px;
-    color: var(--color-text);
-    line-height: 1.25;
 }
 
 .hero-subtitle {
-    font-size: 1rem; /* Mobile 16px */
-    font-weight: 400;
-    color: #4A4A4A;
-    margin-bottom: 32px;
-    line-height: 1.6;
+    font-size: 0.95rem; /* Mobile: 16px */
+    color: var(--color-text-light);
+    margin-bottom: 24px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-cta-box {
-    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
 }
 
-/* 7. SEÇÃO 2: O PROTOCOLO ASSINATURA (SLIMONE) */
-.slimone-section {
-    background-color: var(--bg-white); /* Fundo branco puro para contrastar */
+/* Selo de autoestima */
+.hero-selo {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-gold);
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.slimone-box {
-    max-width: 800px;
-    margin: 0 auto;
-    border: 1px solid var(--color-accent); /* Borda fina bronze fosco */
-    padding: 40px 24px;
+.hero-selo::before, .hero-selo::after {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 1px;
+    background-color: var(--color-gold);
+}
+
+/* Texto de Apoio */
+.hero-support-text {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
     text-align: center;
+    font-style: italic;
+    border-top: 1px solid rgba(197, 164, 109, 0.2);
+    padding-top: 16px;
+    margin-top: 16px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 1024px) {
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr; /* Duas colunas assimétricas */
+        gap: 60px;
+        text-align: left;
+        align-items: center;
+    }
+    
+    .hero-photo-col {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .hero-photo-wrapper {
+        max-width: 420px; /* Desktop: 35% a 45% da largura */
+        max-height: 520px; /* Desktop: max 600px de altura visual */
+    }
+    
+    .hero-text-wrapper {
+        text-align: left;
+    }
+    
+    .hero-subtitle {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .hero-cta-box {
+        align-items: flex-start;
+    }
+    
+    .hero-support-text {
+        text-align: left;
+        margin-left: 0;
+    }
+}
+
+/* 7. SEÇÃO PROBLEMA */
+.problema-section {
+    background-color: var(--color-white);
+}
+
+/* Grid de Cards */
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: 1 por linha */
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 600px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr); /* Tablet: 2 por linha */
+    }
+}
+
+@media (min-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr); /* Desktop: 3 ou 4 por linha */
+    }
+}
+
+.card-problema {
+    background-color: var(--color-off-white);
+    border: 1px solid rgba(197, 164, 109, 0.15);
+    padding: 30px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-height: 140px;
+    height: 100%; /* Todos com mesma altura */
+    transition: var(--transition-smooth);
+}
+
+.card-problema:hover {
+    border-color: var(--color-gold);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(35, 66, 54, 0.04);
+}
+
+.card-number {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--color-gold);
+    margin-bottom: 12px;
+}
+
+.card-problema p {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text-dark);
+}
+
+.problema-conclusion {
+    max-width: 750px;
+    margin: 40px auto 0 auto;
+    text-align: center;
+    border-top: 1px solid rgba(197, 164, 109, 0.2);
+    padding-top: 30px;
+}
+
+.problema-conclusion p {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    margin-bottom: 16px;
+}
+
+.problema-conclusion p strong {
+    color: var(--color-dark-green);
+}
+
+/* 8. SEÇÃO SOBRE TATIANE */
+.sobre-section {
+    background-color: var(--color-off-white);
+}
+
+.sobre-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sobre-photo-wrapper {
+    border: 1px solid rgba(197, 164, 109, 0.2);
+    padding: 12px;
+    background-color: var(--color-white);
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.sobre-content {
+    width: 100%;
+}
+
+.sobre-title {
+    margin-bottom: 24px;
+    color: var(--color-dark-green);
     position: relative;
 }
 
-.slimone-box::before {
+.sobre-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1.5px;
+    background-color: var(--color-gold);
+    margin-top: 12px;
+}
+
+.sobre-text p {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.sobre-text p:last-of-type {
+    margin-bottom: 32px;
+}
+
+/* Highlights */
+.highlights-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    list-style: none;
+}
+
+@media (min-width: 600px) {
+    .highlights-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-dark-green);
+}
+
+.highlight-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+    .sobre-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr; /* Layout assimétrico */
+        gap: 60px;
+        align-items: center;
+    }
+    
+    .sobre-photo-wrapper {
+        margin: 0;
+        max-width: 100%;
+    }
+}
+
+/* 9. SEÇÃO RESULTADOS */
+.resultados-section {
+    background-color: var(--color-white);
+}
+
+/* COMPARADOR INTERATIVO ANTES E DEPOIS */
+.before-after-outer {
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+    width: 100%;
+}
+
+.before-after-slider {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Mobile: altura máxima de 400px */
+    overflow: hidden;
+    border: 1px solid rgba(197, 164, 109, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(35, 66, 54, 0.08);
+}
+
+@media (min-width: 768px) {
+    .before-after-slider {
+        height: 400px;
+    }
+}
+
+.before-after-slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.img-after {
+    z-index: 1;
+}
+
+.img-before {
+    z-index: 2;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    transition: clip-path 0.05s ease-out;
+}
+
+.slider-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: var(--color-gold);
+    z-index: 3;
+    pointer-events: none;
+    transform: translateX(-50%);
+    transition: left 0.05s ease-out;
+}
+
+.slider-handle-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    background-color: var(--color-dark-green);
+    border: 2px solid var(--color-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gold);
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.slider-range-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 4;
+    cursor: ew-resize;
+    margin: 0;
+    padding: 0;
+}
+
+.before-after-label {
+    position: absolute;
+    bottom: 16px;
+    background-color: rgba(35, 66, 54, 0.85);
+    color: var(--color-white);
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.label-before {
+    left: 16px;
+}
+
+.label-after {
+    right: 16px;
+}
+
+/* CARROSSEL DE RESULTADOS */
+.carousel-wrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto 48px auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: var(--transition-smooth);
+}
+
+/* Regra de Resultados Simultâneos */
+.carousel-slide-item {
+    min-width: 100%; /* Mobile: mostra apenas 1 */
+    padding: 10px;
+}
+
+@media (min-width: 600px) {
+    .carousel-slide-item {
+        min-width: 50%; /* Tablet: mostra 2 */
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel-slide-item {
+        min-width: 33.333%; /* Desktop: mostra 3 */
+    }
+}
+
+.slide-card {
+    background-color: var(--color-off-white);
+    border: 1px solid rgba(197, 164, 109, 0.12);
+    padding: 16px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.slide-img-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border: 1px solid rgba(197, 164, 109, 0.1);
+}
+
+.slide-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Imagem ocupa toda a largura sem distorcer */
+}
+
+.slide-caption {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-dark-green);
+    text-align: center;
+    margin-top: auto;
+}
+
+.resultados-nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.resultados-nav-btn {
+    background: none;
+    border: 1px solid var(--color-gold);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--color-dark-green);
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+}
+
+.resultados-nav-btn:hover {
+    background-color: var(--color-gold);
+    color: var(--color-white);
+}
+
+/* 10. SEÇÃO SLIMONE */
+.slimone-section {
+    background-color: var(--color-dark-green); /* Fundo verde escuro premium */
+    color: var(--color-white);
+}
+
+.slimone-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid var(--color-gold);
+    padding: 40px 24px;
+    position: relative;
+}
+
+.slimone-container::before {
     content: '';
     position: absolute;
     top: 8px;
     left: 8px;
     right: 8px;
     bottom: 8px;
-    border: 1px solid rgba(140, 120, 99, 0.15);
+    border: 1px solid rgba(197, 164, 109, 0.2);
     pointer-events: none;
 }
 
-.slimone-title {
-    font-size: 1.8rem;
-    margin-bottom: 24px;
-    color: var(--color-text);
+.slimone-title-custom {
+    font-family: var(--font-title);
+    font-size: 2.2rem;
+    color: var(--color-gold);
+    margin-bottom: 8px;
 }
 
-.slimone-text {
-    font-size: 1rem;
-    color: #4A4A4A;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-/* 8. SEÇÃO 3: PROVA SOCIAL VISUAL (ANTES E DEPOIS) */
-.carousel-section {
-    background-color: var(--bg-canvas);
-}
-
-.carousel-outer {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.carousel-track-container {
-    overflow: hidden;
-    width: 100%;
-}
-
-.carousel-track {
-    display: flex;
-    transition: var(--transition);
-}
-
-.carousel-slide {
-    min-width: 100%;
-    padding: 10px;
-}
-
-.carousel-slide-content {
-    background-color: var(--bg-white);
-    border: 1px solid rgba(140, 120, 99, 0.1);
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.carousel-image-wrapper {
-    width: 100%;
-    margin-bottom: 16px;
-}
-
-.carousel-image-wrapper img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.carousel-caption {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--color-accent);
-    text-align: center;
-}
-
-/* Setas do Carrossel */
-.carousel-nav {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    margin-top: 32px;
-}
-
-.carousel-btn {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: var(--color-text);
-    cursor: pointer;
-    padding: 10px;
-    transition: var(--transition);
-    opacity: 0.6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel-btn:hover {
-    opacity: 1;
-    color: var(--color-accent);
-}
-
-/* 9. SEÇÃO 4: MENU DE PROTOCOLOS PREMIUM */
-.menu-section {
-    background-color: var(--bg-white);
-}
-
-/* Mobile Accordions */
-.protocols-accordion {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.accordion-item {
-    border-bottom: 1px solid rgba(140, 120, 99, 0.15);
-}
-
-.accordion-header {
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: var(--font-serif);
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: var(--color-text);
-    cursor: pointer;
-    text-align: left;
-}
-
-.accordion-icon {
+.slimone-subtitle-custom {
     font-size: 1.1rem;
-    font-weight: 300;
-    transition: var(--transition);
-}
-
-.accordion-item.active .accordion-icon {
-    transform: rotate(45deg);
-}
-
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out;
-}
-
-.accordion-body {
-    padding-bottom: 20px;
-    font-size: 0.95rem;
-    color: #555555;
-    line-height: 1.6;
-}
-
-/* Desktop Grid (Escondido no Mobile por padrão) */
-.protocols-grid {
-    display: none;
-}
-
-/* 10. SEÇÃO 5: AUTORIDADE MÁXIMA */
-.about-section {
-    background-color: var(--bg-canvas);
-}
-
-.about-grid-custom {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-}
-
-.about-photo-col {
-    width: 100%;
-}
-
-.about-photo-wrapper {
-    position: relative;
-    border: 1px solid rgba(140, 120, 99, 0.2);
-    padding: 12px;
-    background-color: var(--bg-white);
-}
-
-.about-photo-wrapper img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.about-text-col {
-    width: 100%;
-}
-
-.about-bio-title {
-    font-size: 1.8rem;
+    color: var(--color-off-white);
     margin-bottom: 24px;
-    color: var(--color-text);
-    position: relative;
+    font-weight: 500;
 }
 
-.about-bio-title::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 1.5px;
-    background-color: var(--color-accent);
-    margin-top: 16px;
-}
-
-.about-bio-text p {
+.slimone-text-custom {
     font-size: 0.95rem;
-    color: #4A4A4A;
-    margin-bottom: 20px;
+    color: #CCCCCC;
+    line-height: 1.7;
+    margin-bottom: 36px;
     text-align: justify;
 }
 
-.about-bio-text p:last-child {
-    margin-bottom: 0;
+.slimone-section .btn-premium {
+    background-color: var(--color-gold);
+    color: var(--color-dark-green);
+    border-color: var(--color-white);
 }
 
-/* 11. SEÇÃO 6: O AMBIENTE DA CLÍNICA */
-.space-section {
-    background-color: var(--bg-white);
+.slimone-section .btn-premium:hover {
+    background-color: var(--color-white);
+    color: var(--color-dark-green);
 }
 
-.space-grid {
+/* 11. SEÇÃO TRATAMENTOS */
+.tratamentos-section {
+    background-color: var(--color-white);
+}
+
+.tratamentos-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4px; /* Espaçamento fino de 4px conforme solicitado */
+    grid-template-columns: 1fr; /* Mobile: 1 por linha */
+    gap: 24px;
 }
 
-.space-item {
-    position: relative;
-    overflow: hidden;
-    aspect-ratio: 1 / 1;
+@media (min-width: 600px) {
+    .tratamentos-grid {
+        grid-template-columns: repeat(2, 1fr); /* Tablet: 2 por linha */
+    }
 }
 
-.space-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
+@media (min-width: 1024px) {
+    .tratamentos-grid {
+        grid-template-columns: repeat(4, 1fr); /* Desktop: 4 por linha */
+    }
 }
 
-.space-item:hover img {
-    transform: scale(1.05);
-}
-
-/* 12. SEÇÃO 7: PROVA SOCIAL INSTITUCIONAL */
-.reviews-section {
-    background-color: var(--bg-canvas);
-}
-
-.reviews-widget {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: var(--bg-white);
-    border: 1px solid rgba(140, 120, 99, 0.1);
+.card-tratamento {
+    background-color: var(--color-off-white);
+    border: 1px solid rgba(197, 164, 109, 0.15);
     padding: 32px 24px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Todos com mesma altura e alinhados */
+    transition: var(--transition-smooth);
 }
 
-.reviews-header-widget {
+.card-tratamento:hover {
+    border-color: var(--color-gold);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(35, 66, 54, 0.05);
+}
+
+.card-tratamento h3 {
+    font-family: var(--font-title);
+    font-size: 1.35rem;
+    color: var(--color-dark-green);
+    margin-bottom: 16px;
+    border-bottom: 1.5px solid var(--color-gold);
+    padding-bottom: 10px;
+}
+
+.card-tratamento p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* 12. SEÇÃO DIFERENCIAIS */
+.diferenciais-section {
+    background-color: var(--color-off-white);
+}
+
+.diferenciais-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 600px) {
+    .diferenciais-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .diferenciais-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.diferencial-item {
+    background-color: var(--color-white);
+    border-left: 3px solid var(--color-gold);
+    padding: 24px 20px;
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-bottom: 32px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    padding-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(35, 66, 54, 0.02);
 }
 
-.google-logo-custom {
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--color-text);
-    letter-spacing: -0.5px;
+.diferencial-num {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+}
+
+.diferencial-text {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text-dark);
+}
+
+/* 13. SEÇÃO INSTAGRAM */
+.instagram-section {
+    background-color: var(--color-white);
+    overflow: hidden;
+}
+
+.instagram-desc {
+    max-width: 650px;
+    margin: 0 auto 48px auto;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+}
+
+/* Celulares Flutuantes */
+.instagram-mockups-container {
     display: flex;
-    align-items: center;
-    gap: 6px;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 48px;
+    width: 100%;
 }
 
-.google-logo-custom span {
-    color: #4285F4; /* Azul Google */
+.phone-mockup {
+    position: relative;
+    width: 100%;
+    max-width: 250px; /* Mobile: largura máxima 280px */
+    height: 480px;
+    border: 10px solid var(--color-dark-green);
+    border-radius: 32px;
+    background-color: #000;
+    box-shadow: 0 20px 45px rgba(35, 66, 54, 0.12);
+    overflow: hidden;
+    /* Movimento flutuante suave */
+    animation: float-slow 6s ease-in-out infinite;
 }
 
-.google-rating-info {
-    font-size: 0.9rem;
-    color: #666;
+.phone-mockup:nth-child(2) {
+    display: none; /* Mobile: apenas 1 celular */
 }
 
-.google-stars {
-    color: var(--color-accent); /* Bronze / Dourado fosco */
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    margin-top: 4px;
+.phone-mockup:nth-child(3) {
+    display: none; /* Mobile: apenas 1 celular */
 }
 
-.reviews-list-widget {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-.review-item-widget {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    padding-bottom: 24px;
+.phone-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.review-item-widget:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+@keyframes float-slow {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
 }
 
-.review-meta-widget {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@media (min-width: 600px) {
+    .phone-mockup:nth-child(2) {
+        display: block; /* Tablet: 2 celulares */
+        animation-delay: -2s;
+    }
+}
+
+@media (min-width: 1024px) {
+    .phone-mockup:nth-child(3) {
+        display: block; /* Desktop: 3 celulares */
+        animation-delay: -4s;
+    }
+    .phone-mockup {
+        height: 520px;
+    }
+}
+
+/* 14. SEÇÃO DEPOIMENTOS */
+.depoimentos-section {
+    background-color: var(--color-off-white);
+}
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.depoimento-card {
+    background-color: var(--color-white);
+    border: 1px solid rgba(197, 164, 109, 0.15);
+    padding: 32px;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(35, 66, 54, 0.02);
+}
+
+.depoimento-card::before {
+    content: '“';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-family: var(--font-title);
+    font-size: 5rem;
+    color: rgba(197, 164, 109, 0.15);
+    line-height: 1;
+}
+
+.depoimento-text {
+    font-size: 1rem;
+    color: var(--color-text-dark);
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* 15. SEÇÃO FINAL (CTA GRANDE) */
+.final-section {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.final-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.final-title {
+    font-family: var(--font-title);
+    color: var(--color-gold);
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.final-desc {
+    font-size: 1rem;
+    color: var(--color-off-white);
+    margin-bottom: 36px;
+}
+
+.final-section .btn-premium {
+    background-color: var(--color-gold);
+    color: var(--color-dark-green);
+    border-color: var(--color-white);
+    width: 95%;
+    max-width: 400px;
+}
+
+.final-section .btn-premium:hover {
+    background-color: var(--color-white);
+    color: var(--color-dark-green);
+}
+
+/* 16. RODAPÉ */
+.footer {
+    background-color: #1A2822; /* Verde muito escuro */
+    color: #CCCCCC;
+    padding: 60px 0 30px 0;
+    border-top: 1px solid rgba(197, 164, 109, 0.15);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1.2fr 0.8fr 1fr;
+    }
+}
+
+.footer-info h3 {
+    font-size: 1.5rem;
+    color: var(--color-gold);
     margin-bottom: 12px;
 }
 
-.review-user-name {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--color-text);
-}
-
-.review-stars {
-    color: var(--color-accent);
+.footer-info p {
     font-size: 0.9rem;
-    letter-spacing: 1px;
+    color: #A3B1AA;
+    margin-bottom: 6px;
 }
 
-.review-text-widget {
-    font-size: 0.95rem;
-    color: #555555;
-    line-height: 1.6;
-    font-style: italic;
-}
-
-/* 13. SEÇÃO 8: RODAPÉ E CTA DE ENCERRAMENTO */
-.footer {
-    background-color: #1A1A1A; /* Grafite escuro */
-    color: var(--bg-canvas); /* Textos claros */
-    padding: 80px 0 40px 0;
-}
-
-.footer-grid-custom {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 48px;
-    margin-bottom: 60px;
-}
-
-.footer-info-col h3 {
-    font-size: 1.8rem;
-    margin-bottom: 16px;
-    color: var(--bg-canvas);
-}
-
-.footer-info-col p {
-    font-size: 0.95rem;
-    color: #B3B3B3;
+.footer-links-col h4 {
+    font-size: 1.1rem;
+    color: var(--color-white);
     margin-bottom: 16px;
 }
 
-.footer-address-list {
-    list-style: none;
-    margin-top: 24px;
-}
-
-.footer-address-list li {
-    margin-bottom: 20px;
-    font-size: 0.9rem;
-}
-
-.footer-address-list strong {
-    color: var(--bg-canvas);
-    display: block;
-    margin-bottom: 4px;
-}
-
-.footer-address-list span {
-    color: #CCCCCC;
-}
-
-.footer-hours-col h4 {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-    color: var(--bg-canvas);
-}
-
-.footer-hours-list {
+.footer-links-list {
     list-style: none;
 }
 
-.footer-hours-list li {
+.footer-links-list li {
     margin-bottom: 10px;
+}
+
+.footer-links-list a {
+    color: #A3B1AA;
+    text-decoration: none;
     font-size: 0.9rem;
-    display: flex;
-    justify-content: space-between;
-    color: #CCCCCC;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    padding-bottom: 8px;
+    transition: var(--transition-smooth);
 }
 
-.footer-hours-list li strong {
-    color: var(--bg-canvas);
+.footer-links-list a:hover {
+    color: var(--color-gold);
 }
 
-.footer-maps-col {
+.footer-maps h4 {
+    font-size: 1.1rem;
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+.footer-map-container {
     width: 100%;
 }
 
-.footer-map-wrapper {
-    margin-bottom: 20px;
-}
-
-/* Google Maps Estilizado em Grayscale */
-.footer-map-wrapper iframe {
+.footer-map-container iframe {
     width: 100%;
-    height: 200px;
+    height: 150px;
     border: none;
     filter: grayscale(1) invert(0.9) contrast(1.2);
     -webkit-filter: grayscale(1) invert(0.9) contrast(1.2);
     opacity: 0.8;
-    transition: var(--transition);
 }
 
-.footer-map-wrapper iframe:hover {
-    opacity: 1;
-}
-
-.footer-bottom-custom {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding-top: 32px;
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    text-align: center;
 }
 
-.footer-bottom-custom p {
+.footer-bottom p {
     font-size: 0.8rem;
     color: #888888;
 }
 
-.footer-links-discretos {
+.footer-discreet-links {
     display: flex;
-    gap: 24px;
+    gap: 20px;
 }
 
-.footer-links-discretos a {
+.footer-discreet-links a {
     color: #888888;
     text-decoration: none;
-    font-size: 0.85rem;
-    transition: var(--transition);
+    font-size: 0.8rem;
+    transition: var(--transition-smooth);
 }
 
-.footer-links-discretos a:hover {
-    color: var(--bg-canvas);
+.footer-discreet-links a:hover {
+    color: var(--color-gold);
 }
 
-/* ==========================================================================
-   14. RESPONSIVIDADE E ADAPTAÇÃO PARA DESKTOP (1440px / > 768px)
-   ========================================================================== */
-@media (min-width: 768px) {
-    /* Tipografia Desktop */
-    .section-title {
-        font-size: 2.8rem;
-        margin-bottom: 24px;
-    }
-    
-    .section-subtitle {
-        font-size: 1.1rem;
-        margin-bottom: 64px;
-    }
+/* 17. ANIMAÇÕES PREMIUM */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
 
-    /* Navbar Desktop */
-    .nav-actions .btn-agendar {
-        display: inline-flex;
-        background-color: var(--color-cta);
-        color: var(--bg-white);
-        text-decoration: none;
-        font-family: var(--font-sans);
-        font-size: 0.8rem;
-        font-weight: 500;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        padding: 12px 24px;
-        border-radius: 4px;
-        transition: var(--transition);
-    }
-    
-    .nav-actions .btn-agendar:hover {
-        background-color: var(--color-cta-hover);
-    }
-
-    /* Hero Desktop (Grid Assimétrico 2 Colunas) */
-    .hero {
-        min-height: 90vh;
-        padding-top: 80px;
-    }
-    
-    .hero-overlay {
-        display: none; /* Não precisa de imagem em baixa opacidade cobrindo tudo */
-    }
-    
-    .hero-content .container {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 60px;
-        align-items: center;
-    }
-    
-    .hero-text {
-        max-width: 100%;
-    }
-    
-    .hero-title {
-        font-size: 3rem; /* Desktop 48px */
-        margin-bottom: 24px;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.1rem; /* Desktop 18px */
-        margin-bottom: 40px;
-    }
-    
-    .hero-cta-box {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .hero-cta-box .btn {
-        width: auto;
-        padding: 20px 48px;
-    }
-    
-    .instagram-link-wrapper {
-        justify-content: flex-start;
-        margin-top: 16px;
-    }
-    
-    /* Coluna Direita da Hero com Imagem da Especialista */
-    .hero-image-desktop {
-        display: block !important;
-        position: relative;
-        height: 600px;
-        overflow: hidden;
-        border: 1px solid rgba(140, 120, 99, 0.15);
-        background-color: var(--bg-white);
-        padding: 16px;
-    }
-    
-    .hero-image-desktop img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    /* SlimOne Box Desktop */
-    .slimone-box {
-        padding: 64px 80px;
-    }
-    
-    .slimone-title {
-        font-size: 2.2rem;
-    }
-    
-    /* Protocolos Grid Desktop (Substitui Accordions) */
-    .protocols-accordion {
-        display: none; /* Esconde accordions */
-    }
-    
-    .protocols-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 por linha */
-        gap: 24px;
-    }
-    
-    .protocol-card {
-        background-color: var(--bg-white);
-        border: 1px solid rgba(140, 120, 99, 0.12);
-        padding: 32px;
-        border-radius: 4px;
-        transition: var(--transition);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
-    .protocol-card:hover {
-        border-color: var(--color-accent);
-        transform: translateY(-4px);
-        box-shadow: 0 10px 30px rgba(140, 120, 99, 0.05);
-    }
-    
-    .protocol-card h3 {
-        font-family: var(--font-serif);
-        font-size: 1.4rem;
-        margin-bottom: 16px;
-        color: var(--color-text);
-        border-bottom: 1px solid rgba(140, 120, 99, 0.1);
-        padding-bottom: 12px;
-    }
-    
-    .protocol-card p {
-        font-size: 0.95rem;
-        color: #555555;
-        line-height: 1.6;
-    }
-
-    /* Sobre Tatiane Gomes Desktop */
-    .about-grid-custom {
-        flex-direction: row;
-        align-items: center;
-        gap: 80px;
-    }
-    
-    .about-photo-col {
-        width: 45%;
-    }
-    
-    .about-text-col {
-        width: 55%;
-    }
-    
-    .about-bio-title {
-        font-size: 2.4rem;
-    }
-    
-    /* Espaço Clínica Desktop Grid */
-    .space-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 colunas em linha */
-    }
-
-    /* Avaliações do Google Desktop */
-    .reviews-widget {
-        padding: 48px;
-    }
-    
-    .reviews-header-widget {
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    /* Footer Desktop */
-    .footer-grid-custom {
-        grid-template-columns: 1.2fr 0.8fr 1fr;
-        gap: 60px;
-    }
-    
-    .footer-bottom-custom {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-    }
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
