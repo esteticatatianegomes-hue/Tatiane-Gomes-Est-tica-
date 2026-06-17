@@ -1325,6 +1325,43 @@ h2 {
     color: var(--color-gold);
 }
 
+/* 16.5 SEÇÃO DE VÍDEO CASO CLÍNICO */
+.video-section {
+    background-color: var(--color-off-white);
+}
+
+.video-wrapper {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    border: 1px solid rgba(197, 164, 109, 0.3);
+    padding: 8px;
+    background-color: var(--color-white);
+    box-shadow: 0 15px 35px rgba(35, 66, 54, 0.06);
+    border-radius: 4px;
+}
+
+.clinical-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+    outline: none;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+}
+
+.video-explanation {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.video-explanation p {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
 /* 17. ANIMAÇÕES PREMIUM */
 .fade-in {
     opacity: 0;
