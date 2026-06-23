@@ -1362,6 +1362,80 @@ h2 {
     line-height: 1.6;
 }
 
+/* 16.6 CLASSES AUXILIARES PARA PÁGINAS DE TRÁFEGO */
+.benefits-list-premium {
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 450px;
+    width: 100%;
+}
+
+.benefits-list-premium li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    text-align: left;
+}
+
+.benefits-list-premium li svg {
+    fill: var(--color-gold);
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.info-box-premium {
+    background-color: var(--color-white);
+    border: 1px solid rgba(197, 164, 109, 0.15);
+    border-left: 4px solid var(--color-gold);
+    padding: 30px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 15px rgba(35, 66, 54, 0.02);
+}
+
+.info-box-premium h3 {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    color: var(--color-dark-green);
+    margin-bottom: 12px;
+}
+
+.info-box-premium p {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.testimonial-card-premium {
+    background-color: var(--color-white);
+    border: 1px solid rgba(197, 164, 109, 0.15);
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(35, 66, 54, 0.05);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.testimonial-card-premium img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 20px auto;
+    border: 1px solid rgba(197, 164, 109, 0.2);
+    padding: 6px;
+    background-color: var(--color-white);
+}
+
 /* 17. ANIMAÇÕES PREMIUM */
 .fade-in {
     opacity: 0;
