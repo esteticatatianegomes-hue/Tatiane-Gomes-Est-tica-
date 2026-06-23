@@ -3,782 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatiane Gomes Estética | Links Úteis</title>
+    <meta name="description" content="Acesse os canais oficiais, agendamentos, tratamentos e participe do nosso Bolão da Copa de Tatiane Gomes Estética.">
     
-    <!-- SEO Local e Otimizações -->
-    <title>Tatiane Gomes Estética | Especialista em Estética Corporal e Facial</title>
-    <meta name="description" content="Tratamentos personalizados para gordura localizada, celulite, flacidez, diástase, emagrecimento e saúde da pele por Tatiane Gomes. Sem procedimentos invasivos.">
-    <meta name="keywords" content="estetica corporal, estetica facial, gordura localizada, celulite, flacidez, diastase, emagrecimento, tatiane gomes, unifesp">
-    <link rel="canonical" href="https://tatianegomesestetica.com.br/">
-    
-    <!-- Google Fonts: Playfair Display (Títulos) e Montserrat (Textos) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
-    <!-- Stylesheet Premium -->
-    <link rel="stylesheet" href="premium-landing.css">
+    <!-- Phosphor Icons para ícones elegantes em vetor -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17947496680"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'AW-17947496680', {
-            'linker': {
-                'domains': ['api.whatsapp.com']
-            }
-        });
-    </script>
-
-    <!-- Script de Conversão de Eventos Google Ads -->
-    <script>
-        function gtag_report_conversion(url) {
-            var callback = function () {
-                if (typeof (url) != 'undefined') {
-                    window.location = url;
-                }
-            };
-            gtag('event', 'conversion', {
-                'send_to': 'AW-17947496680/hUBdCOX99oMcEOihhO5C',
-                'event_callback': callback
-            });
-            return false;
+    <style>
+        :root {
+            --color-dark-green: #234236;
+            --color-moss-green: #2E5344;
+            --color-gold: #C5A46D;
+            --color-off-white: #F8F6F2;
+            --color-white: #FFFFFF;
+            --font-title: 'Playfair Display', Georgia, serif;
+            --font-text: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
-    </script>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-text);
+            background-color: #0b1511; /* Fundo escuro premium */
+            background-image: radial-gradient(circle at 50% 0%, #234236 0%, #0b1511 75%);
+            color: var(--color-off-white);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 3rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Textura Discreta */
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.02;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .linktree-container {
+            width: 100%;
+            max-width: 580px;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .linktree-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .linktree-logo-wrapper {
+            position: relative;
+            margin-bottom: 1.2rem;
+            display: inline-block;
+        }
+
+        .linktree-logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--color-gold);
+            box-shadow: 0 0 25px rgba(197, 164, 109, 0.35);
+        }
+
+        .linktree-title {
+            font-family: var(--font-title);
+            font-size: 1.7rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+            color: var(--color-off-white);
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+        }
+
+        .linktree-subtitle {
+            font-size: 0.88rem;
+            letter-spacing: 1px;
+            color: var(--color-gold);
+            font-weight: 500;
+        }
+
+        .linktree-links {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .link-card {
+            position: relative;
+            width: 100%;
+            height: 84px;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+            background: linear-gradient(135deg, #0e1e17 0%, #1d362d 50%, #0e1e17 100%);
+            background-size: 200% 200%;
+            transition: var(--transition-smooth);
+            border: 1.5px solid rgba(197, 164, 109, 0.2);
+        }
+
+        .link-card:hover {
+            transform: translateY(-4px) scale(1.015);
+            box-shadow: 0 15px 35px rgba(197, 164, 109, 0.3);
+            border-color: rgba(197, 164, 109, 0.7);
+            background-position: right center;
+        }
+
+        .link-card-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 0 2rem;
+            gap: 1.5rem;
+            color: var(--color-white);
+        }
+
+        .link-card-content i {
+            font-size: 1.8rem;
+            color: var(--color-gold);
+            transition: transform 0.4s ease;
+            opacity: 0.95;
+            width: 32px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .link-card:hover .link-card-content i {
+            transform: scale(1.1);
+            color: var(--color-white);
+        }
+
+        .link-card-content span {
+            font-family: var(--font-title);
+            font-size: 1.05rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 2.5rem 1rem;
+            }
+
+            .linktree-logo {
+                width: 95px;
+                height: 95px;
+            }
+            
+            .linktree-title {
+                font-size: 1.45rem;
+                letter-spacing: 2px;
+            }
+            
+            .link-card {
+                height: 76px;
+            }
+            
+            .link-card-content {
+                padding: 0 1.5rem;
+                gap: 1.1rem;
+            }
+
+            .link-card-content i {
+                font-size: 1.5rem;
+                width: 24px;
+            }
+            
+            .link-card-content span {
+                font-size: 0.92rem;
+                letter-spacing: 1.5px;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="linktree-body">
+    <div class="noise-overlay"></div>
 
-    <!-- BOTÃO WHATSAPP FLUTUANTE -->
-    <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes." 
-       class="whatsapp-flutuante" 
-       id="whatsappFlutuante"
-       target="_blank" 
-       rel="noopener"
-       onclick="return gtag_report_conversion('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes.')"
-       aria-label="Fale conosco no WhatsApp">
-        <svg viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.49-3.238l.382.227c1.543.917 3.25 1.4 5.01 1.41h.007c5.626 0 10.203-4.574 10.207-10.201.002-2.727-1.059-5.291-2.99-7.225C17.221 3.24 14.66 2.18 11.993 2.18c-5.636 0-10.21 4.574-10.215 10.203-.001 1.848.497 3.654 1.442 5.233l.251.417-1.006 3.675 3.766-.988zM17.51 15.3c-.307-.154-1.82-.9-2.1-.999-.28-.1-.485-.15-.688.153-.203.303-.787.999-.965 1.202-.178.203-.355.228-.662.074-1.036-.518-1.8-1.002-2.51-2.217-.18-.309-.18-.5-.294-.684-.113-.189-.012-.283.087-.379.09-.086.203-.228.304-.342.102-.114.135-.19.203-.327.068-.137.034-.257-.017-.358-.051-.102-.485-1.168-.665-1.6-.175-.421-.347-.364-.485-.371-.125-.007-.268-.007-.41-.007-.143 0-.376.054-.572.269-.196.216-.749.732-.749 1.786s.767 2.071.872 2.211c.105.14 1.51 2.3 3.66 3.228.51.22 1.085.352 1.457.47.514.163.98.139 1.35.084.412-.061 1.82-.745 2.078-1.464.258-.718.258-1.332.18-1.464-.078-.133-.282-.232-.589-.386z"/>
-        </svg>
-    </a>
+    <div class="linktree-container">
+        <header class="linktree-header">
+            <div class="linktree-logo-wrapper">
+                <img src="tati profissional.jpg" alt="Tatiane Gomes" class="linktree-logo">
+            </div>
+            <h1 class="linktree-title">Tatiane Gomes</h1>
+            <p class="linktree-subtitle">SAÚDE ESTÉTICA • SANTO AMARO</p>
+        </header>
 
-    <!-- HEADER / NAVBAR (ALTURA MÁXIMA 70PX) -->
-    <header class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo" aria-label="Tatiane Gomes Estética Home">
-                <span class="logo-text">Tatiane Gomes</span>
-                <span class="logo-subtitle">Estética</span>
+        <div class="linktree-links">
+            <!-- BOLÃO DA COPA -->
+            <a href="bolao-copa.html" class="link-card">
+                <div class="link-card-content">
+                    <i class="ph ph-trophy"></i>
+                    <span>Bolão da Copa</span>
+                </div>
             </a>
-            <div class="nav-actions">
-                <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes." 
-                   class="nav-btn-whatsapp" 
-                   onclick="return gtag_report_conversion('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes.')">
-                    WhatsApp
-                </a>
-                <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">☰ Menu</button>
-            </div>
+
+            <!-- TATIANE GOMES ESTÉTICA -->
+            <a href="home.html" class="link-card">
+                <div class="link-card-content">
+                    <i class="ph ph-house"></i>
+                    <span>Tatiane Gomes Estética</span>
+                </div>
+            </a>
+
+            <!-- SLIM ONE -->
+            <a href="slim-one.html" class="link-card">
+                <div class="link-card-content">
+                    <i class="ph ph-sparkles"></i>
+                    <span>Slim One</span>
+                </div>
+            </a>
+
+            <!-- TRATAMENTOS CORPORAIS -->
+            <a href="tratamentos-corporais.html" class="link-card">
+                <div class="link-card-content">
+                    <i class="ph ph-leaf"></i>
+                    <span>Tratamentos Corporais</span>
+                </div>
+            </a>
+
+            <!-- TRATAMENTOS FACIAIS -->
+            <a href="tratamentos-faciais.html" class="link-card">
+                <div class="link-card-content">
+                    <i class="ph ph-sparkle"></i>
+                    <span>Tratamentos Faciais</span>
+                </div>
+            </a>
+
+            <!-- CONTATO -->
+            <a href="contato.html" class="link-card">
+                <div class="link-card-content">
+                    <i class="ph ph-chat-circle"></i>
+                    <span>Contato</span>
+                </div>
+            </a>
+
+            <!-- CONHEÇA O MEU PODCAST -->
+            <a href="https://friendly-duckanoo-f468fe.netlify.app/site" class="link-card" target="_blank" rel="noopener">
+                <div class="link-card-content">
+                    <i class="ph ph-microphone"></i>
+                    <span>Conheça o meu Podcast</span>
+                </div>
+            </a>
         </div>
-    </header>
-
-    <!-- MENU OVERLAY -->
-    <nav class="menu-overlay" id="menuOverlay">
-        <ul class="menu-list">
-            <li><a href="tratamentos-corporais.html">Tratamentos Corporais</a></li>
-            <li><a href="tratamentos-faciais.html">Tratamentos Faciais</a></li>
-            <li><a href="slim-one.html">Slim One</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li><a href="bolao-copa.html" style="color: #C5A46D; font-weight: 600;">⚽ Bolão da Copa</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        
-        <!-- SEÇÃO HERO (DOBRA PRINCIPAL MOBILE-FIRST COMPACTA) -->
-        <section class="hero parallax-bg" id="hero">
-            <div class="container hero-content">
-                <div class="hero-grid">
-                    
-                    <!-- FOTO PRINCIPAL TATIANE (Centralizada, proporcional, max 280px mobile) -->
-                    <div class="hero-photo-col">
-                        <div class="hero-photo-wrapper">
-                            <img src="tati profissional.jpg" alt="Tatiane Gomes - Especialista em Saúde Estética">
-                        </div>
-                    </div>
-                    
-                    <!-- TEXTOS E CTA -->
-                    <div class="hero-text-wrapper">
-                        <span class="hero-selo">7+ anos ajudando mulheres a recuperarem sua autoestima</span>
-                        <h1 class="hero-title">Você não precisa aceitar a gordura localizada, a celulite ou a flacidez como algo definitivo.</h1>
-                        <p class="hero-subtitle">Tratamentos personalizados para mulheres que querem se sentir mais bonitas, confiantes e satisfeitas com o próprio corpo, sem promessas milagrosas e sem procedimentos invasivos.</p>
-                        
-                        <div class="hero-cta-box">
-                            <div class="btn-container-centered">
-                                <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes." 
-                                   class="btn-premium" 
-                                   onclick="return gtag_report_conversion('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes.')">
-                                    QUERO AGENDAR MINHA AVALIAÇÃO
-                                </a>
-                            </div>
-                            <p class="hero-support-text">Cada corpo tem uma história. Por isso, cada tratamento precisa de uma estratégia diferente.</p>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO PROBLEMA -->
-        <section class="problema-section fade-in" id="problema">
-            <div class="container">
-                <span class="section-label">Identificação</span>
-                <h2 class="section-title">Você se identifica com alguma dessas situações?</h2>
-                <p class="section-desc">Pequenos incômodos que impactam nossa relação diária com o espelho.</p>
-                
-                <div class="cards-grid">
-                    
-                    <!-- Card 1 -->
-                    <div class="card-problema">
-                        <span class="card-number">01</span>
-                        <p>Treino, faço dieta e mesmo assim aquela gordura continua ali.</p>
-                    </div>
-                    
-                    <!-- Card 2 -->
-                    <div class="card-problema">
-                        <span class="card-number">02</span>
-                        <p>Tenho vergonha da minha barriga, braços ou culote.</p>
-                    </div>
-                    
-                    <!-- Card 3 -->
-                    <div class="card-problema">
-                        <span class="card-number">03</span>
-                        <p>A celulite me incomoda mais do que eu gostaria.</p>
-                    </div>
-                    
-                    <!-- Card 4 -->
-                    <div class="card-problema">
-                        <span class="card-number">04</span>
-                        <p>Perdi peso, mas fiquei com flacidez.</p>
-                    </div>
-                    
-                    <!-- Card 5 -->
-                    <div class="card-problema">
-                        <span class="card-number">05</span>
-                        <p>Minha pele perdeu o brilho e a uniformidade.</p>
-                    </div>
-                    
-                    <!-- Card 6 -->
-                    <div class="card-problema">
-                        <span class="card-number">06</span>
-                        <p>Já tentei vários tratamentos e não tive resultado.</p>
-                    </div>
-                    
-                </div>
-                
-                <div class="problema-conclusion">
-                    <p>Se você respondeu sim para qualquer uma dessas situações, saiba que não está sozinha.</p>
-                    <p>Muitas vezes o problema não é falta de esforço.</p>
-                    <p>O problema é não ter uma <strong>estratégia personalizada para o seu corpo</strong>.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO SOBRE TATIANE -->
-        <section class="sobre-section fade-in" id="sobre">
-            <div class="container">
-                <div class="sobre-grid">
-                    
-                    <!-- Foto Asimétrica -->
-                    <div class="sobre-photo-col">
-                        <div class="sobre-photo-wrapper">
-                            <img src="tatilifestyle.jpeg" alt="Dra. Tatiane Gomes em consulta de avaliação estética">
-                        </div>
-                    </div>
-                    
-                    <!-- Textos e Destaques -->
-                    <div class="sobre-content">
-                        <span class="section-label">Especialista</span>
-                        <h2 class="sobre-title">Prazer, eu sou Tatiane Gomes.</h2>
-                        <div class="sobre-text">
-                            <p>Sou especialista em Saúde Estética e dedico minha carreira a ajudar mulheres a conquistarem resultados reais sem abrir mão da saúde.</p>
-                            <p>Minha trajetória inclui atuação em clínicas de estética, dermatologia e ginecologia, além de constante atualização profissional para oferecer tratamentos seguros, modernos e personalizados.</p>
-                            <p>Atualmente também curso Nutrição porque acredito que a verdadeira transformação acontece quando estética, saúde e hábitos caminham juntos.</p>
-                            <p>Não trabalho com soluções milagrosas.</p>
-                            <p>Tratamento sério baseia-se em <strong>estratégia, conhecimento e individualização</strong>.</p>
-                        </div>
-                        
-                        <ul class="highlights-list">
-                            <li class="highlight-item"><span class="highlight-bullet"></span> Especialista em Saúde Estética</li>
-                            <li class="highlight-item"><span class="highlight-bullet"></span> Experiência em dermatologia e ginecologia</li>
-                            <li class="highlight-item"><span class="highlight-bullet"></span> Graduanda em Nutrição</li>
-                            <li class="highlight-item"><span class="highlight-bullet"></span> Mais de 7 anos de experiência</li>
-                            <li class="highlight-item"><span class="highlight-bullet"></span> Atendimento humanizado</li>
-                            <li class="highlight-item"><span class="highlight-bullet"></span> Protocolos personalizados</li>
-                        </ul>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO RESULTADOS (SLIDER INTERATIVO ANTES/DEPOIS E CARROSSEL) -->
-        <section class="resultados-section fade-in" id="resultados">
-            <div class="container">
-                <span class="section-label">Transformações</span>
-                <h2 class="section-title">Resultados reais de mulheres reais.</h2>
-                <p class="section-desc">Cada resultado é único porque cada corpo também é único.</p>
-                
-                <!-- SLIDER INTERATIVO ANTES E DEPOIS (Mobile máx height 400px, 100% largura) -->
-                <div class="before-after-outer">
-                    <div class="before-after-slider" id="beforeAfterSlider">
-                        <img src="crio3.jpeg" class="img-after" alt="Foto Resultado Depois - Tatiane Gomes Estética" loading="lazy">
-                        <img src="crio4.jpeg" class="img-before" id="beforeImage" alt="Foto Inicial Antes - Tatiane Gomes Estética" loading="lazy">
-                        
-                        <!-- Rótulos explicativos -->
-                        <span class="before-after-label label-before">Antes</span>
-                        <span class="before-after-label label-after">Depois</span>
-                        
-                        <!-- Barra e Botão de Arrastar -->
-                        <div class="slider-handle" id="sliderHandle">
-                            <div class="slider-handle-button">↔</div>
-                        </div>
-                        
-                        <!-- Controle de Input Transparente para Gestos Nativos Touch/Mouse -->
-                        <input type="range" min="0" max="100" value="50" class="slider-range-input" id="sliderRange" aria-label="Ajustar divisor antes e depois">
-                    </div>
-                </div>
-
-                <!-- CARROSSEL AUTOMÁTICO DE RESULTADOS -->
-                <div class="carousel-wrapper">
-                    <div class="carousel-container">
-                        <div class="carousel-slides" id="carouselSlides">
-                            
-                            <!-- Slide 1 -->
-                            <div class="carousel-slide-item">
-                                <div class="slide-card">
-                                    <div class="slide-img-wrapper">
-                                        <img src="crio4.jpeg" alt="Antes e Depois Abdômen - Tatiane Gomes Estética" loading="lazy">
-                                    </div>
-                                    <p class="slide-caption">SlimOne - Gordura abdominal frontal</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Slide 2 -->
-                            <div class="carousel-slide-item">
-                                <div class="slide-card">
-                                    <div class="slide-img-wrapper">
-                                        <img src="resultadofacial1.jpg" alt="Antes e Depois Limpeza de Pele - Tatiane Gomes Estética" loading="lazy">
-                                    </div>
-                                    <p class="slide-caption">Microagulhamento</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Slide 3 -->
-                            <div class="carousel-slide-item">
-                                <div class="slide-card">
-                                    <div class="slide-img-wrapper">
-                                        <img src="crio2.jpeg" alt="Antes e Depois Flancos - Tatiane Gomes Estética" loading="lazy">
-                                    </div>
-                                    <p class="slide-caption">SlimOne - Gordura localizada de perfil</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Slide 4 -->
-                            <div class="carousel-slide-item">
-                                <div class="slide-card">
-                                    <div class="slide-img-wrapper">
-                                        <img src="resultadofacial2.jpg" alt="Antes e Depois Microagulhamento - Tatiane Gomes Estética" loading="lazy">
-                                    </div>
-                                    <p class="slide-caption">Limpeza de Pele Profunda</p>
-                                </div>
-                            </div>
-
-                            <!-- Slide 5 -->
-                            <div class="carousel-slide-item">
-                                <div class="slide-card">
-                                    <div class="slide-img-wrapper">
-                                        <img src="corporal4.jpg" alt="Antes e Depois Corporal - Tatiane Gomes Estética" loading="lazy">
-                                    </div>
-                                    <p class="slide-caption">SlimOne para Gordura Localizada</p>
-                                </div>
-                            </div>
-
-                            <!-- Slide 6 -->
-                            <div class="carousel-slide-item">
-                                <div class="slide-card">
-                                    <div class="slide-img-wrapper">
-                                        <img src="resultadofacial3.jpg" alt="Antes e Depois Peelings - Tatiane Gomes Estética" loading="lazy">
-                                    </div>
-                                    <p class="slide-caption">Tratamento de Acne e Manchas</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resultados-nav">
-                    <button class="resultados-nav-btn" id="carouselPrev" aria-label="Slide anterior">←</button>
-                    <button class="resultados-nav-btn" id="carouselNext" aria-label="Próximo slide">→</button>
-                </div>
-
-                <div class="problema-conclusion" style="margin-top: 30px;">
-                    <p>Meu objetivo não é transformar você em outra pessoa.</p>
-                    <p>Meu objetivo é ajudar você a se sentir melhor quando se olha no espelho.</p>
-                    <div class="btn-container-centered" style="margin-top: 24px;">
-                        <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes." 
-                           class="btn-premium" 
-                           onclick="return gtag_report_conversion('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes.')">
-                            QUERO DESCOBRIR O QUE É POSSÍVEL PARA MIM
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO VÍDEO CASO CLÍNICO -->
-        <section class="video-section fade-in" id="caso-clinico">
-            <div class="container">
-                <span class="section-label">Estudo de Caso</span>
-                <h2 class="section-title">Análise de Caso Clínico Real</h2>
-                <p class="section-desc">Entenda a estratégia científica por trás de uma correção e redefinição corporal.</p>
-                
-                <div class="video-wrapper">
-                    <video controls preload="metadata" class="clinical-video" poster="tatilifestyle.jpeg">
-                        <source src="casoclinico.mp4" type="video/mp4">
-                        Seu navegador não suporta a tag de vídeo.
-                    </video>
-                </div>
-                
-                <div class="video-explanation">
-                    <p>Neste vídeo, apresento os detalhes do planejamento e execução para recuperar a harmonia corporal de uma paciente que já havia realizado procedimentos estéticos em outra clínica sem obter resultados satisfatórios. Demonstramos como a personalização e a visão integrativa fazem toda a diferença.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO SLIMONE -->
-        <section class="slimone-section fade-in" id="slimone">
-            <div class="container">
-                <div class="slimone-container">
-                    <h2 class="slimone-title-custom">SlimOne</h2>
-                    <h3 class="slimone-subtitle-custom">Meu protocolo exclusivo para gordura localizada.</h3>
-                    <p class="slimone-text-custom">O SlimOne foi criado para mulheres que sentem que fazem tudo certo, mas continuam incomodadas com aquela gordura resistente. O protocolo combina avaliação estratégica, análise corporal detalhada e tecnologias avançadas para potencializar a redução da gordura localizada de forma segura e individualizada. Mais do que um procedimento, é uma estratégia pensada para o seu corpo.</p>
-                    
-                    <div class="btn-container-centered">
-                        <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20se%20o%20SlimOne%20%C3%A9%20indicado%20para%20mim." 
-                           class="btn-premium"
-                           onclick="return gtag_report_conversion('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20se%20o%20SlimOne%20%C3%A9%20indicado%20para%20mim.')">
-                            QUERO SABER SE O SLIMONE É PARA MIM
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO TRATAMENTOS -->
-        <section class="tratamentos-section fade-in" id="tratamentos">
-            <div class="container">
-                <span class="section-label">Protocolos</span>
-                <h2 class="section-title">Tratamentos desenvolvidos para valorizar sua melhor versão.</h2>
-                <p class="section-desc">Estratégias científicas e modernas para o cuidado corporal e facial.</p>
-                
-                <div class="tratamentos-grid">
-                    
-                    <!-- Card 1 -->
-                    <div class="card-tratamento">
-                        <h3>Gordura Localizada</h3>
-                        <p>Redução estratégica das áreas que mais incomodam, respeitando a individualidade do seu corpo.</p>
-                    </div>
-                    
-                    <!-- Card 2 -->
-                    <div class="card-tratamento">
-                        <h3>Celulite</h3>
-                        <p>Protocolos personalizados para melhorar o aspecto da pele e devolver mais confiança.</p>
-                    </div>
-                    
-                    <!-- Card 3 -->
-                    <div class="card-tratamento">
-                        <h3>Flacidez</h3>
-                        <p>Tratamentos focados na firmeza e sustentação dos tecidos.</p>
-                    </div>
-                    
-                    <!-- Card 4 -->
-                    <div class="card-tratamento">
-                        <h3>Diástase</h3>
-                        <p>Abordagem específica para mulheres que desejam recuperar a harmonia abdominal.</p>
-                    </div>
-                    
-                    <!-- Card 5 -->
-                    <div class="card-tratamento">
-                        <h3>Drenagem Linfática</h3>
-                        <p>Menos inchaço, mais leveza e sensação de bem-estar.</p>
-                    </div>
-                    
-                    <!-- Card 6 -->
-                    <div class="card-tratamento">
-                        <h3>Limpeza de Pele</h3>
-                        <p>Pele mais limpa, saudável e luminosa.</p>
-                    </div>
-                    
-                    <!-- Card 7 -->
-                    <div class="card-tratamento">
-                        <h3>Peelings</h3>
-                        <p>Renovação da pele com foco em manchas, acne e uniformização.</p>
-                    </div>
-                    
-                    <!-- Card 8 -->
-                    <div class="card-tratamento">
-                        <h3>Microagulhamento</h3>
-                        <p>Estímulo de colágeno para uma pele mais bonita e revitalizada.</p>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO DIFERENCIAL -->
-        <section class="diferenciais-section fade-in" id="diferenciais">
-            <div class="container">
-                <span class="section-label">Diferenciais</span>
-                <h2 class="section-title">Por que minhas pacientes escolhem meu trabalho?</h2>
-                <p class="section-desc">Um atendimento fundamentado em acolhimento, técnica e verdade.</p>
-                
-                <div class="diferenciais-grid">
-                    
-                    <!-- Item 1 -->
-                    <div class="diferencial-item">
-                        <span class="diferencial-num">I</span>
-                        <p class="diferencial-text">Porque não recebem protocolos prontos.</p>
-                    </div>
-                    
-                    <!-- Item 2 -->
-                    <div class="diferencial-item">
-                        <span class="diferencial-num">II</span>
-                        <p class="diferencial-text">Porque entendem exatamente o que está sendo feito.</p>
-                    </div>
-                    
-                    <!-- Item 3 -->
-                    <div class="diferencial-item">
-                        <span class="diferencial-num">III</span>
-                        <p class="diferencial-text">Porque se sentem acolhidas e ouvidas.</p>
-                    </div>
-                    
-                    <!-- Item 4 -->
-                    <div class="diferencial-item">
-                        <span class="diferencial-num">IV</span>
-                        <p class="diferencial-text">Porque recebem orientações que vão além do procedimento.</p>
-                    </div>
-                    
-                    <!-- Item 5 -->
-                    <div class="diferencial-item">
-                        <span class="diferencial-num">V</span>
-                        <p class="diferencial-text">Porque buscam resultados naturais.</p>
-                    </div>
-                    
-                    <!-- Item 6 -->
-                    <div class="diferencial-item">
-                        <span class="diferencial-num">VI</span>
-                        <p class="diferencial-text">Porque querem uma profissional que enxergue o corpo de forma completa.</p>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO INSTAGRAM (MOCKUPS FLUTUANTES) -->
-        <section class="instagram-section fade-in" id="instagram">
-            <div class="container">
-                <span class="section-label">Redes Sociais</span>
-                <h2 class="section-title">A estética que você vê aqui também acontece todos os dias no Instagram.</h2>
-                <p class="instagram-desc">Compartilho bastidores, rotina, dicas sobre gordura localizada, celulite, flacidez, acne, alimentação e tudo o que realmente influencia seus resultados.</p>
-                
-                <!-- Mockups de Celulares (Movimento lento de flutuar via CSS) -->
-                <div class="instagram-mockups-container">
-                    
-                    <!-- Celular 1 (Feed Mockup) -->
-                    <div class="phone-mockup">
-                        <div class="phone-screen">
-                            <img src="instagram-mockup.jpeg" alt="Screenshot do perfil de Instagram de Tatiane Gomes Estética" loading="lazy">
-                        </div>
-                    </div>
-                    
-                </div>
-                
-                <div class="btn-container-centered">
-                    <a href="https://www.instagram.com/tatianegomesestetica/" 
-                       class="btn-premium" 
-                       target="_blank" 
-                       rel="noopener">
-                        SEGUIR @TATIANEGOMESESTETICA
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO DEPOIMENTOS -->
-        <section class="depoimentos-section fade-in" id="depoimentos">
-            <div class="container">
-                <span class="section-label">Relatos</span>
-                <h2 class="section-title">O que minhas pacientes dizem.</h2>
-                <p class="section-desc">Histórias reais de mulheres que redescobriram sua autoconfiança.</p>
-                
-                <div class="depoimentos-grid">
-                    
-                    <!-- Depoimento 1 -->
-                    <div class="depoimento-card">
-                        <p class="depoimento-text">“Achei que precisaria conviver para sempre com aquela gordura abdominal. Hoje me sinto muito mais confiante.”</p>
-                    </div>
-                    
-                    <!-- Depoimento 2 -->
-                    <div class="depoimento-card">
-                        <p class="depoimento-text">“A Tatiane não trata apenas o corpo. Ela entende a mulher por trás da queixa.”</p>
-                    </div>
-                    
-                    <!-- Depoimento 3 -->
-                    <div class="depoimento-card">
-                        <p class="depoimento-text">“Foi a primeira vez que senti que alguém realmente analisou meu caso antes de indicar um tratamento.”</p>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO FINAL -->
-        <section class="final-section fade-in" id="agendar">
-            <div class="container final-container">
-                <h2 class="final-title">Talvez você esteja a apenas uma avaliação de distância da sua melhor versão.</h2>
-                <p class="final-desc">Vamos entender suas queixas, seus objetivos e criar uma estratégia personalizada para você.</p>
-                
-                <div class="btn-container-centered">
-                    <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes." 
-                       class="btn-premium" 
-                       onclick="return gtag_report_conversion('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes.')">
-                        AGENDAR MINHA AVALIAÇÃO
-                    </a>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- RODAPÉ -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                
-                <!-- Coluna Info -->
-                <div class="footer-info">
-                    <h3>Tatiane Gomes Estética</h3>
-                    <p>Especialista em Saúde Estética</p>
-                    <p>Santo Amaro • São Paulo</p>
-                    <p>Próximo ao metrô Borba Gato</p>
-                </div>
-                
-                <!-- Coluna Links -->
-                <div class="footer-links-col">
-                    <h4>Canais Digitais</h4>
-                    <ul class="footer-links-list">
-                        <li>
-                            <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes." 
-                               target="_blank" 
-                               rel="noopener"
-                               onclick="return gtag_report_conversion('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes.')">
-                                WhatsApp
-                            </a>
-                        </li>
-                        <li><a href="https://www.instagram.com/tatianegomesestetica/" target="_blank" rel="noopener">Instagram</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Coluna Mapa -->
-                <div class="footer-maps">
-                    <h4>Localização Google Maps</h4>
-                    <div class="footer-map-container">
-                        <iframe 
-                            src="https://maps.google.com/maps?q=Rua+Bela+Vista,+580+-+Jardim+Francisco+Mendes,+S%C3%A3o+Paulo+-+SP&t=&z=14&ie=UTF8&iwloc=&output=embed" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Localização Clínica Santo Amaro">
-                        </iframe>
-                    </div>
-                </div>
-                
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Tatiane Gomes Estética. Todos os direitos reservados.</p>
-                <div class="footer-discreet-links">
-                    <a href="politica-de-privacidade.html">Políticas de Privacidade</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- LÓGICA DE COMPORTAMENTO DINÂMICO JAVASCRIPT -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            
-            // 1. Menu Mobile Hambúrguer Overlay
-            const menuToggle = document.getElementById("menuToggle");
-            const menuOverlay = document.getElementById("menuOverlay");
-
-            menuToggle.addEventListener("click", function () {
-                const isActive = menuOverlay.classList.toggle("active");
-                if (isActive) {
-                    menuToggle.textContent = "✕ Fechar";
-                } else {
-                    menuToggle.textContent = "☰ Menu";
-                }
-            });
-
-            // Fecha o menu ao clicar em links
-            menuOverlay.querySelectorAll("a").forEach(link => {
-                link.addEventListener("click", () => {
-                    menuOverlay.classList.remove("active");
-                    menuToggle.textContent = "☰ Menu";
-                });
-            });
-
-            // 2. Animação Fade-In ao rolar (Intersection Observer)
-            const fadeElements = document.querySelectorAll(".fade-in");
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px"
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                        observer.unobserve(entry.target); // Executa apenas uma vez
-                    }
-                });
-            }, observerOptions);
-
-            fadeElements.forEach(el => {
-                observer.observe(el);
-            });
-
-            // 3. Slider Interativo de Antes e Depois (Comparador Arrastável)
-            const sliderRange = document.getElementById("sliderRange");
-            const beforeImage = document.getElementById("beforeImage");
-            const sliderHandle = document.getElementById("sliderHandle");
-
-            sliderRange.addEventListener("input", function (e) {
-                const sliderVal = e.target.value;
-                beforeImage.style.clipPath = `polygon(0 0, ${sliderVal}% 0, ${sliderVal}% 100%, 0 100%)`;
-                sliderHandle.style.left = `${sliderVal}%`;
-            });
-
-            // 4. Carrossel Automático de Resultados (3 no desktop, 2 no tablet, 1 no mobile)
-            const track = document.getElementById("carouselSlides");
-            const slides = Array.from(track.children);
-            const nextBtn = document.getElementById("carouselNext");
-            const prevBtn = document.getElementById("carouselPrev");
-            let currentIndex = 0;
-
-            function getItemsPerSlide() {
-                if (window.innerWidth >= 1024) return 3;
-                if (window.innerWidth >= 600) return 2;
-                return 1;
-            }
-
-            function updateCarousel() {
-                const itemsPerSlide = getItemsPerSlide();
-                const maxIndex = slides.length - itemsPerSlide;
-                
-                if (currentIndex > maxIndex) {
-                    currentIndex = maxIndex;
-                }
-                if (currentIndex < 0) {
-                    currentIndex = 0;
-                }
-
-                const slideWidth = slides[0].offsetWidth;
-                const offset = -(slideWidth * currentIndex);
-                track.style.transform = `translateX(${offset}px)`;
-            }
-
-            nextBtn.addEventListener("click", function () {
-                const itemsPerSlide = getItemsPerSlide();
-                const maxIndex = slides.length - itemsPerSlide;
-                
-                if (currentIndex < maxIndex) {
-                    currentIndex++;
-                } else {
-                    currentIndex = 0; // Volta para o primeiro
-                }
-                updateCarousel();
-            });
-
-            prevBtn.addEventListener("click", function () {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                } else {
-                    const itemsPerSlide = getItemsPerSlide();
-                    currentIndex = slides.length - itemsPerSlide; // Vai para o final
-                }
-                updateCarousel();
-            });
-
-            // Ciclo Automático
-            let autoCycle = setInterval(function () {
-                nextBtn.click();
-            }, 5000);
-
-            // Pausa no hover/toque
-            track.addEventListener("mouseenter", () => clearInterval(autoCycle));
-            track.addEventListener("mouseleave", () => {
-                autoCycle = setInterval(function () {
-                    nextBtn.click();
-                }, 5000);
-            });
-
-            // Redimensionamento de Tela
-            window.addEventListener("resize", updateCarousel);
-
-            // Touch Swipe no Carrossel
-            let startX = 0;
-            let endX = 0;
-
-            track.addEventListener("touchstart", (e) => {
-                startX = e.touches[0].clientX;
-            }, { passive: true });
-
-            track.addEventListener("touchend", (e) => {
-                endX = e.changedTouches[0].clientX;
-                const diff = startX - endX;
-                if (diff > 50) {
-                    nextBtn.click();
-                } else if (diff < -50) {
-                    prevBtn.click();
-                }
-            }, { passive: true });
-
-            // 5. Botão de WhatsApp Flutuante Scroll Trigger
-            const whatsappFlutuante = document.getElementById("whatsappFlutuante");
-            const heroSection = document.getElementById("hero");
-
-            window.addEventListener("scroll", function () {
-                const heroHeight = heroSection.offsetHeight;
-                const scrollPos = window.scrollY;
-
-                if (scrollPos > (heroHeight - 100)) {
-                    whatsappFlutuante.style.opacity = "1";
-                    whatsappFlutuante.style.pointerEvents = "auto";
-                } else {
-                    whatsappFlutuante.style.opacity = "0";
-                    whatsappFlutuante.style.pointerEvents = "none";
-                }
-            }, { passive: true });
-
-            // Inicialização da visibilidade do botão de WhatsApp
-            whatsappFlutuante.style.opacity = "0";
-            whatsappFlutuante.style.pointerEvents = "none";
-
-        });
-    </script>
+    </div>
 </body>
 </html>
