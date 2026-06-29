@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tratamentos Corporais - Tatiane Gomes Estética">
-    <title>Tratamentos Corporais - Tatiane Gomes Estética</title>
-
-    <link rel="stylesheet" href="styles.css">
-
+    
+    <!-- SEO Local e Otimizações -->
+    <title>Tratamentos Corporais em São Paulo | Tatiane Gomes Estética</title>
+    <meta name="description" content="Reduza medidas, elimine gordura localizada e combata a flacidez corporal. Protocolos personalizados, seguros e não invasivos por Tatiane Gomes.">
+    <meta name="keywords" content="estetica corporal, criolipolise, gordura localizada, celulite, flacidez, drenagem linfatica, detox slim, tatiane gomes, sao paulo">
+    <link rel="canonical" href="https://tatianegomesestetica.com.br/tratamentos-corporais.html">
+    
+    <!-- Google Fonts: Playfair Display (Títulos) e Montserrat (Textos) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet Premium -->
+    <link rel="stylesheet" href="premium-landing.css">
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17947496680"></script>
     <script>
@@ -27,235 +31,636 @@
             }
         });
     </script>
-</head>
 
+    <!-- Script de Conversão de Eventos Google Ads -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17947496680/hUBdCOX99oMcEOihhO5C',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+</head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="home.html" class="logo" style="text-decoration: none; color: inherit;">
+    <!-- BOTÃO WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes." 
+       class="whatsapp-flutuante" 
+       id="whatsappFlutuante"
+       target="_blank" 
+       rel="noopener"
+       onclick="return gtag_report_conversion('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes.')"
+       aria-label="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.49-3.238l.382.227c1.543.917 3.25 1.4 5.01 1.41h.007c5.626 0 10.203-4.574 10.207-10.201.002-2.727-1.059-5.291-2.99-7.225C17.221 3.24 14.66 2.18 11.993 2.18c-5.636 0-10.21 4.574-10.215 10.203-.001 1.848.497 3.654 1.442 5.233l.251.417-1.006 3.675 3.766-.988zM17.51 15.3c-.307-.154-1.82-.9-2.1-.999-.28-.1-.485-.15-.688.153-.203.303-.787.999-.965 1.202-.178.203-.355.228-.662.074-1.036-.518-1.8-1.002-2.51-2.217-.18-.309-.18-.5-.294-.684-.113-.189-.012-.283.087-.379.09-.086.203-.228.304-.342.102-.114.135-.19.203-.327.068-.137.034-.257-.017-.358-.051-.102-.485-1.168-.665-1.6-.175-.421-.347-.364-.485-.371-.125-.007-.268-.007-.41-.007-.143 0-.376.054-.572.269-.196.216-.749.732-.749 1.786s.767 2.071.872 2.211c.105.14 1.51 2.3 3.66 3.228.51.22 1.085.352 1.457.47.514.163.98.139 1.35.084.412-.061 1.82-.745 2.078-1.464.258-.718.258-1.332.18-1.464-.078-.133-.282-.232-.589-.386z"/>
+        </svg>
+    </a>
+
+    <!-- HEADER / NAVBAR (ALTURA MÁXIMA 70PX) -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="home.html" class="logo" aria-label="Tatiane Gomes Estética Home">
                 <span class="logo-text">Tatiane Gomes</span>
                 <span class="logo-subtitle">Estética</span>
             </a>
-
             <div class="nav-actions">
-                <a href="agendamento.html" class="btn-agendar">Agendar</a>
-                <button class="menu-toggle" id="menuToggle">☰ Menu</button>
+                <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes." 
+                   class="nav-btn-whatsapp" 
+                   onclick="return gtag_report_conversion('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes.')">
+                    WhatsApp
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">☰ Menu</button>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- MENU OVERLAY -->
-    <div class="menu-overlay" id="menuOverlay">
+    <nav class="menu-overlay" id="menuOverlay">
         <ul class="menu-list">
             <li><a href="tratamentos-corporais.html">Tratamentos Corporais</a></li>
             <li><a href="tratamentos-faciais.html">Tratamentos Faciais</a></li>
             <li><a href="slim-one.html">Slim One</a></li>
             <li><a href="bolao-copa.html" style="color: #C5A46D; font-weight: 600;">Bolão da Copa</a></li>
         </ul>
-    </div>
+    </nav>
 
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="page-header-overlay"></div>
-        <div class="section-header">
-            <h1>Tratamentos Corporais</h1>
-            <p>Protocolos corporais personalizados para redução de medidas, contorno e bem-estar</p>
-        </div>
-    </section>
-    <!-- Resultados Reais -->
-    <section class="treatments-section" style="padding: 60px 0; background: #f6f9f3;">
-
-        <section class="results-section">
-            <div class="container" style="max-width: 1200px; margin: 0 auto;">
-
-                <h2 class="section-title" style="text-align: center; font-size: 4rem; margin-bottom: 30px;">
-                    Resultados Reais
-                </h2>
-
-                <div class="title-underline center" style="margin: 0 auto 20px;"></div>
-
-                <p class="section-subtitle" style="text-align: center; font-size: 0.95rem; margin-bottom: 40px;">
-                    Resultados reais de protocolos corporais personalizados
-                </p>
-
-                <!-- CARROSSEL -->
-                <div class="results-carousel">
-
-                    <div class="result-card">
-                        <img src="corporal3.jpg" alt="Antes e Depois Crio Detox Slim" class="result-image">
-                        <span>Crio Detox Slim</span>
+    <main>
+        
+        <!-- SEÇÃO HERO (DOBRA PRINCIPAL MOBILE-FIRST COMPACTA) -->
+        <section class="hero parallax-bg" id="hero">
+            <div class="container hero-content">
+                <div class="hero-grid">
+                    
+                    <!-- Imagem da Especialista/Espaço (Centralizada, proporcional, max 280px mobile) -->
+                    <div class="hero-photo-col">
+                        <div class="hero-photo-wrapper">
+                            <img src="tati profissional.jpg" alt="Dra. Tatiane Gomes - Especialista em Estética Corporal">
+                        </div>
                     </div>
-
-                    <div class="result-card">
-                        <img src="corporal1.jpg" alt="Antes e Depois Detox Slim" class="result-image">
-                        <span>Detox Slim</span>
+                    
+                    <!-- Textos e CTA da Dobra -->
+                    <div class="hero-text-wrapper">
+                        <span class="hero-selo">Estética Avançada Científica e Personalizada</span>
+                        <h1 class="hero-title">Elimine gordura localizada e defina seu corpo</h1>
+                        <p class="hero-subtitle">Protocolos corporais de alta performance, totalmente personalizados, seguros e não invasivos. Resultados reais, naturais e cientificamente embasados.</p>
+                        
+                        <div class="hero-cta-box">
+                            <div class="btn-container-centered">
+                                <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20para%20tratamentos%20corporais." 
+                                   class="btn-premium" 
+                                   onclick="return gtag_report_conversion('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20para%20tratamentos%20corporais.')">
+                                    Quero agendar minha avaliação corporal
+                                </a>
+                            </div>
+                            
+                            <ul class="benefits-list-premium">
+                                <li>
+                                    <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                                    <span>Redução de gordura localizada sem cirurgias ou agulhas</span>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                                    <span>Estímulo de colágeno contra a flacidez tecidual</span>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                                    <span>Remodelação, desintoxicação e melhora no contorno corporal</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-
-                    <div class="result-card">
-                        <img src="corporal2.jpg" alt="Antes e Depois Drenagem Linfática" class="result-image">
-                        <span>Drenagem Linfática</span>
-                    </div>
-
+                    
                 </div>
-                <!-- FIM CARROSSEL -->
-
             </div>
         </section>
 
-    </section>
-
-
-    <!-- TRATAMENTOS CORPORAIS -->
-    <div class="container" style="margin-top: 6rem;">
-
-        <div class="section-header">
-            <h2>Nossos Tratamentos Corporais</h2>
-            <div class="title-underline center"></div>
-        </div>
-
-        <!-- Massagem Modeladora -->
-        <div class="info-box">
-            <h3>Massagem Modeladora</h3>
-            <p>Procedimento corporal que associa manobras intensas a dermocosméticos profissionais de alta performance.
-                Atua na mobilização do tecido adiposo, melhora do contorno corporal e redução de medidas, deixando o
-                corpo mais definido, com sensação imediata de ativação e leveza.</p>
-        </div>
-
-        <!-- Ventosaterapia -->
-        <div class="info-box">
-            <h3>Ventosaterapia</h3>
-            <p>Recurso utilizado dentro dos protocolos corporais para potencializar resultados. A sucção controlada atua
-                na mobilização dos tecidos, melhora a resposta da pele aos ativos aplicados e contribui para melhora
-                visível do aspecto da celulite e do contorno corporal.</p>
-        </div>
-
-        <!-- Limpeza de Pele -->
-        <div class="info-box">
-            <h3>Limpeza de Pele</h3>
-            <p>Tratamento para costas acneicas completo e personalizado para cada tipo de pele. Associa vapor de ozônio,
-                extração segura, alta frequência para ação bactericida e cicatrizante, LEDterapia conforme a necessidade
-                da pele e dermocosméticos profissionais. Remove cravos e impurezas, controla oleosidade, previne acne e
-                deixa a pele mais uniforme, iluminada e preparada para outros tratamentos.</p>
-        </div>
-
-        <!-- Criolipólise -->
-        <div class="info-box">
-            <h3>Criolipólise</h3>
-            <p>Tecnologia avançada para redução de gordura localizada que atua através do resfriamento controlado por
-                temperaturas negativas. Esse processo provoca a morte programada das células de gordura, que são
-                eliminadas gradualmente pelo organismo. O resultado é redução de medidas, melhora significativa do
-                contorno corporal e afinamento da área tratada, sem cirurgia.</p>
-        </div>
-
-        <!-- Eletrolipólise -->
-        <div class="info-box">
-            <h3>Eletrolipólise</h3>
-            <p>Procedimento que utiliza correntes elétricas específicas para estimular a quebra da gordura localizada.
-                Atua diretamente no metabolismo do tecido adiposo, favorecendo a redução de volumes e potencializando
-                protocolos de remodelação corporal.</p>
-        </div>
-
-        <!-- Hidrolipo -->
-        <div class="info-box">
-            <h3>Hidrolipo Não Aspirativa</h3>
-            <p>Procedimento estético avançado, não cirúrgico, que utiliza ativos lipolíticos associados a tecnologias
-                para atuar diretamente na gordura localizada. Promove redução de volumes, remodelação corporal e melhora
-                do contorno de forma progressiva e segura.</p>
-        </div>
-
-        <!-- Ultrassom -->
-        <div class="info-box">
-            <h3>Ultrassom</h3>
-            <p>Tecnologia que utiliza ondas ultrassônicas para atingir as células de gordura e estimular a produção de
-                colágeno. Atua tanto na redução de gordura localizada quanto na flacidez, melhorando firmeza, textura da
-                pele e definição corporal.</p>
-        </div>
-
-        <!-- Endermoterapia -->
-        <div class="info-box">
-            <h3>Endermoterapia</h3>
-            <p>Tecnologia de sucção mecânica que promove mobilização profunda dos tecidos. Auxilia na melhora do aspecto
-                da celulite, na textura da pele e na potencialização dos resultados dos protocolos corporais associados.
-            </p>
-        </div>
-
-        <!-- Pós-operatório -->
-        <div class="info-box">
-            <h3>Pós-operatório Corporal</h3>
-            <p>Atendimento especializado que utiliza técnicas e recursos adequados para auxiliar na recuperação após
-                cirurgias plásticas corporais. Atua na redução de edemas, prevenção de fibroses e organização do tecido,
-                proporcionando recuperação mais confortável e resultados mais harmoniosos.</p>
-        </div>
-
-        <!-- PROTOCOLOS -->
-        <div class="section-header" style="margin-top:4rem;">
-            <h2>Protocolos com Associações</h2>
-            <div class="title-underline center"></div>
-        </div>
-
-        <div class="info-box">
-            <h3>Detox Slim</h3>
-            <p>Protocolo corporal que associa tecnologias e dermocosméticos de alto padrão para promover redução de
-                medidas, melhora do contorno corporal e diminuição da retenção de líquidos. Atua ativando o metabolismo
-                local e potencializando a resposta estética do corpo, deixando a silhueta mais leve e definida.</p>
-        </div>
-
-        <div class="info-box">
-            <h3>CoreFit</h3>
-            <p>Protocolo que utiliza eletroestimulação muscular para fortalecimento profundo do core. Atua na melhora da
-                diástase abdominal, definição da região abdominal, fortalecimento muscular e estabilidade corporal, com
-                resultados estéticos e funcionais.</p>
-        </div>
-
-        <div class="info-box">
-            <h3>Power Firm</h3>
-            <p>Protocolo desenvolvido para tratamento da flacidez corporal. Associa tecnologias e ativos específicos que
-                estimulam a produção de colágeno, promovendo pele mais firme, tonificada e com textura mais uniforme de
-                forma progressiva.</p>
-        </div>
-
-        <div class="info-box">
-            <h3>Remodela Body Shape</h3>
-            <p>Associação estratégica de tecnologias corporais focadas na gordura localizada e no contorno corporal.
-                Atua na harmonização da silhueta, definição corporal e personalização total do tratamento conforme as
-                necessidades de cada corpo.</p>
-        </div>
-
-        <div class="info-box">
-            <h3>Crio Slim Detox</h3>
-            <p>Protocolo completo de harmonização corporal baseado na criolipólise, onde a gordura é tratada através do
-                resfriamento por temperaturas negativas, promovendo a morte das células adiposas. O protocolo inclui
-                preparo corporal antes da criolipólise para melhorar a resposta do tecido, sessões de pós-tratamento
-                para potencializar os resultados e acompanhamento com orientações de hábitos, alimentação e
-                suplementação. Os resultados são expressivos em cerca de 40 dias, com redução de medidas, afinamento da
-                área tratada e melhora do contorno corporal, sem necessidade de inúmeras sessões.</p>
-        </div>
-
-    </div>
-
-    <!-- CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Descubra o protocolo ideal para você</h2>
-                <p>Agende uma avaliação e receba um plano personalizado</p>
-                <a href="agendamento.html" class="btn btn-primary btn-large">Agendar Avaliação</a>
+        <!-- SEÇÃO IDENTIFICAÇÃO (DORES E DESEJOS) -->
+        <section class="problema-section fade-in" id="quem-e">
+            <div class="container">
+                <span class="section-label">Identificação</span>
+                <h2 class="section-title">Para quem os tratamentos corporais são ideais?</h2>
+                <p class="section-desc">Pequenos incômodos que impactam nossa relação diária com o espelho e nossa autoconfiança.</p>
+                
+                <div class="cards-grid">
+                    
+                    <div class="card-problema">
+                        <span class="card-number">I</span>
+                        <p>Quem treina, faz dieta regrada e mesmo assim não consegue eliminar aquela gordura localizada persistente.</p>
+                    </div>
+                    
+                    <div class="card-problema">
+                        <span class="card-number">II</span>
+                        <p>Pessoas que sofrem com inchaço corporal constante, sensação de peso e retenção severa de líquidos.</p>
+                    </div>
+                    
+                    <div class="card-problema">
+                        <span class="card-number">III</span>
+                        <p>Mulheres que desejam combater a flacidez da pele e recuperar o tônus após gestação ou perda significativa de peso.</p>
+                    </div>
+                    
+                    <div class="card-problema">
+                        <span class="card-number">IV</span>
+                        <p>Quem se incomoda com o aspecto da celulite e busca melhorar a circulação sanguínea e a textura da pele.</p>
+                    </div>
+                    
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <!-- SEÇÃO RESULTADOS REAIS (CARROSSEL AUTOMÁTICO CORPORAL) -->
+        <section class="resultados-section fade-in" id="resultados">
+            <div class="container">
+                <span class="section-label">Casos Reais</span>
+                <h2 class="section-title">Resultados Reais de Clientes</h2>
+                <p class="section-desc">Transformações corporais construídas através de protocolos científicos e individuais.</p>
+                
+                <div class="carousel-wrapper">
+                    <div class="carousel-container">
+                        <div class="carousel-slides" id="carouselSlides">
+                            
+                            <!-- Slide 1 -->
+                            <div class="carousel-slide-item">
+                                <div class="slide-card">
+                                    <div class="slide-img-wrapper">
+                                        <img src="corporal3.jpg" alt="Antes e Depois Crio Detox Slim - Tatiane Gomes Estética" loading="lazy">
+                                    </div>
+                                    <p class="slide-caption">Protocolo Crio Slim: Redução expressiva de gordura abdominal e definição de contornos</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2 -->
+                            <div class="carousel-slide-item">
+                                <div class="slide-card">
+                                    <div class="slide-img-wrapper">
+                                        <img src="corporal1.jpg" alt="Antes e Depois Detox Slim - Tatiane Gomes Estética" loading="lazy">
+                                    </div>
+                                    <p class="slide-caption">Protocolo Detox Slim: Eliminação de líquidos retidos e afinamento da silhueta</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 3 -->
+                            <div class="carousel-slide-item">
+                                <div class="slide-card">
+                                    <div class="slide-img-wrapper">
+                                        <img src="corporal2.jpg" alt="Antes e Depois Remodelação Drenagem - Tatiane Gomes Estética" loading="lazy">
+                                    </div>
+                                    <p class="slide-caption">Remodelação Corporal: Melhora expressiva na circulação e textura cutânea</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 4 -->
+                            <div class="carousel-slide-item">
+                                <div class="slide-card">
+                                    <div class="slide-img-wrapper">
+                                        <img src="corporal4.jpg" alt="Antes e Depois Gordura e Celulite - Tatiane Gomes Estética" loading="lazy">
+                                    </div>
+                                    <p class="slide-caption">Tratamento focado na redução de medidas e combate à celulite persistente</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resultados-nav">
+                    <button class="resultados-nav-btn" id="carouselPrev" aria-label="Slide anterior">←</button>
+                    <button class="resultados-nav-btn" id="carouselNext" aria-label="Próximo slide">→</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO SOLUÇÃO E BENEFÍCIOS -->
+        <section class="tratamentos-section fade-in" id="beneficios">
+            <div class="container">
+                <span class="section-label">A Solução</span>
+                <h2 class="section-title">Por que escolher nosso método corporal?</h2>
+                <p class="section-desc">Nossos tratamentos não são receitas de bolo. Entenda como nossa abordagem promove resultados naturais e sustentáveis.</p>
+                
+                <div class="tratamentos-grid">
+                    
+                    <div class="card-tratamento">
+                        <h3>100% Não Invasivo</h3>
+                        <p>Remodele seu corpo e reduza medidas de forma segura, sem agulhas, sem anestesia e sem tempo de recuperação.</p>
+                    </div>
+                    
+                    <div class="card-tratamento">
+                        <h3>Estímulo Fisiológico</h3>
+                        <p>Tratamentos baseados em ativar as respostas naturais do próprio organismo, como estímulo de colágeno e quebra lipídica.</p>
+                    </div>
+                    
+                    <div class="card-tratamento">
+                        <h3>Ação Drenante e Detox</h3>
+                        <p>Protocolos focados na desintoxicação tecidual, eliminação de fluidos acumulados e melhora do sistema circulatório.</p>
+                    </div>
+                    
+                    <div class="card-tratamento">
+                        <h3>Estratégia Integrada</h3>
+                        <p>Visão de saúde estética completa que une a aplicação clínica a orientações realistas de hábitos saudáveis e home-care.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DIFERENCIAIS -->
+        <section class="diferenciais-section fade-in" id="diferenciais">
+            <div class="container">
+                <span class="section-label">Diferenciais</span>
+                <h2 class="section-title">O que torna meu atendimento diferente?</h2>
+                <p class="section-desc">Construímos uma experiência de autocuidado premium pautada em acolhimento e respeito ao seu corpo.</p>
+                
+                <div class="diferenciais-grid">
+                    
+                    <div class="diferencial-item">
+                        <span class="diferencial-num">01</span>
+                        <p class="diferencial-text"><strong>Associação Inteligente:</strong> Combinamos diferentes tecnologias corporais em um único protocolo para acelerar os resultados.</p>
+                    </div>
+                    
+                    <div class="diferencial-item">
+                        <span class="diferencial-num">02</span>
+                        <p class="diferencial-text"><strong>Dermocosméticos Premium:</strong> Utilização estrita de produtos profissionais com alta concentração de ativos cientificamente validados.</p>
+                    </div>
+                    
+                    <div class="diferencial-item">
+                        <span class="diferencial-num">03</span>
+                        <p class="diferencial-text"><strong>Avaliação de Causa:</strong> Analisamos a origem da gordura localizada ou flacidez para traçar a melhor estratégia corretiva.</p>
+                    </div>
+                    
+                    <div class="diferencial-item">
+                        <span class="diferencial-num">04</span>
+                        <p class="diferencial-text"><strong>Espaço Privativo:</strong> Atendimento com hora marcada em um consultório aconchegante, higienizado e relaxante.</p>
+                    </div>
+                    
+                    <div class="diferencial-item">
+                        <span class="diferencial-num">05</span>
+                        <p class="diferencial-text"><strong>Gerenciamento Corporal:</strong> Sem promessas milagrosas. Foco em melhorar a firmeza, textura e volume de forma real.</p>
+                    </div>
+                    
+                    <div class="diferencial-item">
+                        <span class="diferencial-num">06</span>
+                        <p class="diferencial-text"><strong>Manutenção Skincare:</strong> Indicação de cremes e hábitos pós-clínica para prolongar a firmeza e os resultados em casa.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO NOSSOS PROTOCOLOS E SERVIÇOS -->
+        <section class="tratamentos-section fade-in" id="servicos">
+            <div class="container">
+                <span class="section-label">Menu de Serviços</span>
+                <h2 class="section-title">Nossos Protocolos Corporais</h2>
+                <p class="section-desc">Tecnologia avançada e massagens manuais integradas para alcançar os seus objetivos corporais.</p>
+                
+                <div class="tratamentos-grid" style="grid-template-columns: 1fr; gap: 20px;">
+                    
+                    <div class="info-box-premium">
+                        <h3>Crio Slim Detox</h3>
+                        <p>Protocolo completo de harmonização corporal baseado na criolipólise, onde a gordura localizada é tratada pelo resfriamento a temperaturas negativas. Inclui preparo da pele antes da sessão, acompanhamento pós-tratamento de 40 dias e orientações de suplementação para potencializar a perda de medidas e contorno.</p>
+                    </div>
+                    
+                    <div class="info-box-premium">
+                        <h3>Detox Slim</h3>
+                        <p>Associação estratégica de termoterapia, dermocosméticos ativadores e técnicas manuais drenantes. Perfeito para combater a retenção de líquidos intensa, ativar o metabolismo tecidual local e promover sensação imediata de leveza.</p>
+                    </div>
+                    
+                    <div class="info-box-premium">
+                        <h3>Power Firm</h3>
+                        <p>Tratamento exclusivo desenvolvido para combater a flacidez corporal. Combina tecnologias que geram estímulo térmico e ativos firmadores para forçar o organismo a produzir novas fibras de colágeno e elastina, devolvendo a firmeza à pele.</p>
+                    </div>
+                    
+                    <div class="info-box-premium">
+                        <h3>Remodela Body Shape</h3>
+                        <p>Associação de ultrassom focado e correntes de eletroestimulação. Atua na remodelação da silhueta, acelerando a quebra de células de gordura e melhorando o aspecto de regiões como abdômen, flancos, braços e culote.</p>
+                    </div>
+                    
+                    <div class="info-box-premium">
+                        <h3>CoreFit</h3>
+                        <p>Protocolo focado na musculatura profunda da região do core e abdômen. Utiliza correntes de eletroestimulação de alta intensidade para ajudar na recuperação de diástase abdominal, tônus muscular e fortalecimento geral.</p>
+                    </div>
+                    
+                    <div class="info-box-premium">
+                        <h3>Massagem Modeladora</h3>
+                        <p>Procedimento com manobras manuais vigorosas e intensas aplicadas a dermocosméticos profissionais. Atua na oxigenação dos tecidos, mobilização do tecido adiposo e melhora temporária das linhas de contorno corporal.</p>
+                    </div>
+                    
+                    <div class="info-box-premium">
+                        <h3>Hidrolipo Não Aspirativa</h3>
+                        <p>Aplicação localizada de ativos lipolíticos potentes na camada de gordura, seguida da aplicação de ultrassom focado para acelerar a quebra dessas células. Indicado para gordura localizada rebelde e persistente.</p>
+                    </div>
+                    
+                    <div class="info-box-premium">
+                        <h3>Ultrassom</h3>
+                        <p>Emissão de ondas ultrassônicas que geram microvibrações no tecido gorduroso, ajudando na emulsificação de lipídios e facilitando a eliminação natural de toxinas e gordura pelo sistema linfático.</p>
+                    </div>
+                    
+                    <div class="info-box-premium">
+                        <h3>Endermoterapia</h3>
+                        <p>Massagem mecânica por vácuo e sucção controlada. Estimula profundamente a microcirculação sanguínea, desfaz nódulos fibróticos e melhora significativamente a aparência e textura da celulite.</p>
+                    </div>
+                    
+                    <div class="info-box-premium">
+                        <h3>Pós-Operatório Corporal</h3>
+                        <p>Atendimento especializado pós-cirurgia plástica (lipoaspiração, abdominoplastia). Técnicas adequadas e suaves para prevenir a formação de fibroses, organizar a cicatrização do tecido e reduzir o inchaço.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO ESPECIALISTA (AUTORIDADE) -->
+        <section class="sobre-section fade-in" id="especialista">
+            <div class="container">
+                <div class="sobre-grid">
+                    
+                    <div class="sobre-photo-col">
+                        <div class="sobre-photo-wrapper">
+                            <img src="tatilifestyle.jpeg" alt="Dra. Tatiane Gomes aplicando protocolo de estética corporal">
+                        </div>
+                    </div>
+                    
+                    <div class="sobre-content">
+                        <span class="section-label">A Especialista</span>
+                        <h2 class="sobre-title">Conheça a especialista por trás dos resultados</h2>
+                        <div class="sobre-text">
+                            <p><strong>Tatiane Gomes</strong> é especialista em saúde estética com foco em tratamentos personalizados para a remodelação, contorno e equilíbrio funcional do corpo e da pele.</p>
+                            <p>Seu método de atendimento corporal vai muito além de manobras genéricas de massagem. Cada paciente passa por uma detalhada avaliação prévia para investigar a causa das queixas (sejam gordura, flacidez ou edema) e traçar uma estratégia sob medida.</p>
+                            <p>Ao longo de mais de 7 anos de experiência clínica, Tatiane estruturou protocolos que unem tecnologias avançadas e cosméticos de alto padrão para entregar resultados expressivos e naturais sem agredir o organismo.</p>
+                            <p>Sua filosofia de atendimento une o rigor técnico-científico ao acolhimento integral, oferecendo um porto seguro para mulheres que querem resgatar sua autoestima e sentir-se bem com o espelho.</p>
+                        </div>
+                        
+                        <div class="info-box-premium" style="margin-top: 30px; margin-bottom: 0;">
+                            <h3>Abordagem de dentro para fora</h3>
+                            <p>Com formação complementar em Nutrição Clínica, Tatiane integra a estética aos cuidados nutricionais e de hábitos, assegurando que o metabolismo corporal responda com potência máxima aos tratamentos corporais aplicados.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO FAQ (PERGUNTAS FREQUENTES) -->
+        <section class="faq-section fade-in" id="faq">
+            <div class="container">
+                <span class="section-label">Dúvidas Comuns</span>
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <p class="section-desc">Esclareça suas principais dúvidas sobre nossos procedimentos e protocolos corporais.</p>
+                
+                <div class="faq-accordion-custom">
+                    
+                    <div class="faq-item-custom">
+                        <h3 class="faq-question-custom">Os tratamentos corporais doem?</h3>
+                        <p class="faq-answer-custom">A grande maioria dos nossos procedimentos corporais é totalmente indolor ou gera apenas um leve desconforto suportável (como a sucção da endermoterapia ou o resfriamento inicial da criolipólise). Sempre adaptamos a intensidade técnica das tecnologias respeitando a sensibilidade e o limite individual de cada paciente.</p>
+                    </div>
+                    
+                    <div class="faq-item-custom">
+                        <h3 class="faq-question-custom">Em quanto tempo vejo os primeiros resultados?</h3>
+                        <p class="faq-answer-custom">Protocolos drenantes e detox como o Detox Slim proporcionam redução de inchaço e leveza corporal imediata, logo após a primeira sessão. Para tratamentos focados na gordura localizada (como a Criolipólise ou a Hidrolipo), os resultados definitivos tornam-se visíveis entre 30 e 45 dias, período em que o corpo elimina as células adiposas tratadas.</p>
+                    </div>
+                    
+                    <div class="faq-item-custom">
+                        <h3 class="faq-question-custom">Preciso me afastar do trabalho ou dos treinos?</h3>
+                        <p class="faq-answer-custom">Não. Todos os nossos tratamentos são não invasivos e seguros. Você pode retornar à sua rotina profissional, atividades diárias e treinos físicos normais imediatamente após a sessão, sem necessidade de repouso ou tempo de recuperação.</p>
+                    </div>
+                    
+                    <div class="faq-item-custom">
+                        <h3 class="faq-question-custom">Como funciona a consulta de avaliação corporal?</h3>
+                        <p class="faq-answer-custom">Durante a avaliação corporal personalizada, nós analisamos minuciosamente o seu biotipo, queixas (gordura localizada, grau de celulite, tipo de flacidez), hábitos de vida e histórico de saúde. Com base nessa análise, criamos um plano de tratamento único e integrado focado nos seus objetivos.</p>
+                    </div>
+                    
+                    <div class="faq-item-custom">
+                        <h3 class="faq-question-custom">Quais são as formas de pagamento disponíveis?</h3>
+                        <p class="faq-answer-custom">Oferecemos facilidade para o seu tratamento: aceitamos pagamentos via Pix, cartões de débito e cartões de crédito com opções de parcelamento. Os planos de pacotes ou protocolos associados possuem condições especiais.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO FINAL (CTA DE TRÁFEGO) -->
+        <section class="final-section fade-in" id="agendar">
+            <div class="container final-container">
+                <h2 class="final-title">Agende sua avaliação corporal</h2>
+                <p class="final-desc">Atendimento exclusivo com protocolo sob medida para as necessidades do seu corpo. Vagas limitadas para garantir que sua jornada de autocuidado receba toda a atenção que você merece.</p>
+                
+                <div class="btn-container-centered">
+                    <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o%20corporal%20com%20a%20Dra.%20Tatiane%20Gomes." 
+                       class="btn-premium" 
+                       onclick="return gtag_report_conversion('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o%20corporal%20com%20a%20Dra.%20Tatiane%20Gomes.')">
+                        Quero agendar minha avaliação corporal
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
     <footer class="footer">
         <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-col">
+                    <h3>Tatiane Gomes Estética</h3>
+                    <p>Especialista em Saúde Estética</p>
+                    <p>Santo Amaro • São Paulo</p>
+                    <p>Próximo ao metrô Borba Gato</p>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h4>Canais Digitais</h4>
+                    <ul class="footer-links-list">
+                        <li>
+                            <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes." 
+                               target="_blank" 
+                               rel="noopener"
+                               onclick="return gtag_report_conversion('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20avaliativa%20com%20a%20Dra.%20Tatiane%20Gomes.')">
+                                WhatsApp
+                            </a>
+                        </li>
+                        <li><a href="https://www.instagram.com/tatianegomesestetica/" target="_blank" rel="noopener">Instagram</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-maps">
+                    <h4>Localização Google Maps</h4>
+                    <div class="footer-map-container">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Rua+Bela+Vista,+580+-+Jardim+Francisco+Mendes,+S%C3%A3o+Paulo+-+SP&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Localização Clínica Santo Amaro">
+                        </iframe>
+                    </div>
+                </div>
+                
+            </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2026 Tatiane Gomes Estética. Todos os direitos reservados.</p>
+                <div class="footer-discreet-links">
+                    <a href="politica-de-privacidade.html">Políticas de Privacidade</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <!-- LÓGICA DE COMPORTAMENTO DINÂMICO JAVASCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            
+            // 1. Menu Mobile Hambúrguer Overlay
+            const menuToggle = document.getElementById("menuToggle");
+            const menuOverlay = document.getElementById("menuOverlay");
 
+            menuToggle.addEventListener("click", function () {
+                const isActive = menuOverlay.classList.toggle("active");
+                if (isActive) {
+                    menuToggle.textContent = "✕ Fechar";
+                } else {
+                    menuToggle.textContent = "☰ Menu";
+                }
+            });
+
+            menuOverlay.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    menuOverlay.classList.remove("active");
+                    menuToggle.textContent = "☰ Menu";
+                });
+            });
+
+            // 2. Animação Fade-In ao rolar
+            const fadeElements = document.querySelectorAll(".fade-in");
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            fadeElements.forEach(el => {
+                observer.observe(el);
+            });
+
+            // 3. Carrossel Automático de Resultados
+            const track = document.getElementById("carouselSlides");
+            const slides = Array.from(track.children);
+            const nextBtn = document.getElementById("carouselNext");
+            const prevBtn = document.getElementById("carouselPrev");
+            let currentIndex = 0;
+
+            function getItemsPerSlide() {
+                if (window.innerWidth >= 1024) return 3;
+                if (window.innerWidth >= 600) return 2;
+                return 1;
+            }
+
+            function updateCarousel() {
+                const itemsPerSlide = getItemsPerSlide();
+                const maxIndex = slides.length - itemsPerSlide;
+                
+                if (currentIndex > maxIndex) {
+                    currentIndex = maxIndex;
+                }
+                if (currentIndex < 0) {
+                    currentIndex = 0;
+                }
+
+                const slideWidth = slides[0].offsetWidth;
+                const offset = -(slideWidth * currentIndex);
+                track.style.transform = `translateX(${offset}px)`;
+            }
+
+            nextBtn.addEventListener("click", function () {
+                const itemsPerSlide = getItemsPerSlide();
+                const maxIndex = slides.length - itemsPerSlide;
+                
+                if (currentIndex < maxIndex) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                updateCarousel();
+            });
+
+            prevBtn.addEventListener("click", function () {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    const itemsPerSlide = getItemsPerSlide();
+                    currentIndex = slides.length - itemsPerSlide;
+                }
+                updateCarousel();
+            });
+
+            // Auto-play
+            let autoCycle = setInterval(function () {
+                nextBtn.click();
+            }, 5000);
+
+            track.addEventListener("mouseenter", () => clearInterval(autoCycle));
+            track.addEventListener("mouseleave", () => {
+                autoCycle = setInterval(function () {
+                    nextBtn.click();
+                }, 5000);
+            });
+
+            window.addEventListener("resize", updateCarousel);
+
+            // Touch Swipe
+            let startX = 0;
+            let endX = 0;
+
+            track.addEventListener("touchstart", (e) => {
+                startX = e.touches[0].clientX;
+            }, { passive: true });
+
+            track.addEventListener("touchend", (e) => {
+                endX = e.changedTouches[0].clientX;
+                const diff = startX - endX;
+                if (diff > 50) {
+                    nextBtn.click();
+                } else if (diff < -50) {
+                    prevBtn.click();
+                }
+            }, { passive: true });
+
+            // 4. Botão de WhatsApp Flutuante Scroll Trigger
+            const whatsappFlutuante = document.getElementById("whatsappFlutuante");
+            const heroSection = document.getElementById("hero");
+
+            window.addEventListener("scroll", function () {
+                const heroHeight = heroSection.offsetHeight;
+                const scrollPos = window.scrollY;
+
+                if (scrollPos > (heroHeight - 100)) {
+                    whatsappFlutuante.style.opacity = "1";
+                    whatsappFlutuante.style.pointerEvents = "auto";
+                } else {
+                    whatsappFlutuante.style.opacity = "0";
+                    whatsappFlutuante.style.pointerEvents = "none";
+                }
+            }, { passive: true });
+
+            whatsappFlutuante.style.opacity = "0";
+            whatsappFlutuante.style.pointerEvents = "none";
+
+        });
+    </script>
+</body>
 </html>

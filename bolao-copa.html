@@ -596,7 +596,7 @@
                         <div class="form-group">
                             <label for="jogo">Escolha o Jogo da Copa</label>
                             <select id="jogo" name="jogo" class="form-control" required>
-                                <option value="brasil-haiti" selected>Brasil x Haiti (19/06/2026)</option>
+                                <option value="brasil-japao" selected>Brasil x Japão (29/06/2026)</option>
                                 <option value="holanda-suecia">Holanda x Suécia (20/06/2026)</option>
                                 <option value="alemanha-costa-marfim">Alemanha x Costa do Marfim (20/06/2026)</option>
                                 <option value="espanha-arabia-saudita">Espanha x Arábia Saudita (21/06/2026)</option>
@@ -630,8 +630,8 @@
                                 
                                 <!-- Time 2 -->
                                 <div class="score-team" id="team2Container">
-                                    <span class="team-flag" id="team2Flag">🇭🇹</span>
-                                    <span class="team-name" id="team2Label">Haiti</span>
+                                    <span class="team-flag" id="team2Flag">🇯🇵</span>
+                                    <span class="team-name" id="team2Label">Japão</span>
                                     <div class="score-controls">
                                         <button type="button" class="btn-score-adjust" onclick="adjustScore(2, -1)" aria-label="Remover gol time 2">−</button>
                                         <input type="number" name="gols_time2" id="gols_time2" class="score-input" value="0" min="0" readonly>
@@ -762,7 +762,7 @@
     <script>
         // Dados dos jogos pré-configurados
         const matchesInfo = {
-            "brasil-haiti": { team1: "Brasil", flag1: "🇧🇷", team2: "Haiti", flag2: "🇭🇹" },
+            "brasil-japao": { team1: "Brasil", flag1: "🇧🇷", team2: "Japão", flag2: "🇯🇵" },
             "holanda-suecia": { team1: "Holanda", flag1: "🇳🇱", team2: "Suécia", flag2: "🇸🇪" },
             "alemanha-costa-marfim": { team1: "Alemanha", flag1: "🇩🇪", team2: "Costa do Marfim", flag2: "🇨🇮" },
             "espanha-arabia-saudita": { team1: "Espanha", flag1: "🇪🇸", team2: "Arábia Saudita", flag2: "🇸🇦" },
