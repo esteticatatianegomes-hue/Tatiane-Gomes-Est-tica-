@@ -80,6 +80,13 @@
             }
         }
 
+        @media (min-width: 900px) {
+            .rules-grid {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 1000px;
+            }
+        }
+
         .rule-card {
             background-color: var(--color-white);
             border: 1px solid rgba(197, 164, 109, 0.3);
@@ -549,17 +556,25 @@
                     <!-- Regra 1 -->
                     <div class="rule-card">
                         <span class="icon">🏆</span>
-                        <h3>Acertar o Vencedor</h3>
-                        <p>Adivinhe qual time leva a melhor no jogo (ou se será empate) e garanta um desconto especial.</p>
-                        <span class="prize-destaque">20% OFF em procedimentos</span>
+                        <h3>Acertar quem Ganha</h3>
+                        <p>Adivinhe qual time leva a melhor no jogo (ou se será empate) e garanta seu desconto.</p>
+                        <span class="prize-destaque">10% OFF em procedimentos</span>
                     </div>
 
                     <!-- Regra 2 -->
                     <div class="rule-card">
                         <span class="icon">⚽</span>
                         <h3>Acertar o Placar Exato</h3>
-                        <p>Adivinhe a quantidade exata de gols de cada time na partida para ganhar um tratamento vip.</p>
-                        <span class="prize-destaque">Ganhe 1 Limpeza de Pele</span>
+                        <p>Adivinhe a quantidade exata de gols de cada time na partida para dobrar seu desconto.</p>
+                        <span class="prize-destaque">20% OFF em procedimentos</span>
+                    </div>
+
+                    <!-- Regra 3 -->
+                    <div class="rule-card">
+                        <span class="icon">🥅</span>
+                        <h3>Acertar quem faz o Gol</h3>
+                        <p>Adivinhe o nome de qualquer jogadora ou jogador que fará gol na partida e garanta o desconto máximo.</p>
+                        <span class="prize-destaque">30% OFF em procedimentos</span>
                     </div>
                 </div>
             </div>
@@ -596,7 +611,7 @@
                         <div class="form-group">
                             <label for="jogo">Escolha o Jogo da Copa</label>
                             <select id="jogo" name="jogo" class="form-control" required>
-                                <option value="brasil-japao" selected>Brasil x Japão (29/06/2026)</option>
+                                <option value="brasil-noruega" selected>Brasil x Noruega (05/07/2026)</option>
                                 <option value="holanda-suecia">Holanda x Suécia (20/06/2026)</option>
                                 <option value="alemanha-costa-marfim">Alemanha x Costa do Marfim (20/06/2026)</option>
                                 <option value="espanha-arabia-saudita">Espanha x Arábia Saudita (21/06/2026)</option>
@@ -608,6 +623,12 @@
                             <div class="custom-game-field" id="customGameContainer">
                                 <input type="text" id="jogo_customizado" name="jogo_customizado" class="form-control" placeholder="Ex: Brasil x Argentina">
                             </div>
+                        </div>
+
+                        <!-- Palpite de quem faz o gol -->
+                        <div class="form-group">
+                            <label for="autor_gol">Quem faz o gol? (Opcional - Vale 30% OFF)</label>
+                            <input type="text" id="autor_gol" name="autor_gol" class="form-control" placeholder="Ex: Debinha, Marta, Hansen...">
                         </div>
 
                         <!-- PLACAR INTERATIVO -->
@@ -630,8 +651,8 @@
                                 
                                 <!-- Time 2 -->
                                 <div class="score-team" id="team2Container">
-                                    <span class="team-flag" id="team2Flag">🇯🇵</span>
-                                    <span class="team-name" id="team2Label">Japão</span>
+                                    <span class="team-flag" id="team2Flag">🇳🇴</span>
+                                    <span class="team-name" id="team2Label">Noruega</span>
                                     <div class="score-controls">
                                         <button type="button" class="btn-score-adjust" onclick="adjustScore(2, -1)" aria-label="Remover gol time 2">−</button>
                                         <input type="number" name="gols_time2" id="gols_time2" class="score-input" value="0" min="0" readonly>
@@ -687,12 +708,17 @@
                             <span class="voucher-detail-label">Quem Ganha:</span>
                             <span class="voucher-detail-val" id="v_vencedor">-</span>
                         </div>
+                        <div class="voucher-detail-row">
+                            <span class="voucher-detail-label">Autor do Gol:</span>
+                            <span class="voucher-detail-val" id="v_autor_gol">-</span>
+                        </div>
                     </div>
 
                     <div class="voucher-prize-info">
                         <strong>🎁 Regras de Premiação:</strong><br>
-                        Se você acertar quem ganha: <strong>20% OFF em qualquer procedimento!</strong><br>
-                        Se acertar o placar exato: <strong>Ganha 1 Limpeza de Pele!</strong>
+                        Se você acertar quem ganha: <strong>10% OFF em qualquer procedimento!</strong><br>
+                        Se acertar o placar exato: <strong>20% OFF em qualquer procedimento!</strong><br>
+                        Se acertar quem faz o gol: <strong>30% OFF em qualquer procedimento!</strong>
                     </div>
 
                     <p style="margin-bottom: 25px; font-size: 0.9rem; color: var(--color-text-light);">
@@ -762,7 +788,7 @@
     <script>
         // Dados dos jogos pré-configurados
         const matchesInfo = {
-            "brasil-japao": { team1: "Brasil", flag1: "🇧🇷", team2: "Japão", flag2: "🇯🇵" },
+            "brasil-noruega": { team1: "Brasil", flag1: "🇧🇷", team2: "Noruega", flag2: "🇳🇴" },
             "holanda-suecia": { team1: "Holanda", flag1: "🇳🇱", team2: "Suécia", flag2: "🇸🇪" },
             "alemanha-costa-marfim": { team1: "Alemanha", flag1: "🇩🇪", team2: "Costa do Marfim", flag2: "🇨🇮" },
             "espanha-arabia-saudita": { team1: "Espanha", flag1: "🇪🇸", team2: "Arábia Saudita", flag2: "🇸🇦" },
@@ -961,6 +987,7 @@
                         Jogo: jogoFinal,
                         Placar_Palpitado: placarCompleto,
                         Vencedor_Previsto: vencedorCalculado,
+                        Autor_do_Gol: document.getElementById("autor_gol").value || "Não informado",
                         _subject: `⚽ Novo Palpite de Bolão - ${nomeVal}`,
                         _captcha: "false" // Evita o reCAPTCHA que impede respostas limpas de AJAX
                     })
@@ -977,11 +1004,13 @@
                     successContainer.style.display = "block";
 
                     // Preenche dados do voucher na tela
+                    const autorGolVal = document.getElementById("autor_gol").value || "Não informado";
                     vNome.textContent = nomeVal;
                     vWhatsapp.textContent = whatsappVal;
                     vJogo.textContent = jogoFinal;
                     vPlacar.textContent = `${gols1} x ${gols2} (${t1Name} vs ${t2Name})`;
                     vVencedor.textContent = vencedorCalculado;
+                    document.getElementById("v_autor_gol").textContent = autorGolVal;
 
                     // Cria mensagem personalizada para WhatsApp
                     const wppText = `Olá Tatiane! Gostaria de validar meu palpite do Bolão da Copa!\n\n` +
@@ -990,9 +1019,11 @@
                                     `*E-mail:* ${emailVal}\n` +
                                     `*Jogo:* ${jogoFinal}\n` +
                                     `*Palpite:* ${placarCompleto}\n` +
-                                    `*Quem Ganha:* ${vencedorCalculado}\n\n` +
-                                    `🏆 _Se acertar o vencedor ganho 20% OFF!_\n` +
-                                    `⚽ _Se acertar o placar exato ganho uma Limpeza de Pele!_`;
+                                    `*Quem Ganha:* ${vencedorCalculado}\n` +
+                                    `*Quem faz o Gol:* ${autorGolVal}\n\n` +
+                                    `🏆 _Se acertar quem ganha: 10% OFF!_\n` +
+                                    `⚽ _Se acertar o placar: 20% OFF!_\n` +
+                                    `🥅 _Se acertar o autor do gol: 30% OFF!_`;
 
                     const wppLink = `https://wa.me/5511957739880?text=${encodeURIComponent(wppText)}`;
                     btnWhatsappConfirm.href = wppLink;
@@ -1003,18 +1034,21 @@
                     loadingContainer.style.display = "none";
                     successContainer.style.display = "block";
                     
+                    const autorGolVal = document.getElementById("autor_gol").value || "Não informado";
                     vNome.textContent = nomeVal;
                     vWhatsapp.textContent = whatsappVal;
                     vJogo.textContent = jogoFinal;
                     vPlacar.textContent = `${gols1} x ${gols2} (${t1Name} vs ${t2Name})`;
                     vVencedor.textContent = vencedorCalculado;
+                    document.getElementById("v_autor_gol").textContent = autorGolVal;
 
                     const wppText = `[Envio de Backup] Olá Tatiane! Tive uma falha no formulário, mas aqui está meu palpite do Bolão!\n\n` +
                                     `*Nome:* ${nomeVal}\n` +
                                     `*WhatsApp:* ${whatsappVal}\n` +
                                     `*Jogo:* ${jogoFinal}\n` +
                                     `*Palpite:* ${placarCompleto}\n` +
-                                    `*Quem Ganha:* ${vencedorCalculado}`;
+                                    `*Quem Ganha:* ${vencedorCalculado}\n` +
+                                    `*Quem faz o Gol:* ${autorGolVal}`;
                     
                     btnWhatsappConfirm.href = `https://wa.me/5511957739880?text=${encodeURIComponent(wppText)}`;
                 });
