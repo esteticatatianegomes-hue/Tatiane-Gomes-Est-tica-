@@ -170,32 +170,62 @@ section { padding: 64px 0; }
     .btn-premium { height: 58px; font-size: .82rem; }
 }
 
-/* ── 7. WHATSAPP FLUTUANTE ───────────────────────────────────────────────── */
-.whatsapp-flutuante {
+/* ── 7. BOTÕES FLUTUANTES (Instagram + WhatsApp) ──────────────────────────── */
+.floating-btns {
     position: fixed;
     bottom: 22px;
     right: 22px;
-    background: #25D366;
-    color: #fff;
-    width: 58px;
-    height: 58px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1100;
+}
+
+.float-btn {
+    width: 54px;
+    height: 54px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 28px rgba(37,211,102,.45);
-    z-index: 1100;
-    transition: var(--t-slow);
     text-decoration: none;
-    border: 2.5px solid #fff;
+    transition: var(--t-slow);
+    border: 2.5px solid rgba(255,255,255,.85);
+    box-shadow: 0 6px 20px rgba(0,0,0,.2);
 }
 
-.whatsapp-flutuante:hover {
+.float-btn svg {
+    width: 26px;
+    height: 26px;
+    fill: currentColor;
+}
+
+.float-btn--whatsapp {
+    background: #25D366;
+    color: #fff;
+    box-shadow: 0 6px 24px rgba(37,211,102,.4);
+}
+
+.float-btn--whatsapp:hover {
     transform: scale(1.12) rotate(8deg);
-    box-shadow: 0 12px 36px rgba(37,211,102,.6);
+    box-shadow: 0 10px 32px rgba(37,211,102,.6);
 }
 
-.whatsapp-flutuante svg { width:28px; height:28px; fill:currentColor; }
+.float-btn--instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: #fff;
+    box-shadow: 0 6px 24px rgba(214,36,159,.35);
+}
+
+.float-btn--instagram:hover {
+    transform: scale(1.12) rotate(-8deg);
+    box-shadow: 0 10px 32px rgba(214,36,159,.5);
+}
+
+/* compatibilidade retroativa */
+.whatsapp-flutuante { display: none; }
+
+
 
 /* ── 8. NAVBAR ───────────────────────────────────────────────────────────── */
 .navbar {
