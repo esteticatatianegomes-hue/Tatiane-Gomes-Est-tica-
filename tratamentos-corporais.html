@@ -517,6 +517,16 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             
+            // 0. Navbar scroll shadow
+            const navbar = document.getElementById("navbar");
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 20) {
+                    navbar.classList.add("scrolled");
+                } else {
+                    navbar.classList.remove("scrolled");
+                }
+            }, { passive: true });
+
             // 1. Menu Mobile Hambúrguer Overlay
             const menuToggle = document.getElementById("menuToggle");
             const menuOverlay = document.getElementById("menuOverlay");
