@@ -1,608 +1,497 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Crio Slim - Protocolo de Criolipólise para eliminação de gordura, remodelamento e harmonização corporal. Tatiane Gomes Estética.">
-    <title>Crio Slim | Protocolo Corporal Premium - Tatiane Gomes Estética</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <title>Slim One | Estratégia Corporal para Gordura Localizada - Tatiane Gomes</title>
+    <meta name="description" content="Slim One: protocolo estruturado para tratar gordura localizada resistente com estratégia, avaliação e acompanhamento. Conheça e agende sua avaliação.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="premium-landing.css">
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17947496680"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
-        gtag('config', 'AW-17947496680', {
-            'linker': {
-                'domains': ['api.whatsapp.com']
-            }
-        });
+        gtag('config', 'AW-17947496680', { 'linker': { 'domains': ['api.whatsapp.com'] } });
+        
+        function gtag_report_conversion(url) {
+            var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
+            gtag('event', 'conversion', { 'send_to': 'AW-17947496680/hUBdCOX99oMcEOihhO5C', 'event_callback': callback });
+            return false;
+        }
     </script>
 </head>
-
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="home.html" class="logo" style="text-decoration: none; color: inherit;">
-                <span class="logo-text">Tatiane Gomes</span>
-                <span class="logo-subtitle">Estética</span>
-            </a>
 
-            <div class="nav-actions">
-                <a href="agendamento.html" class="btn-agendar">Agendar</a>
-                <button class="menu-toggle" id="menuToggle">☰ Menu</button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- MENU OVERLAY -->
-    <div class="menu-overlay" id="menuOverlay">
-        <ul class="menu-list">
-            <li><a href="slim-one.html">Crio Slim</a></li>
-            <li><a href="tratamentos-faciais.html">Tratamentos Faciais</a></li>
-            <li><a href="https://friendly-duckanoo-f468fe.netlify.app/site" target="_blank" rel="noopener">Conheça meu Podcast</a></li>
-        </ul>
+    <!-- BOTÕES FLUTUANTES -->
+    <div class="floating-btns" id="floatingBtns">
+        <a href="https://www.instagram.com/tatianegomesestetica/" class="float-btn float-btn--instagram" target="_blank" rel="noopener" aria-label="Siga no Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20se%20o%20Slim%20One%20%C3%A9%20para%20mim." class="float-btn float-btn--whatsapp" target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20se%20o%20Slim%20One%20%C3%A9%20para%20mim.')" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.49-3.238l.382.227c1.543.917 3.25 1.4 5.01 1.41h.007c5.626 0 10.203-4.574 10.207-10.201.002-2.727-1.059-5.291-2.99-7.225C17.221 3.24 14.66 2.18 11.993 2.18c-5.636 0-10.21 4.574-10.215 10.203-.001 1.848.497 3.654 1.442 5.233l.251.417-1.006 3.675 3.766-.988zM17.51 15.3c-.307-.154-1.82-.9-2.1-.999-.28-.1-.485-.15-.688.153-.203.303-.787.999-.965 1.202-.178.203-.355.228-.662.074-1.036-.518-1.8-1.002-2.51-2.217-.18-.309-.18-.5-.294-.684-.113-.189-.012-.283.087-.379.09-.086.203-.228.304-.342.102-.114.135-.19.203-.327.068-.137.034-.257-.017-.358-.051-.102-.485-1.168-.665-1.6-.175-.421-.347-.364-.485-.371-.125-.007-.268-.007-.41-.007-.143 0-.376.054-.572.269-.196.216-.749.732-.749 1.786s.767 2.071.872 2.211c.105.14 1.51 2.3 3.66 3.228.51.22 1.085.352 1.457.47.514.163.98.139 1.35.084.412-.061 1.82-.745 2.078-1.464.258-.718.258-1.332.18-1.464-.078-.133-.282-.232-.589-.386z"/></svg>
+        </a>
     </div>
 
-    <!-- Hero Section -->
-    <section class="slim-premium-hero">
-        <div class="hero-container">
-            <div class="hero-content-left">
-                <h1 class="hero-title" style="font-size: 2.8rem; line-height: 1.2; margin-bottom: 20px;">Elimine a gordura localizada, remodele e harmonize seu corpo com o protocolo <em>Crio Slim</em>.</h1>
-                <p class="hero-subtitle" style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 30px;">Protocolo exclusivo que combina criolipólise de alta performance com remodelamento e harmonização corporal — sem cirurgia, sem downtime.</p>
-                <p style="font-size: 1.05rem; line-height: 1.5; margin-bottom: 30px; color: var(--text-light); border-left: 3px solid var(--gold); padding-left: 15px; font-weight: 500;">
-                    Esteticista graduada e pós-graduada em Saúde Estética e Cosmetologia pela UNIFESP, com mais de 7 anos de experiência em tratamentos corporais e gordura localizada.
-                </p>
-                <div style="margin-top: 25px; margin-bottom: 30px;">
-                    <p style="font-weight: 700; font-size: 1.1rem; color: #c49a45; margin-bottom: 10px; line-height: 1.4;">Vagas limitadas essa semana para avaliação. Se você quer eliminar gordura e remodelar seu corpo, esse é o momento.</p>
-                    <p style="font-size: 0.95rem; line-height: 1.4; margin-bottom: 15px; color: var(--text-light); font-style: italic;">Clique no botão e abra uma conversa comigo com a mensagem já pronta. É só enviar e pronto.</p>
-                    <a href="https://wa.me/5511957739880?text=Oi%2C+quero+conhecer+o+Protocolo+Crio+Slim" class="btn btn-whatsapp-destaque" target="_blank"
-                        onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Quero conhecer o Crio Slim (me chama no WhatsApp)</a>
-                    <a href="#avaliacao-form" class="btn btn-premium" style="display: block; margin-top: 15px; width: fit-content;" onclick="document.getElementById('avaliacao-form').scrollIntoView({behavior: 'smooth'}); return false;">Quero entender meu caso</a>
-                </div>
-                <p style="font-size: 0.95rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500; font-family: 'Montserrat', sans-serif;">
-                    7 anos de experiência • Pós-graduação pela UNIFESP • Atendimento privativo e personalizado</p>
-            </div>
-            <div class="hero-image-right">
-                <img src="tati profissional.jpg" alt="Especialista em Gordura Localizada e Crio Slim">
-            </div>
-        </div>
-    </section>
-
-    <!-- Pain & Identification Block -->
-    <section class="pain-identification">
-        <div class="container pain-container">
-            <h2 class="section-title text-center">Para quem é esse tratamento</h2>
-            <div class="title-underline center"></div>
-            <ul class="pain-list" style="margin-top: 2rem;">
-                <li><i class="icon-check"></i> Mulheres que treinam, mas ainda possuem gordura localizada resistente
-                </li>
-                <li><i class="icon-check"></i> Mulheres incomodadas com gordura abdominal ou flancos</li>
-                <li><i class="icon-check"></i> Mulheres que querem reduzir gordura de forma estratégica e acompanhada
-                </li>
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="home.html" class="nav-logo">
+                <span class="nav-logo-main">Tatiane Gomes</span>
+                <span class="nav-logo-sub">Estética</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="home.html">Sobre</a></li>
+                <li><a href="tratamentos-corporais.html">Corpo</a></li>
+                <li><a href="tratamentos-faciais.html">Face</a></li>
+                <li><a href="slim-one.html" style="color:var(--green); font-weight:700;">Slim One</a></li>
+                <li><a href="home.html#resultados">Resultados</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
-        </div>
-    </section>
 
-    <!-- Resistant Fat Issue -->
-    <section class="resistant-fat-issue" style="padding: 80px 0; background-color: #f7f6f2;">
-        <div class="container text-center" style="max-width: 800px; margin: 0 auto;">
-            <h2 class="section-title">Por que muitas mulheres não conseguem perder gordura localizada?</h2>
-            <div class="title-underline center"></div>
-            <p style="font-size: 1.15rem; line-height: 1.6; margin-top: 30px; margin-bottom: 40px; color: var(--text);">
-                Algumas áreas do corpo possuem maior concentração de receptores que dificultam a mobilização da gordura.
-                Por isso muitas mulheres treinam, cuidam da alimentação e mesmo assim continuam com gordura localizada
-                na barriga ou flancos. Nesses casos, o tratamento precisa ser estratégico e direcionado.
-            </p>
-            <div style="margin-top: 20px;">
-                <a href="https://wa.me/5511957739880?text=Oi%2C+quero+eliminar+minha+gordura+localizada" class="btn btn-whatsapp-destaque" target="_blank"
-                    onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Quero eliminar minha gordura localizada (me chama no WhatsApp)</a>
+            <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20se%20o%20Slim%20One%20%C3%A9%20para%20mim." class="nav-cta" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20se%20o%20Slim%20One%20%C3%A9%20para%20mim.')">
+                Saber se é para mim
+            </a>
+
+            <div class="nav-hamburger" id="navToggle">
+                <span></span><span></span><span></span>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Form Section -->
-    <section id="avaliacao-form" class="form-section" style="padding: 80px 0; background-color: #ffffff;">
-        <div class="container text-center" style="max-width: 600px; margin: 0 auto;">
-            <h2 class="section-title">Descubra o que está travando o seu resultado</h2>
-            <div class="title-underline center"></div>
-            <p style="font-size: 1.15rem; line-height: 1.6; margin-top: 20px; margin-bottom: 40px; color: var(--text);">
-                Preencha rápido e eu te explico o melhor caminho para o seu caso
-            </p>
-            <form id="leadForm" style="text-align: left; background: #fdfbf7; padding: 30px; border-radius: 12px; border: 1px solid rgba(196, 154, 69, 0.3);">
-                <div style="margin-bottom: 20px;">
-                    <label for="nome" style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">Nome</label>
-                    <input type="text" id="nome" name="nome" required style="width: 100%; box-sizing: border-box; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit; font-size: 1rem;">
-                </div>
-                <div style="margin-bottom: 20px;">
-                    <label for="whatsapp" style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">WhatsApp</label>
-                    <input type="tel" id="whatsapp" name="whatsapp" required style="width: 100%; box-sizing: border-box; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit; font-size: 1rem;">
-                </div>
-                <div style="margin-bottom: 25px;">
-                    <label for="incomodo" style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">O que mais te incomoda?</label>
-                    <select id="incomodo" name="incomodo" required style="width: 100%; box-sizing: border-box; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit; font-size: 1rem; background-color: #fff;">
-                        <option value="" disabled selected>Selecione uma opção</option>
-                        <option value="gordura localizada">Gordura localizada</option>
-                        <option value="celulite">Celulite</option>
-                        <option value="flacidez">Flacidez</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-whatsapp-destaque" style="width: 100%; box-sizing: border-box; cursor: pointer; border: none; font-size: 1.1rem;">Quero minha avaliação</button>
-                <div id="formMessage" style="display: none; margin-top: 20px; padding: 15px; background-color: #d4edda; color: #155724; border-radius: 6px; text-align: center; font-weight: 500;">
-                    Recebi suas informações. Vou analisar seu caso e entrar em contato com você pelo WhatsApp.
-                </div>
-            </form>
-        </div>
-    </section>
+    <!-- MENU MOBILE -->
+    <nav class="nav-mobile" id="navMobile">
+        <ul>
+            <li><a href="home.html">Sobre</a></li>
+            <li><a href="tratamentos-corporais.html">Corpo</a></li>
+            <li><a href="tratamentos-faciais.html">Face</a></li>
+            <li><a href="slim-one.html" style="color:var(--gold);">Slim One</a></li>
+            <li><a href="home.html#resultados">Resultados</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20se%20o%20Slim%20One%20%C3%A9%20para%20mim." class="mobile-cta" target="_blank">Saber se é para mim</a>
+    </nav>
 
-    <!-- Sobre o Protocolo Crio Slim -->
-    <section class="method-section">
-        <div class="container method-container">
-            <div class="method-text">
-                <h2 class="section-title">O que é o Crio Slim?</h2>
-                <div class="title-underline"></div>
-                <p style="font-size: 1.15rem; line-height: 1.6; margin-bottom: 1.2rem; color: var(--text);">O <strong>Crio Slim</strong> é um protocolo corporal premium que une <strong>criolipólise de alta performance</strong> com técnicas de remodelamento e harmonização corporal. O resultado: eliminação de gordura localizada resistente com redefinição dos contornos do corpo.</p>
-                <p style="font-size: 1.15rem; line-height: 1.6; margin-bottom: 1.2rem; color: var(--text);"><strong>Não é apenas criolipólise.</strong></p>
-                <p style="font-size: 1.15rem; line-height: 1.6; color: var(--text);"><strong>É um plano estruturado para eliminação, remodelamento e harmonização corporal completa.</strong></p>
-                <div style="display: flex; justify-content: center; margin-top: 40px;">
-                    <iframe src="https://www.youtube.com/embed/px2JgGJ-jyE" width="320" height="568" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
+    <!-- HERO SLIM ONE -->
+    <section class="slim-hero">
+        <div class="container slim-hero-grid">
+            <div class="fade-up">
+                <h1><em>Protocolo</em> Slim One</h1>
+                <p class="lead" style="color: var(--off-white); font-size: clamp(1.1rem, 2vw, 1.4rem); margin-bottom: 32px;">Estratégia corporal para gordura localizada resistente.</p>
+                <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20se%20o%20Slim%20One%20%C3%A9%20para%20mim." class="btn btn-ghost btn-block" style="border-color: var(--gold); color: var(--off-white);" target="_blank">Quero saber se o Slim One é para mim</a>
+            </div>
+            <div class="fade-up">
+                <div class="slim-hero-img">
+                    <img src="tati profissional.jpg" alt="Especialista em Gordura Localizada - Tatiane Gomes">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Authority + Connection -->
-    <section class="authority-section">
-        <div class="container authority-grid">
-            <div class="authority-image">
-                <img src="profile-photo.jpg" alt="Tatiane Gomes - Especialista">
-                <div class="authority-badge">Autoridade</div>
-            </div>
-            <div class="authority-text">
-                <h2 class="section-title">Quem conduz seu tratamento</h2>
-                <div class="title-underline"></div>
-                <p style="margin-bottom: 1.2rem; font-size: 1.15rem; line-height: 1.6; color: var(--text);">Sou
-                    esteticista graduada, pós-graduada pela UNIFESP em Saúde Estética e Cosmetologia, com 7 anos de
-                    atuação focada em gordura localizada e harmonização corporal.</p>
-                <p style="margin-bottom: 1.2rem; font-size: 1.15rem; line-height: 1.6; color: var(--text);">Já liderei
-                    equipes em clínicas de alto padrão, palestrei e ministrei aulas sobre tratamento de gordura
-                    localizada, desenvolvendo domínio técnico profundo sobre protocolos corporais de alta performance.
-                </p>
-                <p style="margin-bottom: 1.5rem; font-size: 1.15rem; line-height: 1.6; color: var(--text);">Hoje aplico
-                    essa experiência em um atendimento privativo, acolhedor e altamente estratégico, com foco exclusivo
-                    em mulheres que desejam redefinição corporal estruturada e segura.</p>
-                <ul
-                    style="list-style-type: none; padding: 0; margin: 1.5rem 0; font-size: 1.1rem; line-height: 1.6; color: var(--primary-dark);">
-                    <li style="margin-bottom: 0.8rem; display: flex; align-items: center;"><span
-                            style="color: var(--gold); font-weight: bold; margin-right: 10px;">✔</span> Atendimento
-                        individual e reservado</li>
-                    <li style="margin-bottom: 0.8rem; display: flex; align-items: center;"><span
-                            style="color: var(--gold); font-weight: bold; margin-right: 10px;">✔</span> Tempo dedicado
-                        exclusivamente à paciente</li>
-                    <li style="margin-bottom: 0.8rem; display: flex; align-items: center;"><span
-                            style="color: var(--gold); font-weight: bold; margin-right: 10px;">✔</span> Ambiente
-                        acolhedor e discreto</li>
-                </ul>
-            </div>
+    <!-- PROBLEMA -->
+    <section class="identificacao bg-white">
+        <div class="container section-center fade-up">
+            <span class="eyebrow">Você se identifica?</span>
+            <h2 class="section-title">O esforço que não reflete no espelho.</h2>
+            <div class="gold-rule gold-rule--center"></div>
+        </div>
+        <div class="container fade-up" style="max-width: 800px; text-align: center;">
+            <p class="lead" style="margin: 0 auto 32px;">Existem áreas do nosso corpo que simplesmente não respondem a treinos intensos e alimentação regrada. O abdômen que não afina, os flancos que marcam a roupa, ou aquela gordurinha que resiste mesmo após você ter emagrecido.</p>
+            <p class="lead" style="margin: 0 auto;">Quando você já tentou diversas abordagens sem sucesso, a frustração é inevitável. Mas o problema nem sempre é falta de esforço da sua parte.</p>
         </div>
     </section>
 
-    <!-- Conheça a especialista -->
-    <section class="specialist-video-section" style="padding: 80px 0; background-color: #f7f6f2;">
-        <div class="container text-center" style="max-width: 800px; margin: 0 auto;">
-            <h2 class="section-title">Conheça a especialista por trás do protocolo Crio Slim</h2>
-            <div class="title-underline center"></div>
-            <p style="font-size: 1.15rem; line-height: 1.6; margin-top: 30px; margin-bottom: 40px; color: var(--text);">
-                Antes de iniciar qualquer protocolo, gosto que minhas pacientes entendam minha forma de trabalho e a
-                lógica por trás do tratamento.
-            </p>
-            <div style="display: flex; justify-content: center;">
-                <iframe src="https://www.instagram.com/reel/DJnKJIXRz6L/embed" autoplay muted playsinline width="320"
-                    height="540" frameborder="0" scrolling="no" allowtransparency="true"
-                    style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"
-                    allow="autoplay; encrypted-media"></iframe>
-            </div>
+    <!-- QUEBRAR CRENÇA -->
+    <section style="background: var(--sand); padding: 80px 0;">
+        <div class="container text-center fade-up">
+            <h2 style="font-size: clamp(1.6rem, 3.5vw, 2.4rem); color: var(--green); max-width: 800px; margin: 0 auto;">Pode ser apenas falta de estratégia adequada para o seu tipo de tecido.</h2>
         </div>
     </section>
 
-    <!-- Differential and Quality -->
-    <section class="differential-section">
-        <div class="container text-center">
-            <h2 class="section-title text-white">Você merece um tratamento estruturado</h2>
-            <p class="differential-lead">Em meu protocolo, cada etapa é pensada com critério técnico.</p>
-            <div class="differential-grid">
-                <div class="diff-card">
-                    <div class="diff-icon">🔬</div>
-                    <p>Utilizo equipamentos regulamentados, protocolos personalizados e acompanhamento contínuo.</p>
-                </div>
-                <div class="diff-card">
-                    <div class="diff-icon">💎</div>
-                    <p>Atendo poucas pacientes por mês, pois o acompanhamento é individual e estratégico.</p>
-                </div>
-                <div class="diff-card">
-                    <div class="diff-icon">🎯</div>
-                    <p>Este protocolo é indicado para quem busca resultado real, não soluções rápidas ou promocionais.
-                    </p>
+    <!-- O QUE É O SLIM ONE -->
+    <section class="bg-off-white">
+        <div class="container ident-grid">
+            <div class="fade-up">
+                <h2 class="section-title">O que é o Slim One?</h2>
+                <div class="gold-rule"></div>
+                <p class="lead">O Slim One não é apenas "uma sessão de criolipólise".</p>
+                <p>É um <strong>protocolo corporal estruturado</strong> exclusivamente para mulheres que desejam tratar a gordura localizada resistente de forma inteligente, estratégica e acompanhada.</p>
+                <p>Em vez de entregar procedimentos soltos, construímos uma lógica de tratamento que respeita a fisiologia do seu corpo, unindo preparo, tecnologias consagradas (como a criolipólise de alta performance) e monitoramento contínuo para remodelar o contorno corporal.</p>
+            </div>
+            <div class="fade-up">
+                <!-- Vídeo da Tati explicando o protocolo -->
+                <div style="aspect-ratio: 9/16; max-height: 540px; margin: 0 auto; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow);">
+                    <iframe src="https://www.youtube.com/embed/px2JgGJ-jyE" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Resistant Fat Section -->
-    <section class="resistant-fat-section" style="padding: 80px 0; background-color: #ffffff;">
-        <div class="container text-center" style="max-width: 800px; margin: 0 auto;">
-            <h2 class="section-title">Por que algumas gorduras são resistentes?</h2>
-            <div class="title-underline center"></div>
-            <p style="font-size: 1.15rem; line-height: 1.6; margin-top: 30px; margin-bottom: 40px; color: var(--text);">
-                Algumas áreas do corpo possuem maior concentração de receptores que dificultam a mobilização da gordura.
-                Por isso muitas mulheres treinam, cuidam da alimentação e mesmo assim continuam com gordura localizada
-                na barriga ou flancos. <strong>O protocolo Slim One foi desenvolvido justamente para atuar nesses
-                    casos.</strong>
-            </p>
-            <div style="margin-top: 25px;">
-                <a href="https://wa.me/5511957739880?text=Oi%2C+quero+eliminar+minha+gordura+localizada" class="btn btn-whatsapp-destaque" target="_blank"
-                    onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Quero eliminar minha gordura localizada (me chama no WhatsApp)</a>
-            </div>
+    <!-- COMO FUNCIONA (STEPS) -->
+    <section class="bg-white">
+        <div class="container section-center fade-up">
+            <span class="eyebrow">A Jornada</span>
+            <h2 class="section-title">Como o Slim One funciona.</h2>
+            <div class="gold-rule gold-rule--center"></div>
         </div>
-    </section>
-
-    <!-- Resistant Fat Video Section -->
-    <section class="resistant-fat-video" style="padding: 80px 0; background-color: #f7f6f2;">
-        <div class="container text-center" style="max-width: 800px; margin: 0 auto;">
-            <h2 class="section-title">Por que muitas mulheres treinam e mesmo assim a barriga não vai embora?</h2>
-            <div class="title-underline center"></div>
-            <div style="display: flex; justify-content: center; margin-top: 40px;">
-                <iframe src="https://www.youtube.com/embed/8LL8qqhS5ag" width="320" height="568" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Qualification Section -->
-    <section class="qualification-section" style="padding: 80px 0; background-color: var(--primary-dark);">
-        <div class="container text-center" style="max-width: 800px; margin: 0 auto;">
-            <h2 class="section-title text-white">Este tratamento não é para quem busca sessões isoladas ou promoções.
-            </h2>
-            <div class="title-underline center" style="background-color: var(--gold);"></div>
-            <p style="font-size: 1.15rem; line-height: 1.6; margin-top: 30px; color: #ffffff;">
-                O protocolo Slim One é um plano estruturado para mulheres que desejam tratar gordura localizada de forma
-                estratégica e acompanhada. Cada paciente passa por avaliação para definição de áreas, número de sessões
-                e tecnologias complementares.
-            </p>
-        </div>
-    </section>
-
-    <!-- Results Block -->
-    <section class="results-premium">
-        <div class="container">
-            <h2 class="section-title text-center">Resultados Visíveis</h2>
-            <div class="title-underline center"></div>
-            <p class="results-text text-center"
-                style="margin-bottom: 40px; font-size: 1.1rem; color: var(--text-light);">Resultados começam a ser
-                percebidos a partir de 40 dias, respeitando o processo fisiológico do corpo.</p>
-
-            <div class="results-gallery">
-                <div class="result-item">
-                    <img src="crio4.jpeg" alt="Antes e Depois Harmonização Corporal - Abdômen Frontal" loading="lazy">
-                </div>
-                <div class="result-item">
-                    <img src="crio2.jpeg" alt="Antes e Depois Harmonização Corporal - Abdomen Perfil" loading="lazy">
-                </div>
-                <div class="result-item">
-                    <img src="crio3.jpeg" alt="Antes e Depois Harmonização Corporal - Abdomen Lateral" loading="lazy">
-                </div>
-                <div class="result-item">
-                    <img src="corporal4.jpg" alt="Antes e Depois Harmonização Corporal" loading="lazy">
-                </div>
-            </div>
-
-            <div class="depoimentos-images-section" style="margin-top: 80px;">
-                <h2 class="section-title text-center">O Que Estão Dizendo</h2>
-                <div class="title-underline center"></div>
-                <div class="depoimentos-images-grid">
-                    <img src="dep1.jpeg" alt="Depoimento 1" class="depoimento-img" loading="lazy">
-                    <img src="dep2.jpeg" alt="Depoimento 2" class="depoimento-img" loading="lazy">
-                    <img src="dep3.jpeg" alt="Depoimento 3" class="depoimento-img" loading="lazy">
-                    <img src="dep4.jpeg" alt="Depoimento 4" class="depoimento-img" loading="lazy">
-                </div>
-            </div>
-
-            <div class="text-center" style="margin-top: 60px; margin-bottom: 20px;">
-                <div style="max-width: 700px; margin: 0 auto; background: #fdfbf7; padding: 30px; border-radius: 12px; border: 1px solid rgba(196, 154, 69, 0.3);">
-                    <p style="font-weight: 700; font-size: 1.15rem; color: #c49a45; margin-bottom: 12px; line-height: 1.4;">Estou com vagas limitadas essa semana para avaliação. Se você quer tratar gordura localizada de forma estratégica, esse é o momento.</p>
-                    <p style="font-size: 1rem; line-height: 1.4; margin-bottom: 25px; color: var(--text-light); font-style: italic;">Clique no botão e abra uma conversa comigo com a mensagem já pronta. É só enviar e pronto.</p>
-                    <a href="https://wa.me/5511957739880?text=Oi%2C+quero+eliminar+minha+gordura+localizada" class="btn btn-whatsapp-destaque" target="_blank"
-                        onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Quero eliminar minha gordura localizada (me chama no WhatsApp)</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials-premium">
-        <div class="container">
-            <h2 class="section-title text-center">Relatos de Pacientes</h2>
-            <div class="title-underline center"></div>
-            <div class="testimonials-grid">
-                <div class="testi-card">
-                    <div class="testi-header">
-                        <div class="testi-avatar">M</div>
-                        <div>
-                            <h4>Mariana S.</h4>
-                            <div class="stars">★★★★★</div>
-                        </div>
+        
+        <div class="container fade-up" style="max-width: 700px;">
+            <div class="slim-steps">
+                <div class="slim-step">
+                    <span class="slim-step-n">01</span>
+                    <div>
+                        <h4>Avaliação Diagnóstica</h4>
+                        <p>Análise minuciosa da sua composição corporal, estilo de vida e do tecido na área de queixa para verificar se há indicação para o protocolo.</p>
                     </div>
-                    <p>“Eu treinava, tentava dieta, mas aquela gordura resistente não ia embora de jeito nenhum. Quando
-                        fiz o protocolo com a Tatiane, eu senti que alguém finalmente entendeu o meu corpo. Não foi só
-                        estética, ela redesenhou meu contorno e elevou minha autoestima. Hoje eu me olho no espelho com
-                        muito orgulho.”
-                    </p>
                 </div>
-                <div class="testi-card">
-                    <div class="testi-header">
-                        <div class="testi-avatar">P</div>
-                        <div>
-                            <h4>Patrícia A.</h4>
-                            <div class="stars">★★★★★</div>
-                        </div>
+                <div class="slim-step">
+                    <span class="slim-step-n">02</span>
+                    <div>
+                        <h4>Planejamento e Preparo</h4>
+                        <p>Organização das etapas e, se necessário, preparo metabólico e da pele para receber a tecnologia de forma segura e eficaz.</p>
                     </div>
-                    <p>“Eu já tinha feito vários procedimentos antes, mas sempre parecia que faltava alguma coisa. Com a
-                        Tatiane foi diferente. Ela olha cada detalhe do corpo, explica tudo com clareza e monta um plano
-                        estratégico. Não é só aplicar o aparelho. Eu vi resultado real na gordura localizada e na
-                        flacidez.
-                        Vale cada centavo.”</p>
                 </div>
-                <div class="testi-card">
-                    <div class="testi-header">
-                        <div class="testi-avatar">R</div>
-                        <div>
-                            <h4>Renata M.</h4>
-                            <div class="stars">★★★★★</div>
-                        </div>
+                <div class="slim-step">
+                    <span class="slim-step-n">03</span>
+                    <div>
+                        <h4>Estratégia de Tratamento</h4>
+                        <p>Aplicação das tecnologias selecionadas — como a criolipólise avançada — com parâmetros individualizados para a sua gordura localizada.</p>
                     </div>
-                    <p>“Eu sou muito criteriosa com tudo que faço no meu corpo. Desde a consulta eu percebi o nível de
-                        profissionalismo. A Tatiane é extremamente detalhista e segura no que faz. O resultado foi
-                        visível e natural, sem exageros. É outro padrão de atendimento.”</p>
+                </div>
+                <div class="slim-step">
+                    <span class="slim-step-n">04</span>
+                    <div>
+                        <h4>Acompanhamento Pós</h4>
+                        <p>O tratamento não termina no dia da aplicação. Realizamos o monitoramento da resposta do seu corpo ao longo das semanas seguintes.</p>
+                    </div>
+                </div>
+                <div class="slim-step">
+                    <span class="slim-step-n">05</span>
+                    <div>
+                        <h4>Reavaliação e Resultados</h4>
+                        <p>Registro fotográfico e análise comparativa para mensurar o remodelamento e a evolução do contorno corporal alcançados.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Location -->
-    <section class="location-premium" style="padding: 80px 0;">
-        <div class="container">
-            <h2 class="section-title text-center">Atendimento em São Paulo – Zona Sul e Zona Oeste</h2>
-            <div class="title-underline center"></div>
-
-            <h3 style="text-align: center; color: var(--text-dark); margin-top: 50px; margin-bottom: 30px; font-size: 2rem; font-family: 'Cormorant Garamond', serif;">Unidade Zona Sul – Santo Amaro</h3>
             
-            <div class="location-grid" style="margin-bottom: 60px;">
-                <div class="location-text" style="text-align: left;">
-                    <p><strong>Com fácil acesso para:</strong></p>
-                    <ul
-                        style="list-style-type: none; padding: 0; margin: 1.5rem 0; font-size: 1.1rem; line-height: 1.6; color: var(--text-light);">
-                        <li style="margin-bottom: 0.5rem;"><i class="icon-check"></i> Alto da Boa Vista</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="icon-check"></i> Granja Julieta</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="icon-check"></i> Brooklin</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="icon-check"></i> Campo Belo</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="icon-check"></i> Chácara Santo Antônio</li>
-                    </ul>
-                    <div class="location-details" style="margin-top: 2rem;">
-                        <p><strong>Endereço Completo</strong></p>
-                        <p>Rua Bela Vista, número 580, sala 14<br>Santo Amaro</p>
+            <div class="text-center mt-md">
+                <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20o%20Slim%20One." class="btn btn-primary" target="_blank">Agendar Avaliação para o Slim One</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- O QUE ESTÁ INCLUÍDO -->
+    <section class="bg-off-white">
+        <div class="container section-center fade-up">
+            <span class="eyebrow">Estrutura</span>
+            <h2 class="section-title">O que está incluído no protocolo?</h2>
+            <div class="gold-rule gold-rule--center"></div>
+        </div>
+        
+        <div class="container fade-up" style="max-width: 800px;">
+            <div style="background: var(--white); padding: 40px; border-radius: var(--r-lg); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 16px;">
+                <div class="placeholder-field">[Confirmar itens exatos incluídos no pacote Slim One: Ex: 1 Sessão de Avaliação + 1 Sessão de Criolipólise (X áreas) + X Retornos de Acompanhamento + Suporte via WhatsApp durante o protocolo.]</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTADOS SLIM ONE -->
+    <section class="resultados" id="resultados">
+        <div class="container section-center fade-up">
+            <span class="eyebrow">Resultados</span>
+            <h2 class="section-title">Evolução que você acompanha.</h2>
+            <div class="gold-rule gold-rule--center"></div>
+        </div>
+        
+        <div class="container fade-up">
+            <div class="casos-grid">
+                
+                <div class="caso-card">
+                    <div class="caso-imgs">
+                        <div class="caso-img">
+                            <div class="placeholder-field" style="height:100%; display:flex; align-items:center;">[Inserir Foto Antes]</div>
+                            <span class="caso-img-label">Antes</span>
+                        </div>
+                        <div class="caso-img">
+                            <div class="placeholder-field" style="height:100%; display:flex; align-items:center;">[Inserir Foto Depois]</div>
+                            <span class="caso-img-label">Depois</span>
+                        </div>
+                    </div>
+                    <div class="caso-info">
+                        <span class="caso-queixa">Abdômen Inferior</span>
+                        <div class="placeholder-field">[Inserir contexto do Slim One]</div>
                     </div>
                 </div>
-                <div class="location-map">
-                    <!-- Location map -->
-                    <iframe
-                        src="https://maps.google.com/maps?q=Rua+Bela+Vista,+580+-+Jardim+Francisco+Mendes,+S%C3%A3o+Paulo+-+SP&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                        width="100%" height="350" style="border:0; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                <div class="caso-card">
+                    <div class="caso-imgs">
+                        <div class="caso-img">
+                            <div class="placeholder-field" style="height:100%; display:flex; align-items:center;">[Inserir Foto Antes]</div>
+                            <span class="caso-img-label">Antes</span>
+                        </div>
+                        <div class="caso-img">
+                            <div class="placeholder-field" style="height:100%; display:flex; align-items:center;">[Inserir Foto Depois]</div>
+                            <span class="caso-img-label">Depois</span>
+                        </div>
+                    </div>
+                    <div class="caso-info">
+                        <span class="caso-queixa">Flancos</span>
+                        <div class="placeholder-field">[Inserir contexto do Slim One]</div>
+                    </div>
                 </div>
+                
+                <div class="caso-card">
+                    <div class="caso-imgs">
+                        <div class="caso-img">
+                            <div class="placeholder-field" style="height:100%; display:flex; align-items:center;">[Inserir Foto Antes]</div>
+                            <span class="caso-img-label">Antes</span>
+                        </div>
+                        <div class="caso-img">
+                            <div class="placeholder-field" style="height:100%; display:flex; align-items:center;">[Inserir Foto Depois]</div>
+                            <span class="caso-img-label">Depois</span>
+                        </div>
+                    </div>
+                    <div class="caso-info">
+                        <span class="caso-queixa">Abdômen Completo</span>
+                        <div class="placeholder-field">[Inserir contexto do Slim One]</div>
+                    </div>
+                </div>
+                
             </div>
-
-            <hr style="border: 0; height: 1px; background: rgba(0,0,0,0.1); margin: 50px auto; max-width: 800px;">
-
-            <h3 style="text-align: center; color: var(--text-dark); margin-top: 50px; margin-bottom: 30px; font-size: 2rem; font-family: 'Cormorant Garamond', serif;">Unidade Zona Oeste – Vila Madalena</h3>
             
-            <div class="location-grid" style="margin-bottom: 50px;">
-                <div class="location-text" style="text-align: left;">
-                    <p style="font-size: 1.15rem; line-height: 1.6; color: var(--text-light); margin-bottom: 1.5rem;">Atendimento em parceria com Zeni Estética.</p>
-                    <div class="location-details" style="margin-top: 2rem;">
-                        <p><strong>Endereço Completo</strong></p>
-                        <p>Rua Sen. César Lacerda Vergueiro, 393<br>Sala 43 – Vila Madalena</p>
+            <div class="text-center mt-lg">
+                <p style="font-size: .8rem; color: var(--text-light); font-style: italic;">*Os resultados do protocolo Slim One são acompanhados e documentados, mas a resposta fisiológica pode variar individualmente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTORIDADE -->
+    <section class="autoridade">
+        <div class="container auto-grid">
+            <div class="auto-photo fade-up">
+                <img src="tatilifestyle.jpeg" alt="Tatiane Gomes">
+            </div>
+            <div class="auto-text fade-up">
+                <span class="eyebrow">Quem conduz</span>
+                <h2>Sua estratégia em mãos especializadas.</h2>
+                <div class="gold-rule"></div>
+                <p>Sou Tatiane Gomes, Especialista e Pós-graduada em Saúde Estética. Durante meus 7 anos de experiência clínica, percebi que a tecnologia sozinha não traz o resultado duradouro que as mulheres buscam. Por isso criei o Slim One: para unir técnica, tecnologia e, acima de tudo, estratégia fisiológica.</p>
+                <p>Meu papel é avaliar o seu corpo de forma realista e aplicar o conhecimento técnico para entregar o melhor remodelamento possível com segurança.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="depoimentos">
+        <div class="container section-center fade-up">
+            <h2 class="section-title">A experiência Slim One.</h2>
+            <div class="gold-rule gold-rule--center"></div>
+        </div>
+        
+        <div class="container fade-up">
+            <div class="dep-grid">
+                <div class="dep-card">
+                    <span class="dep-quote">"</span>
+                    <p class="dep-text">
+                        <div class="placeholder-field">[Inserir depoimento real focado na surpresa com o método estruturado em comparação a tratamentos avulsos]</div>
+                    </p>
+                    <span class="dep-name">[Nome da Paciente]</span>
+                </div>
+                <div class="dep-card">
+                    <span class="dep-quote">"</span>
+                    <p class="dep-text">
+                        <div class="placeholder-field">[Inserir depoimento focado na atenção aos detalhes e no acompanhamento pós-tratamento]</div>
+                    </p>
+                    <span class="dep-name">[Nome da Paciente]</span>
+                </div>
+                <div class="dep-card">
+                    <span class="dep-quote">"</span>
+                    <p class="dep-text">
+                        <div class="placeholder-field">[Inserir depoimento real sobre a diferença de remodelamento no contorno da roupa]</div>
+                    </p>
+                    <span class="dep-name">[Nome da Paciente]</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-white">
+        <div class="container section-center fade-up">
+            <span class="eyebrow">Dúvidas Frequentes</span>
+            <h2 class="section-title">Perguntas sobre o Slim One</h2>
+            <div class="gold-rule gold-rule--center"></div>
+        </div>
+        
+        <div class="container fade-up">
+            <div class="faq-list">
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Para quem o Slim One é indicado?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            O Slim One é indicado para mulheres que possuem áreas de gordura localizada resistente — aquelas que persistem mesmo com dieta e exercícios —, como abdômen, flancos, costas ou culotes. O protocolo é voltado para remodelamento corporal e não é um tratamento de emagrecimento sistêmico.
+                        </div>
                     </div>
                 </div>
-                <div class="location-map">
-                    <iframe
-                        src="https://maps.google.com/maps?q=Rua+Senador+C%C3%A9sar+Lacerda+Vergueiro,+393,+Vila+Madalena,+S%C3%A3o+Paulo&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                        width="100%" height="350" style="border:0; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy"></iframe>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Preciso passar por avaliação antes?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Sim, a avaliação é obrigatória. É nela que analiso a espessura e as características do seu tecido adiposo para confirmar se o Slim One é a estratégia mais segura e eficiente para você, descartando contraindicações.
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="text-center" style="margin-top: 60px;">
-                <p style="font-size: 1.15rem; color: var(--text-dark); margin-bottom: 25px; font-weight: 500;">Escolha a unidade mais próxima de você e fale comigo direto no WhatsApp para avaliação.</p>
-                <a href="https://wa.me/5511957739880?text=Oi%2C+quero+agendar+na+unidade+mais+pr%C3%B3xima" class="btn btn-whatsapp-destaque" target="_blank"
-                    onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Quero agendar na unidade mais próxima</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final Conversion Block -->
-    <section class="final-conversion">
-        <div class="container text-center">
-            <h2 class="conversion-title">Pronta para iniciar sua redefinição corporal?</h2>
-            <div class="exclusivity-block"
-                style="background: rgba(255,255,255,0.05); border: 1px solid var(--gold); padding: 30px; border-radius: 8px; margin: 0 auto 40px; max-width: 650px; text-align: left;">
-                <p style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 15px; color: var(--text);">
-                    <strong style="color: var(--white);">Não trabalho com pacotes genéricos.</strong><br>
-                    Cada paciente passa por avaliação estratégica para definir áreas, número de sessões e tecnologias
-                    complementares.
-                </p>
-                <p style="font-weight: 600; font-size: 1.1rem; color: var(--gold); margin-top: 15px;">Vagas limitadas
-                    por semana para manter qualidade e resultado.</p>
-            </div>
-            <div style="margin-top: 20px;">
-                <a href="https://wa.me/5511957739880?text=Oi%2C+quero+eliminar+minha+gordura+localizada" class="btn btn-whatsapp-destaque" target="_blank"
-                    onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Quero eliminar minha gordura localizada (me chama no WhatsApp)</a>
-                <a href="#avaliacao-form" class="btn btn-premium" style="display: block; margin-top: 15px; width: fit-content; margin-left: auto; margin-right: auto;" onclick="document.getElementById('avaliacao-form').scrollIntoView({behavior: 'smooth'}); return false;">Prefiro que você me chame</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Instagram Section -->
-    <section class="instagram-section" style="background-color: #f7f6f2; padding: 80px 0;">
-        <div class="container instagram-container"
-            style="display: flex; align-items: center; justify-content: space-between; gap: 50px; max-width: 1000px; margin: 0 auto; flex-wrap: wrap;">
-            <div class="instagram-mockup" style="flex: 1; display: flex; justify-content: center; min-width: 300px;">
-                <img src="instagram-mockup.jpeg" alt="Instagram Tatiane Gomes"
-                    style="max-width: 280px; border-radius: 35px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); animation: float-mockup 4s ease-in-out infinite;">
-            </div>
-            <div class="instagram-text-content" style="flex: 1; min-width: 300px;">
-                <h2 class="section-title" style="color: var(--primary-dark); text-align: left; margin-bottom: 20px;">
-                    Acompanhe meus bastidores e resultados reais</h2>
-                <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text); margin-bottom: 30px;">Compartilho
-                    rotina de atendimentos, explicações técnicas e resultados reais de pacientes.</p>
-                <a href="https://www.instagram.com/tatiane.esteticista?igsh=MWkzNnU4bG1hYnMyaQ%3D%3D&utm_source=qr"
-                    class="btn btn-premium" target="_blank" style="display: inline-block;">Seguir no Instagram</a>
-            </div>
-        </div>
-    </section>
-    <style>
-        @keyframes float-mockup {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-15px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .instagram-container {
-                flex-direction: column-reverse !important;
-                text-align: center;
-            }
-
-            .instagram-text-content .section-title {
-                text-align: center !important;
-            }
-        }
-    </style>
-
-    <!-- Other Treatments Section -->
-    <section class="other-treatments-section" style="padding: 80px 0; background-color: #ffffff;">
-        <div class="container text-center" style="max-width: 800px; margin: 0 auto;">
-            <h2 class="section-title">Conheça outros tratamentos disponíveis</h2>
-            <div class="title-underline center"></div>
-            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px;">
-                <a href="https://tatianegomesestetica.com.br/tratamentos-corporais.html" class="btn btn-premium"
-                    style="min-width: 250px;">Tratamentos Corporais</a>
-                <a href="https://tatianegomesestetica.com.br/tratamentos-faciais.html" class="btn btn-premium"
-                    style="min-width: 250px;">Tratamentos Faciais</a>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        O Slim One é apenas criolipólise?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Não. A criolipólise de alta performance é a principal tecnologia que utilizamos, mas o Slim One é um plano estruturado que envolve preparo e, fundamentalmente, o acompanhamento e as orientações durante o período pós-aplicação.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Quanto tempo dura o acompanhamento?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <div class="placeholder-field" style="padding: 10px;">[Inserir resposta real: ex. "O acompanhamento padrão do Slim One dura de 60 a 90 dias após a aplicação principal, período em que ocorrem os retornos clínicos."]</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Qual o valor do investimento?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            O valor é definido exclusivamente durante a avaliação presencial. Como a estratégia é personalizada, preciso entender quantas áreas trataremos, a necessidade de preparo do tecido e a tecnologia exata a ser parametrizada para o seu corpo.
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/5511957739880?text=Oi%2C+quero+eliminar+minha+gordura+localizada" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
-        onclick="return gtag_report_conversion('https://wa.me/5511957739880')">
-        <svg viewBox="0 0 32 32" class="wa-icon">
-            <path
-                d="M16 2a13 13 0 00-11 20l-2 6 6-2a13 13 0 107-24zm0 24a11 11 0 01-5-1l-3 1 1-3a11 11 0 117 3zm6-7c0 1-1 3-3 3-1 0-3-1-5-3s-4-4-4-5 1-2 2-3c1-1 1-1 2-1s1 1 2 2c0 1 0 1-1 2-1 1-2 2-2 2s3 4 5 5c0 0 1-1 1-2 1-1 1-1 2-1s2 1 2 2z" />
-        </svg>
-    </a>
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+        <div class="container cta-final-inner fade-up">
+            <span class="eyebrow">Agende sua avaliação</span>
+            <h2>Seu corpo merece uma estratégia pensada para ele.</h2>
+            <p class="lead" style="margin: 0 auto 40px; color: rgba(247,244,239,.85);">Dê o primeiro passo para transformar a sua relação com o espelho. Vamos construir juntas o plano para a sua melhor versão.</p>
+            <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20se%20o%20Slim%20One%20%C3%A9%20para%20mim." class="btn btn-ghost" style="border-color: #fff; color: #fff;" target="_blank">Quero Agendar Minha Avaliação</a>
+            
+            <div class="location-info">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Santo Amaro — São Paulo
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer -->
+    <!-- RODAPÉ -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col">
+                <div class="footer-brand">
                     <h3>Tatiane Gomes Estética</h3>
-                    <p>Cuidando da sua beleza com profissionalismo e dedicação.</p>
+                    <p>Avaliação, estratégia e acompanhamento especializado em estética corporal e facial para resultados reais.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Links Rápidos</h4>
+                    <h4>Navegação</h4>
                     <ul>
-                        <li><a href="home.html">Início</a></li>
-                        <li><a href="home.html#sobre">Sobre</a></li>
-                        <li><a href="tratamentos-corporais.html">Tratamentos</a></li>
+                        <li><a href="slim-one.html">Slim One</a></li>
+                        <li><a href="tratamentos-corporais.html">Tratamentos Corporais</a></li>
+                        <li><a href="tratamentos-faciais.html">Tratamentos Faciais</a></li>
                         <li><a href="contato.html">Contato</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contato</h4>
+                    <h4>Conteúdo</h4>
                     <ul>
-                        <li><a href="contato.html">Entre em Contato</a></li>
-                        <li><a href="agendamento.html">Agendar Consulta</a></li>
-                        <li><a href="faq.html">Perguntas Frequentes</a></li>
+                        <li><a href="https://www.instagram.com/tatianegomesestetica/" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://friendly-duckanoo-f468fe.netlify.app/site" target="_blank" rel="noopener">Conheça meu Podcast</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Tatiane Gomes Estética. Todos os direitos reservados.</p>
+                <a href="#">Política de Privacidade</a>
             </div>
         </div>
     </footer>
 
-    <!-- Event snippet for WhatsApp Slim One conversion page -->
+    <!-- SCRIPTS -->
     <script>
-        function gtag_report_conversion(url) {
-            var callback = function () {
-                if (typeof (url) != 'undefined') {
-                    window.location = url;
-                }
-            };
-            gtag('event', 'conversion', {
-                'send_to': 'AW-17947496680/hUBdCOX99oMcEOihhO5C',
-                'event_callback': callback
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar
+            const navbar = document.getElementById('navbar');
+            const toggle = document.getElementById('navToggle');
+            const menu = document.getElementById('navMobile');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
             });
-            return false;
-        }
-    </script>
-    <script>
-        document.getElementById("leadForm").addEventListener("submit", function(e) {
-            e.preventDefault();
-            
-            var btn = this.querySelector('button[type="submit"]');
-            var originalText = btn.innerText;
-            btn.innerText = "Enviando...";
-            btn.disabled = true;
 
-            var formData = new FormData(this);
-            formData.append("_subject", "Novo lead - Avaliação estética");
-            formData.append("_captcha", "false");
+            toggle.addEventListener('click', () => {
+                toggle.classList.toggle('open');
+                menu.classList.toggle('open');
+                document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+            });
+
+            // Fade Up
+            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
             
-            fetch("https://formsubmit.co/ajax/EsteticaTatianeGomes@gmail.com", {
-                method: "POST",
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById("formMessage").style.display = "block";
-                this.reset();
-                btn.innerText = originalText;
-                btn.disabled = false;
-            })
-            .catch(error => {
-                alert("Ocorreu um erro ao enviar. Por favor, tente novamente ou chame no WhatsApp.");
-                btn.innerText = originalText;
-                btn.disabled = false;
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const btn = item.querySelector('.faq-question');
+                btn.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+                    
+                    // Fechar todos
+                    faqItems.forEach(i => i.classList.remove('open'));
+                    
+                    // Abrir atual se estava fechado
+                    if (!isOpen) item.classList.add('open');
+                });
             });
         });
     </script>
-    <script src="script.js"></script>
 </body>
-
 </html>
