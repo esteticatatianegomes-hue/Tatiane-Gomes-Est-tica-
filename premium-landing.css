@@ -656,3 +656,43 @@ section { padding: 70px 0; position: relative; }
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Faixa Editorial Horizontal (Ticker Contínuo da Esquerda para a Direita) */
+.ticker-section {
+  background: var(--primary);
+  color: var(--off-white);
+  padding: 16px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid rgba(184, 160, 122, 0.25);
+  border-bottom: 1px solid rgba(184, 160, 122, 0.25);
+  position: relative;
+  width: 100%;
+}
+.ticker-track {
+  display: inline-flex;
+  gap: 36px;
+  animation: marquee-ltr 28s linear infinite;
+  will-change: transform;
+}
+@keyframes marquee-ltr {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+.ticker-item {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--off-white);
+  display: inline-flex;
+  align-items: center;
+  gap: 36px;
+}
+.ticker-item::after {
+  content: '•';
+  color: var(--champagne);
+  font-size: 1rem;
+}
+
