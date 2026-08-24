@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Contato e Agendamento | Tatiane Gomes Estética</title>
-    <meta name="description" content="Agende sua avaliação presencial com Tatiane Gomes. Clínica de estética especializada em Santo Amaro, SP.">
+    <title>Contato | Tatiane Gomes Estética</title>
+    <meta name="description" content="Entre em contato com Tatiane Gomes para agendar sua avaliação estética em Santo Amaro, São Paulo.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="premium-landing.css">
-    
-    <!-- Google tag (gtag.js) -->
+
+    <!-- Google Tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17947496680"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -21,148 +18,222 @@
         gtag('js', new Date());
         gtag('config', 'AW-17947496680', { 'linker': { 'domains': ['api.whatsapp.com'] } });
         
-        function gtag_report_conversion(url) {
-            var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
+        function trackWpp(url, eventName) {
+            if (eventName) {
+                gtag('event', eventName, { 'event_category': 'WhatsApp_CTA' });
+            }
+            var callback = function () { if (typeof(url) != 'undefined') { window.open(url, '_blank'); } };
             gtag('event', 'conversion', { 'send_to': 'AW-17947496680/hUBdCOX99oMcEOihhO5C', 'event_callback': callback });
             return false;
         }
     </script>
+
+    <style>
+        .contact-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(184, 160, 122, 0.2);
+            box-shadow: var(--shadow-sm);
+        }
+        .info-group { margin-bottom: 24px; }
+        .info-group h4 {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            color: var(--champagne);
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+        .info-group p, .info-group a {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20Tatiane%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." 
+       class="float-wa" 
+       onclick="return trackWpp('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20Tatiane%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.', 'whatsapp_float');"
+       aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.49-3.238l.382.227c1.543.917 3.25 1.4 5.01 1.41h.007c5.626 0 10.203-4.574 10.207-10.201.002-2.727-1.059-5.291-2.99-7.225C17.221 3.24 14.66 2.18 11.993 2.18c-5.636 0-10.21 4.574-10.215 10.203-.001 1.848.497 3.654 1.442 5.233l.251.417-1.006 3.675 3.766-.988zM17.51 15.3c-.307-.154-1.82-.9-2.1-.999-.28-.1-.485-.15-.688.153-.203.303-.787.999-.965 1.202-.178.203-.355.228-.662.074-1.036-.518-1.8-1.002-2.51-2.217-.18-.309-.18-.5-.294-.684-.113-.189-.012-.283.087-.379.09-.086.203-.228.304-.342.102-.114.135-.19.203-.327.068-.137.034-.257-.017-.358-.051-.102-.485-1.168-.665-1.6-.175-.421-.347-.364-.485-.371-.125-.007-.268-.007-.41-.007-.143 0-.376.054-.572.269-.196.216-.749.732-.749 1.786s.767 2.071.872 2.211c.105.14 1.51 2.3 3.66 3.228.51.22 1.085.352 1.457.47.514.163.98.139 1.35.084.412-.061 1.82-.745 2.078-1.464.258-.718.258-1.332.18-1.464-.078-.133-.282-.232-.589-.386z"/></svg>
+    </a>
+
+    <!-- CTA Mobile Fixo -->
+    <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20Tatiane%21%20Quero%20saber%20se%20o%20M%C3%A9todo%20Slim%20One%20%C3%A9%20para%20mim." 
+       class="mobile-cta-fixed" 
+       onclick="return trackWpp('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20Tatiane%21%20Quero%20saber%20se%20o%20M%C3%A9todo%20Slim%20One%20%C3%A9%20para%20mim.', 'whatsapp_mobile');">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.49-3.238l.382.227c1.543.917 3.25 1.4 5.01 1.41h.007c5.626 0 10.203-4.574 10.207-10.201.002-2.727-1.059-5.291-2.99-7.225C17.221 3.24 14.66 2.18 11.993 2.18c-5.636 0-10.21 4.574-10.215 10.203-.001 1.848.497 3.654 1.442 5.233l.251.417-1.006 3.675 3.766-.988zM17.51 15.3c-.307-.154-1.82-.9-2.1-.999-.28-.1-.485-.15-.688.153-.203.303-.787.999-.965 1.202-.178.203-.355.228-.662.074-1.036-.518-1.8-1.002-2.51-2.217-.18-.309-.18-.5-.294-.684-.113-.189-.012-.283.087-.379.09-.086.203-.228.304-.342.102-.114.135-.19.203-.327.068-.137.034-.257-.017-.358-.051-.102-.485-1.168-.665-1.6-.175-.421-.347-.364-.485-.371-.125-.007-.268-.007-.41-.007-.143 0-.376.054-.572.269-.196.216-.749.732-.749 1.786s.767 2.071.872 2.211c.105.14 1.51 2.3 3.66 3.228.51.22 1.085.352 1.457.47.514.163.98.139 1.35.084.412-.061 1.82-.745 2.078-1.464.258-.718.258-1.332.18-1.464-.078-.133-.282-.232-.589-.386z"/></svg>
+        QUERO SABER SE O SLIM ONE É PARA MIM
+    </a>
+
+    <!-- HEADER / MENU PRINCIPAL -->
     <header class="navbar" id="navbar">
-        <div class="nav-inner">
+        <div class="container nav-inner">
             <a href="home.html" class="nav-logo">
-                <span class="nav-logo-main">Tatiane Gomes</span>
-                <span class="nav-logo-sub">Estética</span>
+                <span>Tatiane Gomes</span>
+                <span>Estética</span>
             </a>
-            
-            <ul class="nav-links">
-                <li><a href="home.html">Sobre</a></li>
-                <li><a href="tratamentos-corporais.html">Corpo</a></li>
-                <li><a href="tratamentos-faciais.html">Face</a></li>
-                <li><a href="slim-one.html">Slim One</a></li>
-                <li><a href="home.html#resultados">Resultados</a></li>
-                <li><a href="contato.html" style="color:var(--green); font-weight:700;">Contato</a></li>
-            </ul>
-
-            <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." class="nav-cta" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o.')">
-                Agendar Avaliação
-            </a>
-
-            <div class="nav-hamburger" id="navToggle">
+            <nav class="nav-links">
+                <a href="slim-one.html">Slim One</a>
+                <a href="outros-tratamentos.html">Outros Tratamentos</a>
+                <a href="sobre.html">Sobre a Tatiane</a>
+                <a href="duvidas.html">Dúvidas</a>
+            </nav>
+            <div class="nav-cta-wrapper">
+                <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20Tatiane%21%20Quero%20saber%20se%20o%20M%C3%A9todo%20Slim%20One%20%C3%A9%20para%20mim." 
+                   class="btn btn-primary" 
+                   style="padding: 10px 20px; font-size: 0.68rem;"
+                   onclick="return trackWpp('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20Tatiane%21%20Quero%20saber%20se%20o%20M%C3%A9todo%20Slim%20One%20%C3%A9%20para%20mim.', 'whatsapp_header');">
+                    QUERO SABER SE O SLIM ONE É PARA MIM
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger" aria-label="Abrir Menu">
                 <span></span><span></span><span></span>
             </div>
         </div>
     </header>
 
-    <!-- MENU MOBILE -->
-    <nav class="nav-mobile" id="navMobile">
-        <ul>
-            <li><a href="home.html">Sobre</a></li>
-            <li><a href="tratamentos-corporais.html">Corpo</a></li>
-            <li><a href="tratamentos-faciais.html">Face</a></li>
-            <li><a href="slim-one.html">Slim One</a></li>
-            <li><a href="home.html#resultados">Resultados</a></li>
-            <li><a href="contato.html" style="color:var(--gold);">Contato</a></li>
-        </ul>
-        <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." class="mobile-cta" target="_blank">Agendar Avaliação</a>
-    </nav>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="slim-one.html">Slim One</a>
+        <a href="outros-tratamentos.html">Outros Tratamentos</a>
+        <a href="sobre.html">Sobre a Tatiane</a>
+        <a href="duvidas.html">Dúvidas</a>
+        <a href="contato.html">Contato</a>
+        <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20Tatiane%21%20Quero%20saber%20se%20o%20M%C3%A9todo%20Slim%20One%20%C3%A9%20para%20mim." 
+           class="btn btn-primary btn-block"
+           onclick="return trackWpp('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20Tatiane%21%20Quero%20saber%20se%20o%20M%C3%A9todo%20Slim%20One%20%C3%A9%20para%20mim.', 'whatsapp_mobile_menu');">
+            QUERO SABER SE O SLIM ONE É PARA MIM
+        </a>
+    </div>
 
-    <!-- HERO CONTATO -->
-    <section class="page-hero" style="min-height: 100svh; display:flex; align-items:center;">
-        <div class="container section-center fade-up" style="max-width: 800px;">
-            <span class="page-hero-label">Agendamento</span>
-            <h1 class="hero-title" style="margin-bottom: 24px;">Vamos entender o que sua pele ou seu corpo precisa.</h1>
-            <div class="gold-rule gold-rule--center"></div>
-            <p class="lead" style="margin: 0 auto 48px;">Você não precisa escolher um tratamento sozinha. Agende sua avaliação e vamos definir a estratégia mais adequada para o seu objetivo.</p>
-            
-            <div style="background: var(--white); padding: 48px; border-radius: var(--r-lg); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 40px; margin-bottom: 40px;">
-                
-                <div class="contato-item text-center">
-                    <h4>WhatsApp</h4>
-                    <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" style="font-size: 1.4rem; font-weight: 600; color: var(--green);">(11) 95773-9880</a>
-                </div>
-                
-                <div class="contato-item text-center">
-                    <h4>Localização</h4>
-                    <p>Santo Amaro — São Paulo, SP<br><em>(Atendimento presencial com horário marcado)</em></p>
-                </div>
-                
-                <div class="contato-item text-center">
-                    <h4>Horário de Atendimento</h4>
-                    <p>Segunda a Sexta, das 9h às 19h<br>Sábados, das 9h às 14h</p>
-                </div>
-                
-                <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." class="btn btn-primary" style="margin: 0 auto; width: 100%; max-width: 320px;" target="_blank">Agendar Minha Avaliação</a>
-            </div>
-            
-            <a href="https://www.instagram.com/tatianegomesestetica/" target="_blank" style="font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--text-light); transition: var(--t-fast);">@tatianegomesestetica</a>
+    <!-- 41. HERO CONTATO -->
+    <section class="hero" style="min-height: 50vh;">
+        <div class="container text-center reveal">
+            <span class="eyebrow">AGENDE SUA AVALIAÇÃO</span>
+            <h1>Vamos conversar sobre o seu caso?</h1>
+            <div class="rule-champagne rule-center"></div>
+            <p class="lead" style="max-width: 720px; margin: 0 auto 32px;">Você não precisa saber qual tratamento fazer antes de entrar em contato.<br>Conte o que mais te incomoda e vamos entender qual estratégia pode fazer sentido para você.</p>
+            <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20Tatiane%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." 
+               class="btn btn-primary"
+               onclick="return trackWpp('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20Tatiane%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.', 'whatsapp_contato_hero');">
+                FALAR COM A TATIANE
+            </a>
         </div>
     </section>
 
-    <!-- RODAPÉ -->
+    <!-- INFORMAÇÕES & MAPA INCORPORADO -->
+    <section class="bg-white">
+        <div class="container">
+            <div class="hero-grid" style="grid-template-columns: 1fr 1fr; align-items: stretch;">
+                
+                <div class="contact-card reveal">
+                    <h3 style="margin-bottom: 24px; color: var(--primary);">Tatiane Gomes Estética</h3>
+                    
+                    <div class="info-group">
+                        <h4>LOCALIZAÇÃO</h4>
+                        <p>Santo Amaro — São Paulo, SP</p>
+                    </div>
+                    
+                    <div class="info-group">
+                        <h4>WHATSAPP</h4>
+                        <p><a href="https://wa.me/5511957739880" target="_blank" onclick="return trackWpp('https://wa.me/5511957739880', 'whatsapp_contato_link');">(11) 95773-9880</a></p>
+                    </div>
+                    
+                    <div class="info-group">
+                        <h4>INSTAGRAM</h4>
+                        <p><a href="https://www.instagram.com/tatianegomesestetica/" target="_blank">@tatianegomesestetica</a></p>
+                    </div>
+
+                    <div style="margin-top: 32px;">
+                        <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20Tatiane%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." 
+                           class="btn btn-primary btn-block"
+                           onclick="return trackWpp('https://wa.me/5511957739880?text=Ol%C3%A1%2C%20Tatiane%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.', 'whatsapp_contato_card');">
+                            FALAR NO WHATSAPP
+                        </a>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.2s; min-height: 380px;">
+                    <div class="map-container" style="height: 100%; min-height: 380px; border-radius: var(--radius-lg);">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.512398745612!2d-46.7032145!3d-23.6521456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce505b22555555%3A0x123456789abcdef!2sSanto%20Amaro%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ & MAPA -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <h3>Tatiane Gomes Estética</h3>
-                    <p>Avaliação, estratégia e acompanhamento especializado em estética corporal e facial para resultados reais.</p>
+                    <p style="color: rgba(247,244,239,0.75); font-size: 0.9rem;">Especialista em estética corporal e facial.</p>
+                    <p style="color: var(--champagne); font-size: 0.85rem; margin-top: 8px;">Santo Amaro — São Paulo</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Navegação</h4>
-                    <ul>
-                        <li><a href="slim-one.html">Slim One</a></li>
-                        <li><a href="tratamentos-corporais.html">Tratamentos Corporais</a></li>
-                        <li><a href="tratamentos-faciais.html">Tratamentos Faciais</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                    </ul>
+                    <h4>NAVEGAÇÃO</h4>
+                    <div class="footer-links">
+                        <a href="slim-one.html">Slim One</a>
+                        <a href="outros-tratamentos.html">Outros Tratamentos</a>
+                        <a href="sobre.html">Sobre a Tatiane</a>
+                        <a href="duvidas.html">Dúvidas</a>
+                        <a href="contato.html">Contato</a>
+                    </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Conteúdo</h4>
-                    <ul>
-                        <li><a href="https://www.instagram.com/tatianegomesestetica/" target="_blank" rel="noopener">Instagram</a></li>
-                        <li><a href="https://friendly-duckanoo-f468fe.netlify.app/site" target="_blank" rel="noopener">Conheça meu Podcast</a></li>
-                    </ul>
+                    <h4>FALE COMIGO</h4>
+                    <div class="footer-links">
+                        <a href="https://wa.me/5511957739880" target="_blank" rel="noopener">WhatsApp</a>
+                        <a href="https://www.instagram.com/tatianegomesestetica/" target="_blank" rel="noopener">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>LOCALIZAÇÃO</h4>
+                    <p style="font-size: 0.85rem; color: rgba(247,244,239,0.8); margin-bottom: 12px;">Santo Amaro — São Paulo, SP</p>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.512398745612!2d-46.7032145!3d-23.6521456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce505b22555555%3A0x123456789abcdef!2sSanto%20Amaro%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Tatiane Gomes Estética. Todos os direitos reservados.</p>
-                <a href="#">Política de Privacidade</a>
+                <span>© 2026 Tatiane Gomes Estética. Todos os direitos reservados.</span>
+                <a href="politica-de-privacidade.html">Política de Privacidade</a>
             </div>
         </div>
     </footer>
 
-    <!-- SCRIPTS -->
+    <!-- SCRIPTS DE INTERAÇÃO -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const navbar = document.getElementById('navbar');
-            const toggle = document.getElementById('navToggle');
-            const menu = document.getElementById('navMobile');
-            
             window.addEventListener('scroll', () => {
-                if (window.scrollY > 20) navbar.classList.add('scrolled');
+                if (window.scrollY > 40) navbar.classList.add('scrolled');
                 else navbar.classList.remove('scrolled');
             });
 
-            toggle.addEventListener('click', () => {
-                toggle.classList.toggle('open');
-                menu.classList.toggle('open');
-                document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
             });
 
-            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
-            const observer = new IntersectionObserver((entries, observer) => {
+            // Reveal Animation
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
+                    if (entry.isIntersecting) entry.target.classList.add('active');
                 });
-            }, observerOptions);
-
-            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
         });
     </script>
 </body>
