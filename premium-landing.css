@@ -584,6 +584,11 @@ section { padding: 70px 0; position: relative; }
 }
 @media (min-width: 1024px) {
   .hero-grid { grid-template-columns: 1.15fr 0.85fr; gap: 64px; }
+  .hero-grid.grid-equal { grid-template-columns: 1fr 1fr; }
+  .hero-grid.grid-reverse { grid-template-columns: 0.9fr 1.1fr; }
+  .hero-grid.grid-start { align-items: start; }
+  .hero-grid.grid-stretch { align-items: stretch; }
+  .timeline.grid-4 { grid-template-columns: repeat(4, 1fr); }
 }
 .hero-buttons { display: flex; flex-direction: column; gap: 16px; margin-top: 36px; }
 @media (min-width: 640px) { .hero-buttons { flex-direction: row; align-items: center; } }
