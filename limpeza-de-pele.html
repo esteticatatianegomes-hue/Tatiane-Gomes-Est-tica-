@@ -1,495 +1,458 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Método LINFACT - Drenagem Linfática com Estímulo Profundo por Tatiane Gomes. Resultados reais, leveza e contorno corporal.">
-    <title>Método LINFACT | Tatiane Gomes Estética</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17947496680"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limpeza de Pele Profunda e Avaliação Facial | Tatiane Gomes Estética</title>
+  <meta name="description" content="Limpeza de Pele Profunda e Avaliação Facial individualizada na Chácara Santo Antônio, São Paulo. Atendimento exclusivo pós-graduado com biotecnologia e LEDterapia. A 3 min do Metrô Borba Gato.">
+  <meta name="keywords" content="Limpeza de pele Chácara Santo Antônio, Tatiane Gomes estética, avaliação facial, LEDterapia, Metrô Borba Gato">
 
-        gtag('config', 'AW-17947496680', {
-            'linker': {
-                'domains': ['api.whatsapp.com']
-            }
-        });
-    </script>
+  <!-- Google Fonts: Cormorant Garamond & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    <!-- NAVBAR (mesma do site principal) -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="home.html" class="logo" style="text-decoration: none; color: inherit;">
-                <span class="logo-text">Tatiane Gomes</span>
-                <span class="logo-subtitle">Estética</span>
-            </a>
-            <div class="nav-actions">
-                <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20vim%20pelo%20an%C3%BAncio%20do%20M%C3%A9todo%20LINFACT%20e%20quero%20agendar."
-                    class="btn-agendar" target="_blank"
-                    onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Agendar</a>
-                <button class="menu-toggle" id="menuToggle">☰ Menu</button>
-            </div>
-        </div>
-    </nav>
+  <!-- TOP HEADER NAVBAR WITH NAVIGATION MENU -->
+  <header class="top-header">
+    <div class="container header-container">
+      <a href="limpeza-de-pele.html" class="brand-logo">
+        <span class="brand-name">Tatiane Gomes</span>
+        <span class="brand-tag">Estética Avançada</span>
+      </a>
 
-    <!-- MENU OVERLAY -->
-    <div class="menu-overlay" id="menuOverlay">
-        <ul class="menu-list">
-            <li><a href="slim-one.html">Slim One</a></li>
-            <li><a href="outros-tratamentos.html">Outros Tratamentos</a></li>
-            <li><a href="sobre.html">Sobre a Tatiane</a></li>
-            <li><a href="duvidas.html">Dúvidas</a></li>
-            <li><a href="limpeza-de-pele.html">Limpeza de Pele</a></li>
-        </ul>
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="slim-one.html" class="nav-link highlight">Slim One</a>
+        <a href="limpeza-de-pele.html" class="nav-link active">Limpeza de Pele</a>
+        <a href="outros-tratamentos.html" class="nav-link">Outros Tratamentos</a>
+        <a href="sobre.html" class="nav-link">Sobre a Tatiane</a>
+        <a href="duvidas.html" class="nav-link">Dúvidas</a>
+        <a href="contato.html" class="nav-link">Contato</a>
+      </nav>
+
+      <!-- Header Action Button & Mobile Hamburger -->
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="#" class="header-btn js-whatsapp-cta" data-msg-type="limpeza" aria-label="Agendar via WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M12.031 2c-5.514 0-9.998 4.484-9.998 9.998 0 1.764.459 3.487 1.332 5.006l-1.365 4.996 5.114-1.341c1.472.805 3.136 1.236 4.917 1.236 5.514 0 9.998-4.484 9.998-9.998 0-5.514-4.484-9.998-9.998-9.998zm0 18.175c-1.542 0-3.047-.413-4.358-1.196l-.312-.187-3.033.795.809-2.957-.205-.326c-.86-1.371-1.314-2.956-1.314-4.582 0-4.509 3.669-8.178 8.178-8.178 4.509 0 8.178 3.669 8.178 8.178 0 4.509-3.669 8.178-8.178 8.178zm4.505-6.117c-.247-.124-1.463-.722-1.69-.804-.227-.083-.392-.124-.557.124-.165.247-.641.804-.785.969-.144.165-.289.186-.536.062-.247-.124-1.044-.385-1.988-1.227-.735-.656-1.232-1.466-1.376-1.713-.144-.247-.015-.381.108-.504.111-.111.247-.289.371-.433.124-.144.165-.247.247-.412.083-.165.042-.309-.021-.433-.062-.124-.557-1.341-.763-1.836-.2-.482-.403-.417-.557-.425-.144-.008-.309-.008-.474-.008s-.433.062-.66.309c-.227.247-.866.846-.866 2.063s.887 2.393 1.011 2.558c.124.165 1.746 2.666 4.229 3.738.591.255 1.053.408 1.413.522.593.188 1.133.162 1.56.098.476-.071 1.463-.598 1.669-1.176.206-.578.206-1.073.144-1.176-.062-.103-.227-.165-.474-.289z"/></svg>
+          <span>Agendar</span>
+        </a>
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir Menu de Navegação">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
+  </header>
 
-    <!-- 1. HERO - IMPACTO IMEDIATO -->
-    <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="title-line">Método LINFACT</span>
-                    <span class="title-line highlight">Drenagem Linfática com Estímulo Profundo</span>
-                </h1>
-                <p class="hero-subtitle">Alongamento Leve e Respiração Diafragmática Guiada para ativar seu sistema
-                    linfático de forma estratégica. Sinta leveza e melhora do contorno corporal já na primeira
-                    sessão.</p>
-                <div class="hero-buttons">
-                    <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20vim%20pelo%20an%C3%BAncio%20do%20M%C3%A9todo%20LINFACT%20e%20quero%20agendar."
-                        class="btn btn-primary" target="_blank"
-                        onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Quero Agendar Minha
-                        Sessão</a>
-                    <a href="#sobre" class="btn btn-secondary">Conheça o Método</a>
-                </div>
-            </div>
+  <!-- MOBILE NAVIGATION OVERLAY (CLEAN ELEGANT TYPOGRAPHY, NO EMOJIS) -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <a href="slim-one.html" class="nav-link highlight">Slim One</a>
+    <a href="limpeza-de-pele.html" class="nav-link active">Limpeza de Pele Profunda</a>
+    <a href="outros-tratamentos.html" class="nav-link">Outros Tratamentos</a>
+    <a href="sobre.html" class="nav-link">Sobre a Tatiane</a>
+    <a href="duvidas.html" class="nav-link">Dúvidas</a>
+    <a href="contato.html" class="nav-link">Contato</a>
+  </div>
+
+  <!-- SEÇÃO 1: TOPO (HERO SECTION - LIMPEZA DE PELE) -->
+  <section class="section hero-section" id="limpeza-de-pele">
+    <div class="container hero-grid">
+      <div class="hero-content fade-in-element">
+        <div class="tag-badge">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span>ATENDIMENTO PERSONALIZADO NA CHÁCARA SANTO ANTÔNIO</span>
         </div>
-        <div class="scroll-indicator">
-            <span>Role para descobrir</span>
-            <div class="scroll-arrow">↓</div>
+        
+        <h1 class="hero-title">Sua pele limpa, renovada e tratada com olhar clínico e individualizado</h1>
+        
+        <p class="hero-subtitle">
+          Muito além de uma limpeza comum: uma experiência de até 2 horas com biotecnologia, LEDterapia, cosméticos de alta performance e consultoria com rotina de skincare personalizada. A 3 minutos do Metrô Borba Gato.
+        </p>
+
+        <div class="hero-features">
+          <div class="hero-feature-item">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>Duração de até 2h</span>
+          </div>
+          <div class="hero-feature-item">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>LEDterapia + Biotecnologia</span>
+          </div>
+          <div class="hero-feature-item">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>Marcas Profissionais</span>
+          </div>
+          <div class="hero-feature-item">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>Guia de Skincare incluso</span>
+          </div>
         </div>
-    </section>
 
-    <!-- 2. IDENTIFICAÇÃO COM A DOR -->
-    <section class="about" id="identificacao">
-        <div class="container">
-            <div class="section-header" style="text-align: center;">
-                <span class="section-label">Você se identifica?</span>
-                <h2 class="section-title">Isso não é gordura. É retenção.</h2>
-                <div class="title-underline center"></div>
-                <p class="section-description">Muitas mulheres convivem com sintomas que não são gordura, e sim
-                    sobrecarga do sistema linfático.</p>
-            </div>
+        <a href="#" class="btn-cta js-whatsapp-cta" data-msg-type="limpeza">
+          <svg viewBox="0 0 24 24"><path d="M12.031 2c-5.514 0-9.998 4.484-9.998 9.998 0 1.764.459 3.487 1.332 5.006l-1.365 4.996 5.114-1.341c1.472.805 3.136 1.236 4.917 1.236 5.514 0 9.998-4.484 9.998-9.998 0-5.514-4.484-9.998-9.998-9.998zm0 18.175c-1.542 0-3.047-.413-4.358-1.196l-.312-.187-3.033.795.809-2.957-.205-.326c-.86-1.371-1.314-2.956-1.314-4.582 0-4.509 3.669-8.178 8.178-8.178 4.509 0 8.178 3.669 8.178 8.178 0 4.509-3.669 8.178-8.178 8.178zm4.505-6.117c-.247-.124-1.463-.722-1.69-.804-.227-.083-.392-.124-.557.124-.165.247-.641.804-.785.969-.144.165-.289.186-.536.062-.247-.124-1.044-.385-1.988-1.227-.735-.656-1.232-1.466-1.376-1.713-.144-.247-.015-.381.108-.504.111-.111.247-.289.371-.433.124-.144.165-.247.247-.412.083-.165.042-.309-.021-.433-.062-.124-.557-1.341-.763-1.836-.2-.482-.403-.417-.557-.425-.144-.008-.309-.008-.474-.008s-.433.062-.66.309c-.227.247-.866.846-.866 2.063s.887 2.393 1.011 2.558c.124.165 1.746 2.666 4.229 3.738.591.255 1.053.408 1.413.522.593.188 1.133.162 1.56.098.476-.071 1.463-.598 1.669-1.176.206-.578.206-1.073.144-1.176-.062-.103-.227-.165-.474-.289z"/></svg>
+          <span>AGENDAR MINHA LIMPEZA DE PELE NO WHATSAPP</span>
+        </a>
+      </div>
 
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">💧</div>
-                    <h3>Inchaço Frequente</h3>
-                    <p>Sensação constante de corpo estufado, principalmente ao acordar e ao final do dia.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🦵</div>
-                    <h3>Pernas Pesadas</h3>
-                    <p>Cansaço e peso nas pernas, especialmente depois de muitas horas sentada ou em pé.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🩺</div>
-                    <h3>Abdômen Estufado</h3>
-                    <p>Barriga inchada mesmo se alimentando bem, sem relação direta com a gordura.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📅</div>
-                    <h3>Retenção Pré-Menstrual</h3>
-                    <p>Inchaço acentuado antes e durante o ciclo menstrual, com desconforto significativo.</p>
-                </div>
+      <div class="hero-image-wrapper fade-in-element">
+        <div class="hero-image-card">
+          <img src="tatilifestyle.jpeg" alt="Tatiane Gomes em seu consultório na Rua Bela Vista">
+          <div class="hero-badge-overlay">
+            <div class="hero-badge-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
             </div>
-
-            <div style="text-align: center; margin-top: 3rem;">
-                <p style="font-size: 1.15rem; max-width: 700px; margin: 0 auto; line-height: 1.8;">
-                    O <strong>Método LINFACT</strong> foi desenvolvido para ativar profundamente o sistema linfático e
-                    auxiliar o corpo a eliminar o excesso de líquidos de forma estratégica.
-                </p>
+            <div class="hero-badge-text">
+              <h4>Consultório Elegante & Acolhedor</h4>
+              <p>Rua Bela Vista, 580 — Chácara Santo Antônio</p>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- 3. O QUE TORNA O MÉTODO DIFERENTE -->
-    <section class="philosophy-section" id="sobre">
-        <div class="container">
-            <div class="section-header" style="text-align: center;">
-                <span class="section-label">O Diferencial</span>
-                <h2 class="section-title">Não é uma drenagem comum</h2>
-                <div class="title-underline center"></div>
-            </div>
+  <!-- BANNER DESTAQUE: PROTOCOLO SLIM ONE -->
+  <section class="section" style="background: linear-gradient(135deg, #1B3B32 0%, #10241E 100%); color: #FFFFFF; padding: 3.5rem 0;">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <div class="tag-badge gold">DESTAQUE CORPORAL</div>
+      <h2 style="color: #FFFFFF; font-size: 2.2rem; margin-bottom: 0.85rem;">Conheça o Protocolo Slim One</h2>
+      <p style="color: rgba(255, 255, 255, 0.85); max-width: 720px; font-size: 1.05rem; margin-bottom: 1.75rem;">
+        Redução de medidas, gordura localizada e modelagem corporal inteligente com eletroestimulação, ultrassom e drenagem detox.
+      </p>
+      <a href="slim-one.html" class="btn-cta" style="background-color: var(--gold-accent); color: #1B3B32;">
+        <span>VER DETALHES DO SLIM ONE</span>
+      </a>
+    </div>
+  </section>
 
-            <div class="philosophy-row">
-                <div class="philosophy-image">
-                    <img src="profile-photo.jpg" alt="Tatiane Gomes realizando o Método LINFACT"
-                        style="max-height: 400px; object-fit: cover; border-radius: 15px;">
-                </div>
-                <div class="philosophy-content">
-                    <p><strong>Estímulo profundo</strong> do sistema linfático, diferente das drenagens superficiais
-                        convencionais.</p>
-                    <p><strong>Sequência técnica</strong> baseada na fisiologia dos coletores linfáticos, garantindo
-                        eficiência máxima.</p>
-                    <p><strong>Alongamentos leves</strong> que auxiliam na mobilização de líquidos e aliviam a sensação
-                        de corpo travado.</p>
-                    <p><strong>Respiração diafragmática guiada</strong> — o diafragma funciona como uma bomba natural do
-                        sistema linfático. Quando associamos técnica manual e respiração guiada,
-                        <strong>potencializamos o resultado.</strong>
-                    </p>
-                </div>
-            </div>
+  <!-- SEÇÃO 2: O QUE TORNA ESTE PROTOCOLO ÚNICO -->
+  <section class="section section-protocol">
+    <div class="container">
+      <div class="section-header fade-in-element">
+        <div class="tag-badge">PROTOCOLO EXCLUSIVO</div>
+        <h2>Um tratamento facial completo feito exclusivamente por mim</h2>
+        <p class="section-subtitle">
+          Duração aproximada de 1h30 a 2h — focado 100% nas necessidades reais da sua pele no momento.
+        </p>
+      </div>
+
+      <div class="protocol-grid">
+        <div class="protocol-card fade-in-element">
+          <div class="protocol-number">01</div>
+          <h3>Higienização & Extração Completa</h3>
+          <p>Extração delicada de cravos, míliuns e espinhas, respeitando a integridade da pele com emulsões profissionais e vapor de ozônio.</p>
         </div>
-    </section>
 
-    <!-- CTA INTERMEDIÁRIO -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Sinta a diferença já na primeira sessão</h2>
-                <p>Agende agora e descubra o que a ativação linfática estratégica pode fazer pelo seu corpo</p>
-                <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20vim%20pelo%20an%C3%BAncio%20do%20M%C3%A9todo%20LINFACT%20e%20quero%20agendar."
-                    class="btn btn-primary btn-large" target="_blank"
-                    onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Agendar pelo WhatsApp</a>
-            </div>
+        <div class="protocol-card fade-in-element">
+          <div class="protocol-number">02</div>
+          <h3>Associação de Tecnologias Avançadas</h3>
+          <p>Uso de LEDterapia (fotobiomodulação) para regeneração e controle inflamatório, e Alta Frequência para ação bactericida e cicatrização rápida.</p>
         </div>
-    </section>
 
-    <!-- 4. BENEFÍCIOS -->
-    <section class="services-preview" id="beneficios">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Benefícios</span>
-                <h2 class="section-title">O que você pode sentir após a sessão</h2>
-                <div class="title-underline center"></div>
-                <p class="section-description">Resultados reais relatados pelas nossas clientes</p>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🍃</div>
-                    <h3>Redução do Inchaço</h3>
-                    <p>Diminuição visível do inchaço em pernas, tornozelos e abdômen.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3>Leveza Imediata</h3>
-                    <p>Sensação de corpo leve, solto e desinchado logo após a sessão.</p>
-                </div>
-                <div class="service-card featured">
-                    <div class="featured-badge">Destaque</div>
-                    <div class="service-icon">💎</div>
-                    <h3>Contorno Corporal</h3>
-                    <p>Melhora visível da silhueta pela eliminação estratégica de líquidos retidos.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">❤️</div>
-                    <h3>Circulação Ativadah3>
-                        <p>Alívio nas dores e cansaço das pernas, melhora na circulação geral.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌸</div>
-                    <h3>Auxílio no Lipedema</h3>
-                    <p>Grande aliado no gerenciamento do Lipedema e celulites inflamatórias.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🧴</div>
-                    <h3>Melhora da Celulite</h3>
-                    <p>Redução da celulite associada à retenção hídrica e inflamação.</p>
-                </div>
-            </div>
-
-            <div
-                style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: #fff3cd; border-radius: 10px; max-width: 700px; margin-left: auto; margin-right: auto;">
-                <p style="color: #856404; margin: 0;"><strong>Importante:</strong> O Método LINFACT atua na retenção de
-                    líquidos. Não é tratamento para redução de gordura.</p>
-            </div>
+        <div class="protocol-card fade-in-element">
+          <div class="protocol-number">03</div>
+          <h3>Cosméticos Profissionais de Alta Performance</h3>
+          <p>Aplicação de máscaras específicas e dermocosméticos de marcas consagradas do mercado profissional (Adcos, Bioage, Bel Col e Tulípia), selecionados sob medida para as necessidades da sua pele.</p>
         </div>
-    </section>
 
-    <!-- 5. PARA QUEM É INDICADO -->
-    <section class="about" id="indicado" style="background: var(--light-green);">
-        <div class="container">
-            <div class="section-header" style="text-align: center;">
-                <span class="section-label">Para quem é</span>
-                <h2 class="section-title">O Método LINFACT é indicado para você se:</h2>
-                <div class="title-underline center"></div>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">💧</div>
-                    <h3>Retém Líquido</h3>
-                    <p>Mulheres que retêm líquido com facilidade e se sentem estufadas frequentemente.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>Trabalho Sedentário</h3>
-                    <p>Passa muitas horas sentada e sente as pernas pesadas ao final do dia.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📅</div>
-                    <h3>Inchaço no Ciclo</h3>
-                    <p>Sofre com retenção acentuada nos períodos pré-menstrual e menstrual.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎯</div>
-                    <h3>Busca Resultado Real</h3>
-                    <p>Quer melhora do contorno corporal sem promessas milagrosas ou irreais.</p>
-                </div>
-            </div>
+        <div class="protocol-card fade-in-element">
+          <div class="protocol-number">04</div>
+          <h3>Análise Clínica & Guia de Skincare</h3>
+          <p>Faço uma consultoria detalhada do seu tipo de pele e entrego um planejamento de cuidados diários para você manter o resultado em casa.</p>
         </div>
-    </section>
+      </div>
 
-    <!-- 6. SOBRE A PROFISSIONAL -->
-    <section class="about" id="profissional">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <div class="image-frame">
-                        <img src="profile-photo.jpg" alt="Tatiane Gomes - Esteticista">
-                        <div class="image-decoration"></div>
-                    </div>
-                    <div class="experience-badge">
-                        <span class="number">7+</span>
-                        <span class="text">Anos de<br>Experiência</span>
-                    </div>
+      <div class="brand-chips-container fade-in-element">
+        <span class="brand-chip-label">Marcas Utilizadas:</span>
+        <span class="brand-chip">ADCOS</span>
+        <span class="brand-chip">BIOAGE</span>
+        <span class="brand-chip">BEL COL</span>
+        <span class="brand-chip">TULÍPIA</span>
+      </div>
+
+      <div class="protocol-cta-wrapper fade-in-element">
+        <a href="#" class="btn-cta js-whatsapp-cta" data-msg-type="limpeza">
+          <svg viewBox="0 0 24 24"><path d="M12.031 2c-5.514 0-9.998 4.484-9.998 9.998 0 1.764.459 3.487 1.332 5.006l-1.365 4.996 5.114-1.341c1.472.805 3.136 1.236 4.917 1.236 5.514 0 9.998-4.484 9.998-9.998 0-5.514-4.484-9.998-9.998-9.998zm0 18.175c-1.542 0-3.047-.413-4.358-1.196l-.312-.187-3.033.795.809-2.957-.205-.326c-.86-1.371-1.314-2.956-1.314-4.582 0-4.509 3.669-8.178 8.178-8.178 4.509 0 8.178 3.669 8.178 8.178 0 4.509-3.669 8.178-8.178 8.178zm4.505-6.117c-.247-.124-1.463-.722-1.69-.804-.227-.083-.392-.124-.557.124-.165.247-.641.804-.785.969-.144.165-.289.186-.536.062-.247-.124-1.044-.385-1.988-1.227-.735-.656-1.232-1.466-1.376-1.713-.144-.247-.015-.381.108-.504.111-.111.247-.289.371-.433.124-.144.165-.247.247-.412.083-.165.042-.309-.021-.433-.062-.124-.557-1.341-.763-1.836-.2-.482-.403-.417-.557-.425-.144-.008-.309-.008-.474-.008s-.433.062-.66.309c-.227.247-.866.846-.866 2.063s.887 2.393 1.011 2.558c.124.165 1.746 2.666 4.229 3.738.591.255 1.053.408 1.413.522.593.188 1.133.162 1.56.098.476-.071 1.463-.598 1.669-1.176.206-.578.206-1.073.144-1.176-.062-.103-.227-.165-.474-.289z"/></svg>
+          <span>QUERO CUIDAR DA MINHA PELE AGORA</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARROSSEL DE ANTES E DEPOIS / RESULTADOS REAIS FACIAIS -->
+  <section class="section section-results">
+    <div class="container">
+      <div class="section-header fade-in-element">
+        <div class="tag-badge">RESULTADOS REAIS</div>
+        <h2>Transformações Faciais & Peles Renovadas</h2>
+        <p class="section-subtitle">
+          Arraste para conferir os resultados reais de textura, desobstrução e luminosidade conquistados por nossas pacientes.
+        </p>
+      </div>
+
+      <div class="carousel-container fade-in-element">
+        <button class="carousel-nav-btn carousel-prev" id="carouselPrev" aria-label="Slide anterior">
+          <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+
+        <div class="carousel-track-wrapper">
+          <div class="carousel-track" id="carouselTrack">
+            
+            <div class="carousel-slide">
+              <div class="slide-card js-lightbox-trigger" data-img-src="resultadofacial1.jpg">
+                <div class="slide-card-image-wrapper">
+                  <span class="slide-badge">Resultado Real</span>
+                  <img src="resultadofacial1.jpg" alt="Resultado de Limpeza de Pele Profunda 1">
                 </div>
-                <div class="about-content">
-                    <span class="section-label">A Especialista</span>
-                    <h2 class="section-title">Tatiane Dias Gomes</h2>
-                    <div class="title-underline"></div>
-                    <div class="about-text">
-                        <p>Esteticista graduada e pós-graduada em <strong>Saúde Estética e Cosmetologia</strong>, com
-                            especialização pela UNIFESP.</p>
-                        <p>Especialista em tratamentos corporais estratégicos com foco em fisiologia e ativação
-                            linfática. Minha abordagem une técnica manual precisa e compreensão profunda do
-                            funcionamento corporal.</p>
-                        <p><strong>Não trabalho com promessas ilusórias. Trabalho com estratégia e ciência aplicada à
-                                estética.</strong></p>
-                        <p>Cada atendimento é pensado de forma individual, respeitando a realidade de vida da cliente e
-                            buscando resultados visíveis e sustentáveis.</p>
-                    </div>
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">✓</div>
-                            <div class="feature-text">
-                                <h4>Atendimento Individual</h4>
-                                <p>Cada sessão é única</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">✓</div>
-                            <div class="feature-text">
-                                <h4>Avaliação Personalizada</h4>
-                                <p>Protocolo sob medida</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">✓</div>
-                            <div class="feature-text">
-                                <h4>Pós-Graduada</h4>
-                                <p>Saúde Estética e Cosmetologia</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="slide-card-caption">
+                  <h4>Desobstrução de Poros</h4>
+                  <p>Clique para Ampliar</p>
                 </div>
+              </div>
             </div>
+
+            <div class="carousel-slide">
+              <div class="slide-card js-lightbox-trigger" data-img-src="resultadofacial2.jpg">
+                <div class="slide-card-image-wrapper">
+                  <span class="slide-badge">Resultado Real</span>
+                  <img src="resultadofacial2.jpg" alt="Resultado de Limpeza de Pele Profunda 2">
+                </div>
+                <div class="slide-card-caption">
+                  <h4>Extração & Luminosidade</h4>
+                  <p>Clique para Ampliar</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <div class="slide-card js-lightbox-trigger" data-img-src="resultadofacial3.jpg">
+                <div class="slide-card-image-wrapper">
+                  <span class="slide-badge">Resultado Real</span>
+                  <img src="resultadofacial3.jpg" alt="Resultado de Limpeza de Pele Profunda 3">
+                </div>
+                <div class="slide-card-caption">
+                  <h4>Uniformização da Textura</h4>
+                  <p>Clique para Ampliar</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <div class="slide-card js-lightbox-trigger" data-img-src="resultadofacial4.jpg">
+                <div class="slide-card-image-wrapper">
+                  <span class="slide-badge">Resultado Real</span>
+                  <img src="resultadofacial4.jpg" alt="Resultado de Limpeza de Pele Profunda 4">
+                </div>
+                <div class="slide-card-caption">
+                  <h4>Ação Anti-inflamatória</h4>
+                  <p>Clique para Ampliar</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <div class="slide-card js-lightbox-trigger" data-img-src="resultadofacial5.jpg">
+                <div class="slide-card-image-wrapper">
+                  <span class="slide-badge">Resultado Real</span>
+                  <img src="resultadofacial5.jpg" alt="Resultado de Limpeza de Pele Profunda 5">
+                </div>
+                <div class="slide-card-caption">
+                  <h4>Controle de Oleosidade</h4>
+                  <p>Clique para Ampliar</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <div class="slide-card js-lightbox-trigger" data-img-src="resultadofacial6.jpg">
+                <div class="slide-card-image-wrapper">
+                  <span class="slide-badge">Resultado Real</span>
+                  <img src="resultadofacial6.jpg" alt="Resultado de Limpeza de Pele Profunda 6">
+                </div>
+                <div class="slide-card-caption">
+                  <h4>Pele Renovada & Saudável</h4>
+                  <p>Clique para Ampliar</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
-    </section>
 
-    <!-- 7. RESULTADOS REAIS (ANTES E DEPOIS) -->
-    <section class="lp-section" id="resultados" style="background: var(--light-green); padding: 80px 20px;">
-        <div class="container">
-            <div class="section-header" style="text-align: center;">
-                <span class="section-label">Prova Social</span>
-                <h2 class="section-title">Resultados Reais</h2>
-                <div class="title-underline center"></div>
-                <p class="section-description">Veja a transformação que uma sessão pode proporcionar</p>
-            </div>
+        <button class="carousel-nav-btn carousel-next" id="carouselNext" aria-label="Próximo slide">
+          <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </button>
 
-            <div class="ba-gallery">
-                <div class="ba-card">
-                    <img src="corporal2.jpg" alt="Resultado Método LINFACT - Redução de Edema">
-                    <span>Redução de Edema Abdominal</span>
-                </div>
-                <div class="ba-card">
-                    <img src="corporal6.jpeg" alt="Resultado Método LINFACT - Contorno Corporal">
-                    <span>Definição do Contorno Corporal</span>
-                </div>
-            </div>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+    </div>
+  </section>
 
-            <!-- Depoimento -->
-            <div
-                style="max-width: 600px; margin: 3rem auto 0; text-align: center; background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
-                <p style="font-size: 1.1rem; font-style: italic; color: var(--text-dark); line-height: 1.8;">
-                    "Já na primeira sessão senti minhas pernas mais leves e o abdômen menos inchado. Saí outra
-                    pessoa."
-                </p>
-                <p style="margin-top: 1rem; font-weight: 600; color: var(--primary-color);">★★★★★</p>
+  <!-- SEÇÃO 3: PROVA SOCIAL E DEPOIMENTOS REALISTAS -->
+  <section class="section section-testimonials">
+    <div class="container">
+      <div class="section-header fade-in-element">
+        <div class="tag-badge">DEPOIMENTOS</div>
+        <h2>O que dizem as pacientes que já cuidaram da pele comigo</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in-element">
+          <div>
+            <div class="testimonial-stars">
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
             </div>
+            <p class="testimonial-quote">
+              "Fiz limpeza de pele e tratamento para acne com a Tatiane. Minha pele mudou completamente, e ela me ensinou exatamente o que usar no dia a dia. Atendimento impecável!"
+            </p>
+          </div>
+          <div class="testimonial-author-wrapper">
+            <div class="testimonial-avatar">
+              <img src="avaliacao-maria.jpeg" alt="Paciente Real Maria">
+            </div>
+            <div class="testimonial-author-info">
+              <h4>Maria — Paciente Real</h4>
+              <p>Identificação preservada</p>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- CTA INTERMEDIÁRIO 2 -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Quer resultados como esses?</h2>
-                <p>Agende sua sessão e sinta a transformação no seu corpo</p>
-                <a href="https://wa.me/5511957739880?text=Quero%20ter%20resultados%20como%20esses%20com%20o%20M%C3%A9todo%20LINFACT."
-                    class="btn btn-primary btn-large" target="_blank"
-                    onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Quero Agendar Agora</a>
+        <div class="testimonial-card fade-in-element">
+          <div>
+            <div class="testimonial-stars">
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
             </div>
+            <p class="testimonial-quote">
+              "Excelente atendimento! A Tati tem um cuidado absurdo na extração, não fiquei com o rosto todo marcado e a pele ficou super leve e luminosa no mesmo dia."
+            </p>
+          </div>
+          <div class="testimonial-author-wrapper">
+            <div class="testimonial-avatar">
+              <svg viewBox="0 0 24 24" style="width: 100%; height: 100%; fill: var(--olive-soft);"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+            </div>
+            <div class="testimonial-author-info">
+              <h4>Paciente Real</h4>
+              <p>Identificação preservada</p>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- 8. DÚVIDAS FREQUENTES -->
-    <section class="about" id="faq-section">
-        <div class="container">
-            <div class="section-header" style="text-align: center;">
-                <span class="section-label">FAQ</span>
-                <h2 class="section-title">Dúvidas Frequentes</h2>
-                <div class="title-underline center"></div>
-            </div>
-
-            <div style="max-width: 700px; margin: 0 auto;">
-                <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #eee;">
-                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">O procedimento é doloroso?</h3>
-                    <p>Absolutamente não. O estímulo é profundo porém extremamente confortável, respeitando sempre a
-                        fisiologia e o limite do seu corpo.</p>
-                </div>
-                <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #eee;">
-                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Quantas sessões eu preciso?</h3>
-                    <p>Os resultados são percebidos já na primeira sessão. A frequência ideal depende do seu estilo de
-                        vida e grau de retenção, o que avaliamos juntas no primeiro encontro.</p>
-                </div>
-                <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #eee;">
-                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Emagrece?</h3>
-                    <p>Não reduz gordura. Atua na retenção de líquidos e melhora o aspecto corporal de forma real e
-                        honesta.</p>
-                </div>
-                <div>
-                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Serve para quem tem Lipedema?</h3>
-                    <p>Sim. O Método LINFACT é um grande aliado no gerenciamento do Lipedema e das celulites
-                        inflamatórias.</p>
-                </div>
-            </div>
+  <!-- SEÇÃO 4: QUEM VAI CUIDAR DE VOCÊ (SOBRE) -->
+  <section class="section section-bio" id="sobre">
+    <div class="container bio-grid">
+      <div class="bio-image-wrapper fade-in-element">
+        <div class="bio-image-card">
+          <img src="tatilifestyle.jpeg" alt="Tatiane Gomes - Especialista em Saúde Estética e Cosmetologia">
         </div>
-    </section>
+      </div>
 
-    <!-- 9. OFERTA FINAL -->
-    <section class="cta-section" id="oferta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Primeira sessão com avaliação corporal inclusa</h2>
-                <p>Se você quer se sentir mais leve, menos inchada e com o corpo mais solto, agende agora sua sessão do
-                    <strong>Método LINFACT</strong>.
-                </p>
-                <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20vim%20pelo%20an%C3%BAncio%20do%20M%C3%A9todo%20LINFACT%20e%20quero%20agendar%20minha%20primeira%20sess%C3%A3o."
-                    class="btn btn-primary btn-large" target="_blank"
-                    onclick="return gtag_report_conversion('https://wa.me/5511957739880')">Agendar pelo WhatsApp</a>
-            </div>
+      <div class="bio-content fade-in-element">
+        <div class="tag-badge">ESPECIALISTA RESPONSÁVEL</div>
+        <h2 class="bio-title">Prazer, sou Tatiane Gomes</h2>
+        
+        <p class="bio-text">
+          Especialista em Estética Corporal e Facial, pós-graduada em Saúde Estética e Cosmetologia. Há mais de 7 anos ajudo mulheres a conquistarem a melhor versão da sua pele por meio de ciência, protocolos estratégicos e atendimento humanizado. Eu mesma realizo do início ao fim o seu atendimento, garantindo total segurança, biossegurança e precisão em cada etapa.
+        </p>
+
+        <div class="bio-credentials">
+          <div class="bio-credential-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.5L20.5 19h-17L12 5.5zM11 10h2v4h-2zm0 5h2v2h-2z"/></svg>
+            <span>+7 Anos de Prática e Especialização Clínica</span>
+          </div>
+          <div class="bio-credential-item">
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+            <span>Pós-Graduada em Saúde Estética e Cosmetologia</span>
+          </div>
+          <div class="bio-credential-item">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            <span>Atendimento 100% Individualizado do Início ao Fim</span>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- MAPA -->
-    <section class="map-section">
-        <div class="map-placeholder">
-            <div class="map-content">
-                <h3>📍 Localização</h3>
-                <p>Rua Bela Vista, 580 - Clínica OEquilibrio</p>
-                <p>Santo Amaro - São Paulo/SP</p>
-                <p class="map-note">Próximo ao metrô Borba Gato - Linha 5 Lilás</p>
-            </div>
+  <!-- SEÇÃO 5: LOCALIZAÇÃO E CONTATO FINAL -->
+  <section class="section section-location" id="contato">
+    <div class="container">
+      <div class="section-header fade-in-element">
+        <div class="tag-badge">LOCALIZAÇÃO</div>
+        <h2>Atendimento com conforto e privacidade</h2>
+      </div>
+
+      <div class="location-card-main fade-in-element">
+        <div class="address-highlight-box">
+          <div class="address-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="address-text">
+            <h4>Endereço do Consultório:</h4>
+            <p>Rua Bela Vista, 580 - Sala 14 (Clínica O Equilíbrio) — Chácara Santo Antônio / Santo Amaro, São Paulo - SP (Próximo à estação de Metrô Borba Gato).</p>
+          </div>
         </div>
-    </section>
 
-    <!-- FOOTER (mesmo do site principal) -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Tatiane Gomes Estética</h3>
-                    <p>Cuidando da sua beleza com profissionalismo e dedicação.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Links Rápidos</h4>
-                    <ul>
-                        <li><a href="home.html">Início</a></li>
-                        <li><a href="slim-one.html">Slim One</a></li>
-                        <li><a href="outros-tratamentos.html">Outros Tratamentos</a></li>
-                        <li><a href="sobre.html">Sobre a Tatiane</a></li>
-                        <li><a href="duvidas.html">Dúvidas</a></li>
-                        <li><a href="limpeza-de-pele.html" style="color: #c7a17a; font-weight: bold;">★ Limpeza de Pele</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contato</h4>
-                    <ul>
-                        <li><a href="contato.html">Entre em Contato</a></li>
-                        <li><a href="agendamento.html">Agendar Consulta</a></li>
-                        <li><a href="faq.html">Perguntas Frequentes</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Tatiane Gomes Estética. Todos os direitos reservados.</p>
-            </div>
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.775836474102!2d-46.6974246237667!3d-23.630324864771618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce50f3b0ba12ab%3A0x6b4f74d08ec8bf0c!2sRua%20Bela%20Vista%2C%20580%20-%20Santo%20Amaro%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004709-000!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localização do Consultório Tatiane Gomes Estética na Rua Bela Vista 580">
+          </iframe>
         </div>
-    </footer>
 
-    <!-- FLOAT WHATSAPP -->
-    <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20vim%20pelo%20an%C3%BAncio%20do%20M%C3%A9todo%20LINFACT%20e%20quero%20agendar."
-        class="whatsapp-float" target="_blank"
-        style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 5px 20px rgba(37,211,102,0.4); z-index: 1000; text-decoration: none; transition: transform 0.3s;"
-        onclick="return gtag_report_conversion('https://wa.me/5511957739880')">
-        💬
+        <div class="location-cta-box">
+          <a href="#" class="btn-cta js-whatsapp-cta" data-msg-type="limpeza" style="font-size: 1.08rem; padding: 1.3rem 2.8rem;">
+            <svg viewBox="0 0 24 24"><path d="M12.031 2c-5.514 0-9.998 4.484-9.998 9.998 0 1.764.459 3.487 1.332 5.006l-1.365 4.996 5.114-1.341c1.472.805 3.136 1.236 4.917 1.236 5.514 0 9.998-4.484 9.998-9.998 0-5.514-4.484-9.998-9.998-9.998zm0 18.175c-1.542 0-3.047-.413-4.358-1.196l-.312-.187-3.033.795.809-2.957-.205-.326c-.86-1.371-1.314-2.956-1.314-4.582 0-4.509 3.669-8.178 8.178-8.178 4.509 0 8.178 3.669 8.178 8.178 0 4.509-3.669 8.178-8.178 8.178zm4.505-6.117c-.247-.124-1.463-.722-1.69-.804-.227-.083-.392-.124-.557.124-.165.247-.641.804-.785.969-.144.165-.289.186-.536.062-.247-.124-1.044-.385-1.988-1.227-.735-.656-1.232-1.466-1.376-1.713-.144-.247-.015-.381.108-.504.111-.111.247-.289.371-.433.124-.144.165-.247.247-.412.083-.165.042-.309-.021-.433-.062-.124-.557-1.341-.763-1.836-.2-.482-.403-.417-.557-.425-.144-.008-.309-.008-.474-.008s-.433.062-.66.309c-.227.247-.866.846-.866 2.063s.887 2.393 1.011 2.558c.124.165 1.746 2.666 4.229 3.738.591.255 1.053.408 1.413.522.593.188 1.133.162 1.56.098.476-.071 1.463-.598 1.669-1.176.206-.578.206-1.073.144-1.176-.062-.103-.227-.165-.474-.289z"/></svg>
+            <span>CONVERSAR COM A TATIANE NO WHATSAPP</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL FOR CAROUSEL -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Fechar visualização">&times;</button>
+      <img id="lightboxImage" src="" alt="Ampliação do Resultado Facial">
+    </div>
+  </div>
+
+  <!-- FLOATING STICKY WHATSAPP BUTTON FOR MOBILE -->
+  <div class="mobile-sticky-bar">
+    <a href="#" class="btn-mobile-whatsapp js-whatsapp-cta" data-msg-type="limpeza">
+      <svg viewBox="0 0 24 24"><path d="M12.031 2c-5.514 0-9.998 4.484-9.998 9.998 0 1.764.459 3.487 1.332 5.006l-1.365 4.996 5.114-1.341c1.472.805 3.136 1.236 4.917 1.236 5.514 0 9.998-4.484 9.998-9.998 0-5.514-4.484-9.998-9.998-9.998zm0 18.175c-1.542 0-3.047-.413-4.358-1.196l-.312-.187-3.033.795.809-2.957-.205-.326c-.86-1.371-1.314-2.956-1.314-4.582 0-4.509 3.669-8.178 8.178-8.178 4.509 0 8.178 3.669 8.178 8.178 0 4.509-3.669 8.178-8.178 8.178zm4.505-6.117c-.247-.124-1.463-.722-1.69-.804-.227-.083-.392-.124-.557.124-.165.247-.641.804-.785.969-.144.165-.289.186-.536.062-.247-.124-1.044-.385-1.988-1.227-.735-.656-1.232-1.466-1.376-1.713-.144-.247-.015-.381.108-.504.111-.111.247-.289.371-.433.124-.144.165-.247.247-.412.083-.165.042-.309-.021-.433-.062-.124-.557-1.341-.763-1.836-.2-.482-.403-.417-.557-.425-.144-.008-.309-.008-.474-.008s-.433.062-.66.309c-.227.247-.866.846-.866 2.063s.887 2.393 1.011 2.558c.124.165 1.746 2.666 4.229 3.738.591.255 1.053.408 1.413.522.593.188 1.133.162 1.56.098.476-.071 1.463-.598 1.669-1.176.206-.578.206-1.073.144-1.176-.062-.103-.227-.165-.474-.289z"/></svg>
+      <span>AGENDAR NO WHATSAPP</span>
     </a>
+  </div>
 
-    <!-- Event snippet for WhatsApp conversion -->
-    <script>
-        function gtag_report_conversion(url) {
-            var callback = function () {
-                if (typeof (url) != 'undefined') {
-                    window.location = url;
-                }
-            };
-            gtag('event', 'conversion', {
-                'send_to': 'AW-17947496680/hUBdCOX99oMcEOihhO5C',
-                'event_callback': callback
-            });
-            return false;
-        }
-    </script>
-    <script src="script.js"></script>
-    <script>
-        const toggle = document.getElementById('menuToggle');
-        const overlay = document.getElementById('menuOverlay');
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 Tatiane Gomes Estética. Todos os direitos reservados. Política de Privacidade.</p>
+    </div>
+  </footer>
 
-        toggle.addEventListener('click', () => {
-            overlay.classList.toggle('active');
-        });
-
-        overlay.addEventListener('click', () => {
-            overlay.classList.remove('active');
-        });
-    </script>
+  <!-- Script JS -->
+  <script src="script.js"></script>
 </body>
-
 </html>
