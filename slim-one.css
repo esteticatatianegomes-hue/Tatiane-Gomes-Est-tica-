@@ -793,3 +793,11 @@ img:hover {
         transform: translateY(0);
     }
 }
+
+/* ===========================================
+   SLIM ONE — OVERRIDES PARA NAVBAR GLOBAL
+   =========================================== */
+/* O slim-one usa o global.css navbar. As classes
+   antigas (.header, .nav-desktop etc.) podem ser
+   mantidas para compatibilidade mas o navbar ativo
+   vem do global. Garantia sem conflito: */

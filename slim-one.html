@@ -3,54 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tatiane Gomes Estética | Slim One em São Paulo</title>
+    <title>Método Slim One | Tatiane Gomes Estética — Gordura Localizada em São Paulo</title>
     <meta name="description" content="Tratamento personalizado para gordura localizada com o Método Slim One. Conheça a estratégia de Tatiane Gomes Estética em São Paulo.">
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="slim-one.css">
+    <!-- Google Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17947496680"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-17947496680', { linker: { domains: ['api.whatsapp.com'] } });
+    </script>
 </head>
 <body>
 
-    <!-- 7. HEADER -->
-    <header class="header">
-        <div class="header-container">
-            <div class="logo">
-                <span class="logo-name">Tatiane Gomes</span>
-                <span class="logo-sub">ESTÉTICA</span>
-            </div>
-            
-            <nav class="nav-desktop">
-                <a href="sobre.html">SOBRE MIM</a>
-                <a href="outros-tratamentos.html">TRATAMENTOS CORPORAIS</a>
-                <a href="limpeza-de-pele.html">TRATAMENTOS FACIAIS</a>
-                <a href="contato.html">CONTATO</a>
-            </nav>
-            
-            <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20Tatiane%21%20Quero%20saber%20se%20o%20M%C3%A9todo%20Slim%20One%20%C3%A9%20para%20mim." class="btn header-btn">FALE COMIGO</a>
-            
-            <button class="menu-toggle" aria-label="Abrir Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </header>
+<!-- WhatsApp Flutuante -->
+<a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20Tatiane%21%20Quero%20saber%20se%20o%20M%C3%A9todo%20Slim%20One%20%C3%A9%20para%20mim." class="float-wa" onclick="return trackWpp(this.href,'wpp_float')" aria-label="WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
 
-    <!-- Mobile Drawer -->
-    <div class="mobile-drawer">
-        <div class="drawer-content">
-            <button class="close-drawer" aria-label="Fechar Menu">&times;</button>
-            <nav class="nav-mobile">
-                <a href="sobre.html">SOBRE MIM</a>
-                <a href="outros-tratamentos.html">TRATAMENTOS CORPORAIS</a>
-                <a href="limpeza-de-pele.html">TRATAMENTOS FACIAIS</a>
-                <a href="contato.html">CONTATO</a>
-                <a href="https://www.instagram.com/tatianegomes_estetica?stkn=MWY3amE3ZG1tczA0Mg==" target="_blank" rel="noopener">INSTAGRAM</a>
-            </nav>
+<!-- NAVBAR GLOBAL -->
+<header class="navbar" id="navbar">
+    <div class="container nav-inner">
+        <a href="index.html" class="nav-logo">
+            <span class="logo-name">Tatiane Gomes</span>
+            <span class="logo-sub">Estética</span>
+        </a>
+        <nav class="nav-links" aria-label="Menu principal">
+            <a href="index.html">Home</a>
+            <a href="slim-one.html" class="active">Slim One</a>
+            <a href="outros-tratamentos.html">Outros Tratamentos</a>
+            <a href="duvidas.html">Dúvidas</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <div class="nav-cta">
+            <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20Tatiane%21%20Quero%20saber%20se%20o%20M%C3%A9todo%20Slim%20One%20%C3%A9%20para%20mim." class="btn btn-primary" onclick="return trackWpp(this.href,'wpp_header')" target="_blank" rel="noopener">QUERO SABER SE É PARA MIM</a>
         </div>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
     </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+    <button id="close-menu" style="position:absolute;top:24px;right:24px;background:none;border:none;font-size:2rem;color:var(--verde);cursor:pointer;">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="slim-one.html">Slim One</a>
+    <a href="outros-tratamentos.html">Outros Tratamentos</a>
+    <a href="duvidas.html">Dúvidas</a>
+    <a href="contato.html">Contato</a>
+    <a href="https://wa.me/5511957739880?text=Ol%C3%A1%2C%20Tatiane%21%20Quero%20saber%20se%20o%20M%C3%A9todo%20Slim%20One%20%C3%A9%20para%20mim." class="btn btn-primary" onclick="return trackWpp(this.href,'wpp_menu')" target="_blank" rel="noopener">QUERO SABER SE É PARA MIM</a>
+</div>
 
     <main>
         <!-- 8. HERO -->
@@ -289,39 +294,49 @@
         </section>
     </main>
 
-    <!-- 23. FOOTER -->
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <div class="footer-logo">TATIANE GOMES ESTÉTICA</div>
-                <p>São Paulo — SP</p>
-                <div class="footer-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.512398745612!2d-46.7032145!3d-23.6521456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce505b22555555%3A0x123456789abcdef!2sSanto%20Amaro%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" loading="lazy" aria-hidden="true" title="Mapa Localização"></iframe>
+<!-- FOOTER GLOBAL -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="logo-name">Tatiane Gomes</span>
+                <span class="logo-sub">Estética</span>
+                <p>Especialista em estética corporal e facial. Tratamentos personalizados em São Paulo.</p>
+                <p style="color:var(--dourado);margin-top:8px;font-size:0.85rem;">Santo Amaro — São Paulo, SP</p>
+            </div>
+            <div>
+                <h4>NAVEGAÇÃO</h4>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="slim-one.html">Slim One</a>
+                    <a href="outros-tratamentos.html">Outros Tratamentos</a>
+                    <a href="duvidas.html">Dúvidas</a>
+                    <a href="contato.html">Contato</a>
                 </div>
             </div>
-            <div class="footer-col">
-                <nav class="footer-nav">
-                    <a href="sobre.html">SOBRE MIM</a>
-                    <a href="outros-tratamentos.html">TRATAMENTOS CORPORAIS</a>
-                    <a href="limpeza-de-pele.html">TRATAMENTOS FACIAIS</a>
-                    <a href="contato.html">CONTATO</a>
-                </nav>
+            <div>
+                <h4>FALE COMIGO</h4>
+                <div class="footer-links">
+                    <a href="https://wa.me/5511957739880" target="_blank" rel="noopener">WhatsApp</a>
+                    <a href="https://www.instagram.com/tatianegomes_estetica?stkn=MWY3amE3ZG1tczA0Mg==" target="_blank" rel="noopener">Instagram</a>
+                </div>
             </div>
-            <div class="footer-col">
-                <nav class="footer-nav">
-                    <a href="https://wa.me/5511957739880" target="_blank" rel="noopener">WHATSAPP</a>
-                    <a href="https://www.instagram.com/tatianegomes_estetica?stkn=MWY3amE3ZG1tczA0Mg==" target="_blank" rel="noopener">INSTAGRAM</a>
-                </nav>
+            <div>
+                <h4>LOCALIZAÇÃO</h4>
+                <p style="font-size:0.85rem;color:rgba(247,242,232,0.8);margin-bottom:12px;">Santo Amaro — São Paulo, SP</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.512398745612!2d-46.7032145!3d-23.6521456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce505b22555555%3A0x123456789abcdef!2sSanto%20Amaro%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" loading="lazy" aria-hidden="true" title="Mapa"></iframe>
+                </div>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <span>© 2026 Tatiane Gomes Estética. Todos os direitos reservados.</span>
+            <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        </div>
+    </div>
+</footer>
 
-    <!-- 22. WHATSAPP FLUTUANTE -->
-    <a href="https://wa.me/5511957739880" class="whatsapp-float" aria-label="Falar no WhatsApp" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M12.031 2C6.505 2 2 6.505 2 12.031c0 2.213.722 4.28 1.968 6.012L2 22l4.086-1.913a9.98 9.98 0 005.945 1.944c5.526 0 10.031-4.505 10.031-10.031S17.557 2 12.031 2zm5.783 14.538c-.244.686-1.42 1.309-1.967 1.385-.547.076-1.28.114-3.568-.836-2.73-1.135-4.475-3.926-4.61-4.106-.134-.18-1.101-1.465-1.101-2.793 0-1.328.69-1.982.936-2.253.245-.271.536-.339.712-.339.176 0 .351.002.505.008.163.007.382-.065.597.457.224.542.75 1.828.818 1.963.067.135.112.293.022.473-.09.18-.135.293-.269.451-.135.158-.285.347-.405.474-.135.135-.279.285-.12.557.158.271.704 1.163 1.517 1.888.625.557 1.488.865 1.773 1.002.285.135.45.113.616-.06.166-.173.712-.828.905-1.111.192-.283.383-.235.638-.145.255.09 1.614.762 1.892.902.278.14.463.21.531.328.067.118.067.684-.177 1.37z"/></svg>
-    </a>
-
-    <!-- SCRIPTS -->
-    <script src="slim-one.js" defer></script>
+<script src="global.js" defer></script>
+<script src="slim-one.js" defer></script>
 </body>
 </html>
