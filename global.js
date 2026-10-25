@@ -1,4 +1,4 @@
-/* global.js — Script compartilhado entre todas as páginas */
+/* global.js — Script compartilhado entre todas as páginas — v2.1 */
 (function () {
     'use strict';
 
@@ -48,14 +48,12 @@
         if (hamburger) hamburger.addEventListener('click', openMenu);
         if (closeBtn)  closeBtn.addEventListener('click', closeMenu);
 
-        /* Close on overlay click */
         if (mobileMenu) {
             mobileMenu.addEventListener('click', function (e) {
                 if (e.target === mobileMenu) closeMenu();
             });
         }
 
-        /* Close on Escape */
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') closeMenu();
         });
@@ -76,10 +74,10 @@
             if (!btn || !ans) return;
             btn.addEventListener('click', function () {
                 var isOpen = item.classList.contains('active');
-                /* Close all */
                 document.querySelectorAll('.faq-item.active').forEach(function (el) {
                     el.classList.remove('active');
-                    el.querySelector('.faq-answer').style.maxHeight = null;
+                    var a = el.querySelector('.faq-answer');
+                    if (a) a.style.maxHeight = null;
                 });
                 if (!isOpen) {
                     item.classList.add('active');
@@ -97,7 +95,7 @@
                         io.unobserve(e.target);
                     }
                 });
-            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+            }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
             document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
         } else {
             document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('active'); });
@@ -109,98 +107,132 @@
         });
     });
 
-    /* ========================================================
-       Carousel Engine
-       Usage: <div data-carousel data-per-desktop="2" data-per-mobile="1">
-                <div class="carousel-track-wrap">
-                  <div class="carousel-track">
-                    <div class="carousel-slide">…</div>
-                  </div>
-                </div>
-                <div class="carousel-controls">
-                  <button class="carousel-btn prev">…</button>
-                  <div class="carousel-dots"></div>
-                  <button class="carousel-btn next">…</button>
-                </div>
-              </div>
-    ======================================================== */
+    /* ================================================================
+       CAROUSEL ENGINE v2  —  baseado em pixels reais (sem % bugado)
+       ================================================================ */
     function initCarousel(outer) {
         var track  = outer.querySelector('.carousel-track');
+        var wrap   = outer.querySelector('.carousel-track-wrap');
         var slides = outer.querySelectorAll('.carousel-slide');
         var prev   = outer.querySelector('.carousel-btn.prev');
         var next   = outer.querySelector('.carousel-btn.next');
         var dotsEl = outer.querySelector('.carousel-dots');
+
         if (!track || !slides.length) return;
 
         var perDesktop = parseInt(outer.dataset.perDesktop || 1, 10);
         var perMobile  = parseInt(outer.dataset.perMobile  || 1, 10);
-        var current = 0;
+        var currentIdx = 0; /* índice do SLIDE (não da página) */
 
-        function perPage() {
+        /* ---- helpers ---- */
+        function pp() {
             return window.innerWidth >= 768 ? perDesktop : perMobile;
         }
 
-        function totalSteps() {
-            return Math.ceil(slides.length / perPage());
+        function slideGap() {
+            /* lê o gap real definido em CSS (ou fallback 0) */
+            if (!wrap) return 0;
+            var cs = window.getComputedStyle(track);
+            return parseFloat(cs.columnGap || cs.gap || '0') || 0;
         }
 
-        function setSlideWidths() {
-            var pp = perPage();
+        function slideW() {
+            /* largura de um slide calculada a partir do wrap */
+            var wrapW = (wrap || outer).getBoundingClientRect().width;
+            var perPg = pp();
+            var g     = slideGap();
+            return (wrapW - g * (perPg - 1)) / perPg;
+        }
+
+        function maxIdx() {
+            return Math.max(0, slides.length - pp());
+        }
+
+        function totalSteps() {
+            return Math.ceil(slides.length / pp());
+        }
+
+        /* ---- layout ---- */
+        function applyWidths() {
+            var w = slideW();
             slides.forEach(function (s) {
-                s.style.flex = '0 0 calc(100% / ' + pp + ')';
-                s.style.minWidth = 'calc(100% / ' + pp + ')';
+                s.style.width    = w + 'px';
+                s.style.flexShrink = '0';
             });
         }
 
-        function goTo(idx) {
-            var pp = perPage();
-            var max = slides.length - pp;
-            current = Math.max(0, Math.min(idx * pp, max));
-            var pct = (current / slides.length) * 100;
-            track.style.transform = 'translateX(-' + pct + '%)';
+        /* ---- navigate ---- */
+        function goTo(slideIndex) {
+            currentIdx = Math.max(0, Math.min(slideIndex, maxIdx()));
+            var offset = currentIdx * (slideW() + slideGap());
+            track.style.transform = 'translateX(-' + offset + 'px)';
             buildDots();
         }
 
+        function stepFwd() { goTo(currentIdx + pp()); }
+        function stepBwd() { goTo(currentIdx - pp()); }
+
+        /* ---- dots ---- */
         function buildDots() {
             if (!dotsEl) return;
             dotsEl.innerHTML = '';
             var steps = totalSteps();
-            var activePage = Math.round(current / perPage());
+            var activePg = Math.min(Math.round(currentIdx / pp()), steps - 1);
             for (var i = 0; i < steps; i++) {
                 var d = document.createElement('button');
-                d.className = 'carousel-dot' + (i === activePage ? ' active' : '');
+                d.className = 'carousel-dot' + (i === activePg ? ' active' : '');
                 d.setAttribute('aria-label', 'Slide ' + (i + 1));
-                (function (idx) {
-                    d.addEventListener('click', function () { goTo(idx); });
+                (function (pageIdx) {
+                    d.addEventListener('click', function () { goTo(pageIdx * pp()); });
                 })(i);
                 dotsEl.appendChild(d);
             }
         }
 
-        function stepForward()  { goTo(Math.round(current / perPage()) + 1); }
-        function stepBackward() { goTo(Math.round(current / perPage()) - 1); }
+        /* ---- events ---- */
+        if (prev) prev.addEventListener('click', stepBwd);
+        if (next) next.addEventListener('click', stepFwd);
 
-        if (prev) prev.addEventListener('click', stepBackward);
-        if (next) next.addEventListener('click', stepForward);
+        /* Touch / swipe */
+        var touchStartX = 0;
+        var touchStartY = 0;
+        var isDragging  = false;
 
-        /* Touch swipe */
-        var startX = 0;
-        track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+        track.addEventListener('touchstart', function (e) {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            isDragging  = false;
+        }, { passive: true });
+
+        track.addEventListener('touchmove', function (e) {
+            var dx = Math.abs(e.touches[0].clientX - touchStartX);
+            var dy = Math.abs(e.touches[0].clientY - touchStartY);
+            if (dx > dy && dx > 8) isDragging = true;
+        }, { passive: true });
+
         track.addEventListener('touchend', function (e) {
-            var dx = startX - e.changedTouches[0].clientX;
-            if (Math.abs(dx) > 40) dx > 0 ? stepForward() : stepBackward();
+            if (!isDragging) return;
+            var dx = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(dx) > 36) {
+                dx > 0 ? stepFwd() : stepBwd();
+            }
+            isDragging = false;
         }, { passive: true });
 
-        /* Init */
-        setSlideWidths();
-        goTo(0);
-
+        /* ---- resize ---- */
+        var resizeTimer;
         window.addEventListener('resize', function () {
-            setSlideWidths();
-            goTo(0);
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function () {
+                applyWidths();
+                goTo(0);
+            }, 150);
         }, { passive: true });
+
+        /* ---- init ---- */
+        applyWidths();
+        goTo(0);
     }
 
-    /* Expose for manual use */
     window.initCarousel = initCarousel;
 })();

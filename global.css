@@ -498,7 +498,7 @@ p { font-size: 1.05rem; color: var(--cinza-texto); }
 .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 60px;
     align-items: center;
 }
 .two-col.reverse { direction: rtl; }
@@ -550,6 +550,7 @@ p { font-size: 1.05rem; color: var(--cinza-texto); }
 /* --- IMAGE EDITORIAL --- */
 .editorial-img {
     overflow: hidden;
+    max-height: 560px; /* evita imagens gigantes no desktop */
 }
 .editorial-img img {
     width: 100%;
@@ -562,15 +563,15 @@ p { font-size: 1.05rem; color: var(--cinza-texto); }
 /* --- RESULTADO CARD (carrossel) --- */
 .resultado-img {
     width: 100%;
-    aspect-ratio: 3/4;
+    aspect-ratio: 4/3;    /* mais equilibrado que 3/4 */
     overflow: hidden;
-    background: #eee;
+    background: var(--off-white);
 }
 .resultado-img img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    background: #f0ede6;
+    background: var(--off-white);
 }
 .resultado-info {
     padding: 16px 0 8px;
@@ -602,26 +603,31 @@ p { font-size: 1.05rem; color: var(--cinza-texto); }
 /* --- HERO --- */
 .hero {
     background: var(--verde);
-    min-height: 720px;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 .hero-grid {
     display: grid;
-    grid-template-columns: 48fr 42fr;
-    gap: 80px;
-    align-items: center;
+    grid-template-columns: 52fr 42fr;
+    gap: 60px;
+    align-items: end;
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 0;
+    min-height: 680px;
 }
+.hero-content { padding-bottom: 80px; }
 .hero-content h1 { color: var(--branco); margin-bottom: 20px; }
 .hero-content .lead { color: rgba(247,242,232,0.85); margin-bottom: 36px; }
 .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
 .hero-disclaimer { font-size: 0.8rem; color: rgba(247,242,232,0.55); margin-top: 14px; letter-spacing: 0.04em; }
 .hero-img {
-    aspect-ratio: 4/5;
+    aspect-ratio: 3/4;
+    max-height: 580px;      /* teto no desktop */
     overflow: hidden;
     align-self: flex-end;
+    justify-self: end;
+    width: 100%;
 }
 .hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 
@@ -669,36 +675,128 @@ p { font-size: 1.05rem; color: var(--cinza-texto); }
 }
 
 /* === RESPONSIVIDADE === */
+
+/* Tablet largo (1024 â†’ 768) */
 @media (max-width: 1023px) {
     .container { padding-left: var(--px-tablet); padding-right: var(--px-tablet); }
     .nav-links, .nav-cta { display: none; }
     .hamburger { display: flex; }
     .mobile-menu { display: flex; }
-    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-    .trat-grid { grid-template-columns: repeat(2,1fr); }
+
+    .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        min-height: auto;
+        padding-top: 60px;
+    }
+    .hero-img { max-height: 460px; }
+
     .two-col { grid-template-columns: 1fr; gap: 40px; }
     .two-col.reverse { direction: ltr; }
+    .editorial-img { max-height: 420px; }
+
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .trat-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Carrossel: garante que o track nÃ£o escapa da janela */
+    .carousel-track-wrap { overflow: hidden; }
+    .carousel-track { will-change: transform; }
 }
 
+/* Mobile (â‰¤ 767px) */
 @media (max-width: 767px) {
-    :root {
-        --section-py: var(--section-py-mobile);
-    }
+    :root { --section-py: var(--section-py-mobile); }
     .container { padding-left: var(--px-mobile); padding-right: var(--px-mobile); }
+
+    /* Navbar */
     .navbar { height: 64px; }
-    .hero { min-height: auto; }
-    .hero-grid { grid-template-columns: 1fr; gap: 40px; padding-top: 60px; padding-bottom: 0; }
-    .hero-img { aspect-ratio: 4/3; align-self: auto; }
+
+    /* Hero */
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding-top: 52px;
+        padding-bottom: 0;
+        min-height: auto;
+        align-items: start;
+    }
+    .hero-content { padding-bottom: 48px; order: 1; }
+    .hero-img {
+        order: 2;
+        aspect-ratio: 3/2;
+        max-height: none;
+        width: 100%;
+        justify-self: stretch;
+    }
     .hero-buttons { flex-direction: column; }
     .hero-buttons .btn { width: 100%; }
-    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+
+    /* Imagens editoriais */
+    .editorial-img { max-height: 320px; }
+
+    /* Two-col */
+    .two-col { grid-template-columns: 1fr; gap: 32px; }
+
+    /* Tratamentos grid */
     .trat-grid { grid-template-columns: 1fr; }
+
+    /* Carrossel */
+    .carousel-track-wrap { overflow: hidden; }
+    .carousel-track { will-change: transform; }
+    .resultado-img { aspect-ratio: 4/3; }
+
+    /* Step flow */
     .step-flow { flex-direction: column; gap: 32px; }
     .step-flow-item:not(:last-child)::after { display: none; }
-    .btn { font-size: 0.68rem; padding: 0 24px; }
-    h1 { font-size: clamp(2rem, 8vw, 3rem); }
-    h2 { font-size: clamp(1.8rem, 7vw, 2.6rem); }
-    .section-subtitle { margin-bottom: 36px; }
+    .step-flow-item { align-items: flex-start; text-align: left; }
+
+    /* Typography */
+    h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
+    h2 { font-size: clamp(1.7rem, 7vw, 2.4rem); }
+    .section-subtitle { margin-bottom: 32px; }
+    .lead { font-size: 1rem; }
+
+    /* Lists */
     .dif-item { flex-direction: column; gap: 8px; }
     .dif-num { font-size: 1.8rem; }
+
+    /* Footer */
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+
+    /* BotÃµes */
+    .btn { padding: 0 20px; font-size: 0.68rem; }
+    .trat-card .btn { width: 100%; }
+
+    /* FAQ */
+    .faq-question { font-size: 0.95rem; padding: 22px 0; }
+}
+
+/* ================================================================
+   CAROUSEL — Fixes de overflow e gap (v2.1)
+   ================================================================ */
+[data-carousel] {
+    overflow: hidden; /* garante que o track nunca vaze */
+    width: 100%;
+}
+.carousel-track-wrap {
+    overflow: hidden;
+    width: 100%;
+}
+.carousel-track {
+    display: flex;
+    transition: transform 420ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+    backface-visibility: hidden;
+}
+.carousel-slide {
+    flex-shrink: 0;
+    /* largura definida via JS */
+    min-width: 0;
+}
+
+/* Resultado img: proporção coerente em todos os breakpoints */
+@media (max-width: 767px) {
+    .resultado-img { aspect-ratio: 4/3; }
+    [data-carousel] .carousel-slide { padding: 0 6px; }
 }

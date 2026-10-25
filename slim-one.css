@@ -801,3 +801,45 @@ img:hover {
    antigas (.header, .nav-desktop etc.) podem ser
    mantidas para compatibilidade mas o navbar ativo
    vem do global. Garantia sem conflito: */
+
+/* ================================================================
+   SLIM ONE — CORREÇÕES RESPONSIVAS (adicionadas v2.1)
+   ================================================================ */
+
+/* Impede que o hero da Slim One fique enorme no desktop */
+.hero .headline { font-size: clamp(2rem, 4.5vw, 3.6rem); }
+.hero-image img { max-height: 560px; object-fit: cover; }
+
+/* Slim One hero mobile: imagem abaixo do texto, não gigante */
+@media (max-width: 767px) {
+    .hero { min-height: auto; padding: 52px 0 0 0; align-items: flex-start; }
+    .hero-grid { flex-direction: column; gap: 0; }
+    .hero-text { width: 100%; padding-bottom: 40px; }
+    .hero-image { width: 100%; display: block; }
+    .hero-image img { aspect-ratio: 3/2; max-height: none; width: 100%; }
+    .hero .headline { font-size: clamp(1.8rem, 7vw, 2.6rem); }
+}
+
+/* Carrosséis da Slim One no mobile */
+@media (max-width: 767px) {
+    .depoimentos-carousel-container,
+    .carousel-container { padding: 0; }
+    .depoimento-card { flex: 0 0 100%; min-width: 100%; padding: 20px; }
+    .carousel-slide img { height: auto; max-height: 60vw; }
+}
+
+/* Seções two-column da Slim One no mobile */
+@media (max-width: 767px) {
+    .slim-one-grid { flex-direction: column; gap: 32px; }
+    .slim-one-text, .slim-one-image { width: 100%; }
+    .sobre-grid { flex-direction: column-reverse; gap: 32px; }
+    .sobre-img, .sobre-text { width: 100%; }
+    .sobre-img img { max-height: 320px; object-fit: cover; }
+    .trat-card .btn { width: auto; }
+}
+
+/* Steps flow mobile */
+@media (max-width: 767px) {
+    .flow-steps { flex-direction: column; gap: 16px; align-items: flex-start; }
+    .flow-arrow { display: none; }
+}
