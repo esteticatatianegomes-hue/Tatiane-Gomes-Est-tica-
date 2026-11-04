@@ -1,4 +1,4 @@
-﻿/* =================================================================
+/* =================================================================
    TATIANE GOMES ESTÃ‰TICA â€” Design System v6.0 (MASTER CONVERSION)
    Editorial ContemporÃ¢nea, Luxo Discreto, Responsividade Total
    ================================================================= */
@@ -433,7 +433,7 @@ section { padding: 70px 0; position: relative; }
   font-size: 0.95rem;
 }
 .comp-list li::before {
-  content: 'â€¢';
+  content: '\2022';
   color: var(--champagne);
   font-size: 1.4rem;
   line-height: 1;
@@ -696,7 +696,7 @@ section { padding: 70px 0; position: relative; }
   gap: 36px;
 }
 .ticker-item::after {
-  content: 'â€¢';
+  content: '\2022';
   color: var(--champagne);
   font-size: 1rem;
 }
