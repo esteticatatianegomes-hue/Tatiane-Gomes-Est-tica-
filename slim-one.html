@@ -10,6 +10,276 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="slim-one.css">
+    <style>
+        /* Ajuste Fino e Responsivo do Carrossel de Resultados — Slim One */
+        .section-resultados {
+            padding: 80px 0 60px;
+            background: #FFFFFF;
+        }
+        #resultadosCarouselContainer {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 52px;
+            position: relative;
+            box-sizing: border-box;
+        }
+        #resultadosTrack {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            gap: 0;
+            scroll-behavior: smooth;
+            border-radius: 12px;
+        }
+        #resultadosTrack::-webkit-scrollbar {
+            display: none;
+        }
+        #resultadosCarouselContainer .carousel-slide {
+            flex: 0 0 100%;
+            min-width: 100%;
+            scroll-snap-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 4px;
+            box-sizing: border-box;
+        }
+        #resultadosCarouselContainer .carousel-slide-card {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #FDFCFA;
+            border: 1px solid rgba(226, 183, 120, 0.35);
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: 0 10px 30px rgba(11, 36, 35, 0.06);
+            box-sizing: border-box;
+        }
+        #resultadosCarouselContainer .carousel-slide img {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 480px;
+            object-fit: contain;
+            border-radius: 8px;
+            display: block;
+        }
+        #resultadosCarouselContainer .carousel-slide-caption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--dourado, #B8A07A);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        #resultadosCarouselContainer .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background-color: var(--verde, #1F3D36);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        #resultadosCarouselContainer .carousel-arrow:hover {
+            background-color: var(--dourado, #B8A07A);
+            transform: translateY(-50%) scale(1.05);
+        }
+        #resultadosCarouselContainer .carousel-arrow svg {
+            fill: #FFFFFF;
+            width: 22px;
+            height: 22px;
+        }
+        #resultadosCarouselContainer .carousel-arrow.prev { left: 0; }
+        #resultadosCarouselContainer .carousel-arrow.next { right: 0; }
+
+        #resultadosCarouselContainer .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 24px;
+        }
+        #resultadosCarouselContainer .carousel-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(31,61,54,0.2);
+            cursor: pointer;
+            transition: all 300ms ease;
+        }
+        #resultadosCarouselContainer .carousel-indicator.active {
+            background-color: var(--verde, #1F3D36);
+            width: 24px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 767px) {
+            .section-resultados {
+                padding: 50px 0 40px;
+            }
+            #resultadosCarouselContainer {
+                max-width: 100%;
+                padding: 0 42px;
+            }
+            #resultadosCarouselContainer .carousel-slide {
+                padding: 4px 0;
+            }
+            #resultadosCarouselContainer .carousel-slide-card {
+                padding: 8px;
+            }
+            #resultadosCarouselContainer .carousel-slide img {
+                max-height: 380px;
+                max-width: 100%;
+            }
+            #resultadosCarouselContainer .carousel-arrow {
+                width: 36px;
+                height: 36px;
+            }
+            #resultadosCarouselContainer .carousel-arrow svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            #resultadosCarouselContainer {
+                padding: 0 36px;
+            }
+            #resultadosCarouselContainer .carousel-slide img {
+                max-height: 330px;
+            }
+            #resultadosCarouselContainer .carousel-arrow {
+                width: 32px;
+                height: 32px;
+            }
+            #resultadosCarouselContainer .carousel-arrow svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+        /* Ajuste dos Depoimentos Slim One */
+        #depoimentosCarouselContainer {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+            padding: 0 48px;
+            box-sizing: border-box;
+        }
+        #depoimentosTrack {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            gap: 20px;
+            scroll-behavior: smooth;
+            border-radius: 12px;
+        }
+        #depoimentosTrack::-webkit-scrollbar {
+            display: none;
+        }
+        .depoimento-card {
+            flex: 0 0 calc(50% - 10px);
+            min-width: calc(50% - 10px);
+            scroll-snap-align: start;
+            background: #FFFFFF;
+            border: 1px solid rgba(226, 183, 120, 0.35);
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 10px 30px rgba(11, 36, 35, 0.06);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .depoimento-card img {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 440px;
+            object-fit: contain;
+            border-radius: 8px;
+            display: block;
+        }
+        #depoimentosCarouselContainer .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background-color: var(--verde, #1F3D36);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        #depoimentosCarouselContainer .carousel-arrow:hover {
+            background-color: var(--dourado, #B8A07A);
+            transform: translateY(-50%) scale(1.05);
+        }
+        #depoimentosCarouselContainer .carousel-arrow svg {
+            fill: #FFFFFF;
+            width: 22px;
+            height: 22px;
+        }
+        #depoimentosCarouselContainer .carousel-arrow.prev { left: 0; }
+        #depoimentosCarouselContainer .carousel-arrow.next { right: 0; }
+
+        @media (max-width: 767px) {
+            #depoimentosCarouselContainer {
+                max-width: 100%;
+                padding: 0 38px;
+            }
+            .depoimento-card {
+                flex: 0 0 100%;
+                min-width: 100%;
+                padding: 10px;
+            }
+            .depoimento-card img {
+                max-height: 380px;
+            }
+            #depoimentosCarouselContainer .carousel-arrow {
+                width: 36px;
+                height: 36px;
+            }
+            #depoimentosCarouselContainer .carousel-arrow svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            #depoimentosCarouselContainer {
+                padding: 0 32px;
+            }
+            .depoimento-card img {
+                max-height: 320px;
+            }
+            #depoimentosCarouselContainer .carousel-arrow {
+                width: 32px;
+                height: 32px;
+            }
+            #depoimentosCarouselContainer .carousel-arrow svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    </style>
     <!-- Google Tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17947496680"></script>
     <script>
@@ -170,14 +440,72 @@
                 </button>
                 <div class="carousel-track" id="resultadosTrack">
                     <!-- Images -->
-                    <div class="carousel-slide"><img src="crio1.jpeg" alt="Resultado" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="crio2.jpeg" alt="Resultado" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="crio3.jpeg" alt="Resultado" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="crio4.jpeg" alt="Resultado" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="corporal1.jpg" alt="Resultado" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="corporal2.jpg" alt="Resultado" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="corporal3.jpg" alt="Resultado" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="corporal4.jpg" alt="Resultado" loading="lazy"></div>
+                    <div class="carousel-slide">
+                        <div class="carousel-slide-card">
+                            <img src="resultado-slim1.jpg" alt="Resultado Slim One — Redução de gordura localizada e contorno da cintura" loading="lazy">
+                            <span class="carousel-slide-caption">Paciente real — Método Slim One</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="carousel-slide-card">
+                            <img src="resultado-slim2.jpg" alt="Resultado Slim One — Remodelação de costas e flancos" loading="lazy">
+                            <span class="carousel-slide-caption">Paciente real — Método Slim One</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="carousel-slide-card">
+                            <img src="resultado-slim3.jpg" alt="Resultado Slim One — Definição corporal e redução de medidas" loading="lazy">
+                            <span class="carousel-slide-caption">Paciente real — Método Slim One</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="carousel-slide-card">
+                            <img src="resultado-slim4.jpg" alt="Resultado Slim One — Perfil corporal e abdômen inferior" loading="lazy">
+                            <span class="carousel-slide-caption">Paciente real — Método Slim One</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="carousel-slide-card">
+                            <img src="resultado-slim5.jpg" alt="Resultado Slim One — Vista frontal, alinhamento de silhueta e abdômen" loading="lazy">
+                            <span class="carousel-slide-caption">Paciente real — Método Slim One</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="carousel-slide-card">
+                            <img src="Resultadoslimone1.jpeg" alt="Resultado Método Slim One" loading="lazy">
+                            <span class="carousel-slide-caption">Paciente real — Método Slim One</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="carousel-slide-card">
+                            <img src="Resultadoslimone2.jpeg" alt="Resultado Método Slim One" loading="lazy">
+                            <span class="carousel-slide-caption">Paciente real — Método Slim One</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="carousel-slide-card">
+                            <img src="Resultadoslimone3.jpeg" alt="Resultado Método Slim One" loading="lazy">
+                            <span class="carousel-slide-caption">Paciente real — Método Slim One</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="carousel-slide-card">
+                            <img src="Resultadoslimone4.jpeg" alt="Resultado Método Slim One" loading="lazy">
+                            <span class="carousel-slide-caption">Paciente real — Método Slim One</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="carousel-slide-card">
+                            <img src="Resultadoslimone5.jpeg" alt="Resultado Método Slim One" loading="lazy">
+                            <span class="carousel-slide-caption">Paciente real — Método Slim One</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="carousel-slide-card">
+                            <img src="Resultadoslimone6.jpeg" alt="Resultado Método Slim One" loading="lazy">
+                            <span class="carousel-slide-caption">Paciente real — Método Slim One</span>
+                        </div>
+                    </div>
                 </div>
                 <button class="carousel-arrow next" aria-label="Próximo">
                     <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>

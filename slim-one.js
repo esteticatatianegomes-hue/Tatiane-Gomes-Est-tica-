@@ -82,8 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
             visibleSlides = 2;
         }
         
-        const totalSteps = Math.max(1, slides.length - visibleSlides + 1);
-
         // Update indicators on scroll/resize
         function updateIndicators() {
             indicatorsContainer.innerHTML = '';
@@ -91,11 +89,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const slideWidth = slides[0].offsetWidth;
             const gap = isDepoimentos ? (window.innerWidth >= 768 ? 24 : 16) : 0;
             const currentIndex = Math.round(scrollLeft / (slideWidth + gap));
+            const steps = Math.max(1, slides.length - visibleSlides + 1);
             
-            for (let i = 0; i < totalSteps; i++) {
+            for (let i = 0; i < steps; i++) {
                 const dot = document.createElement('div');
                 dot.classList.add('carousel-indicator');
-                if (i === Math.min(currentIndex, totalSteps - 1)) dot.classList.add('active');
+                if (i === Math.min(currentIndex, steps - 1)) dot.classList.add('active');
                 
                 dot.addEventListener('click', () => {
                     track.scrollTo({
@@ -114,14 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         window.addEventListener('resize', () => {
-            // Re-evaluate visible slides and total steps
-            const newVisibleSlides = isDepoimentos && window.innerWidth >= 768 ? 2 : 1;
-            if(newVisibleSlides !== visibleSlides) {
-                // simple reload logic or re-init
-                location.reload();
-            } else {
-                updateIndicators();
-            }
+            visibleSlides = isDepoimentos && window.innerWidth >= 768 ? 2 : 1;
+            updateIndicators();
         });
 
         if (prevBtn && nextBtn) {
