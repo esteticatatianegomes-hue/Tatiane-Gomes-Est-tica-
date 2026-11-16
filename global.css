@@ -550,7 +550,7 @@ p { font-size: 1.05rem; color: var(--cinza-texto); }
 /* --- IMAGE EDITORIAL --- */
 .editorial-img {
     overflow: hidden;
-    max-height: 560px; /* evita imagens gigantes no desktop */
+    max-height: 420px; /* teto equilibrado no desktop */
 }
 .editorial-img img {
     width: 100%;
@@ -563,7 +563,7 @@ p { font-size: 1.05rem; color: var(--cinza-texto); }
 /* --- RESULTADO CARD (carrossel) --- */
 .resultado-img {
     width: 100%;
-    aspect-ratio: 4/3;    /* mais equilibrado que 3/4 */
+    max-height: 330px; aspect-ratio: 16/10; border-radius: 8px;
     overflow: hidden;
     background: var(--off-white);
 }
@@ -614,7 +614,7 @@ p { font-size: 1.05rem; color: var(--cinza-texto); }
     align-items: end;
     padding-top: 80px;
     padding-bottom: 0;
-    min-height: 680px;
+    min-height: 520px;
 }
 .hero-content { padding-bottom: 80px; }
 .hero-content h1 { color: var(--branco); margin-bottom: 20px; }
@@ -623,7 +623,7 @@ p { font-size: 1.05rem; color: var(--cinza-texto); }
 .hero-disclaimer { font-size: 0.8rem; color: rgba(247,242,232,0.55); margin-top: 14px; letter-spacing: 0.04em; }
 .hero-img {
     aspect-ratio: 3/4;
-    max-height: 580px;      /* teto no desktop */
+    max-height: 440px; /* teto equilibrado no desktop */
     overflow: hidden;
     align-self: flex-end;
     justify-self: end;
@@ -773,7 +773,7 @@ p { font-size: 1.05rem; color: var(--cinza-texto); }
 }
 
 /* ================================================================
-   CAROUSEL — Fixes de overflow e gap (v2.1)
+   CAROUSEL ï¿½ Fixes de overflow e gap (v2.1)
    ================================================================ */
 [data-carousel] {
     overflow: hidden; /* garante que o track nunca vaze */
@@ -795,7 +795,7 @@ p { font-size: 1.05rem; color: var(--cinza-texto); }
     min-width: 0;
 }
 
-/* Resultado img: proporção coerente em todos os breakpoints */
+/* Resultado img: proporï¿½ï¿½o coerente em todos os breakpoints */
 @media (max-width: 767px) {
     .resultado-img { aspect-ratio: 4/3; }
     [data-carousel] .carousel-slide { padding: 0 6px; }
